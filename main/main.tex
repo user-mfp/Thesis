@@ -1,0 +1,217 @@
+% vim: foldmethod=marker
+
+%% Dokumentenklasse (Koma Script) ---------------------------------------
+\documentclass[%%{{{
+	%draft, % Entwurfsstadium, Achtung: links funktionieren nicht
+	final, % fertiges Dokument
+	11pt, % Grundschriftgroesse (Standard)
+	normalheadings, % keine grossen Ueberschriften wie es Standard waere
+%	ngerman, % wird an andere Pakete weitergereicht
+	a4paper,
+%	BCOR5mm, % Bindekorrektur fuer Rand auf der Innenseite
+%	DIV11, % Seitengroesse (siehe Koma Skript Dokumentation !)
+	1.1headlines, % Zeilenanzahl der Kopfzeilen
+	pagesize, % Schreibt die Papiergroesse in die Datei.
+%	twoside, % Seitenraender fuer zweiseitiges Layout
+	oneside, % kein zweis. Layout, besser fuer das lesen am Bildschirm
+%	openright, % Kapitel beginnen immer auf der rechten Seite
+	titlepage, % Titel als einzelne Seite ('titlepage' Umgebung)
+%	parindent, % Absaetze eingerueckt (Standard)
+	halfparskip, % Absaetze getrennt durch halbe Leerzeile, keine Einrueckung
+	headsepline, % Linie unter Kolumnentitel
+	nochapterprefix, % keine Ausgabe von 'Kapitel:'
+	bibtotoc, % Bibliographie ins TOC
+	tocindent, % eingerueckte Gliederung
+	listsindent, % eingereuckte LOT, LOF
+	pointlessnumbers, % ueberschriftnummerierung ohne Punkt, siehe DUDEN
+%	fleqn, % Formeln werden linksbuendig angezeigt
+]{scrbook} % moegl. Klassen: scrartcl, scrreprt, scrbook%}}}
+% -----------------------------------------------------------------------
+
+%@proceedings{DBLP:conf/fse/2004,
+%   editor    = {Bimal K. Roy and Willi Meier},
+%   title     = {Fast Software Encryption, 11th International Workshop, FSE
+%                2004, Delhi, India, February 5-7, 2004, Revised Papers},
+%   booktitle = {FSE},
+%   publisher = {Springer},
+%   series    = {Lecture Notes in Computer Science},
+%   volume    = {3017},
+%   year      = {2004},
+%   isbn      = {3-540-22171-9},
+%   bibsource = {DBLP, http://dblp.uni-trier.de}
+%}
+
+% für lstlisting verzeichnis
+
+
+\input{preambel/preambel}
+% Silbentrennung
+\input{preambel/Hyphenation}
+
+%für quellcode
+\usepackage{listings}
+\lstset{
+    language=c#,
+    basicstyle=\ttfamily\small,
+    frame=single,       % einfacher rahmen um quellcode 
+    %frameround=fttt,   % runder rahmen für rahmentyp frame
+    %frame=trBL         % komplexer rahmen um quellcode
+    %frame=lines,        % rahmen nur unten und oben
+    %numbers=left,
+    %numberstyle=tiny
+    %backgroundcolor=\color{lightgray}
+    %keywordstyle=\color{orange}\bfseries,
+    %keywordstyle=\color{RoyalBlue}\bfseries,
+    keywordstyle=\color{Black}\bfseries,
+    commentstyle=\color{darkgray},
+    stringstyle=\color{red}
+}
+
+%
+% WORKAROUND, damit lstlistoflistings funktioniert:
+% Quelle: http://www.komascript.de/node/477
+%
+\makeatletter% --> De-TeX-FAQ
+\renewcommand*{\lstlistoflistings}{%
+\begingroup
+\if@twocolumn
+\@restonecoltrue\onecolumn
+\else
+\@restonecolfalse
+\fi
+\lol@heading
+\setlength{\parskip}{\z@}%
+\setlength{\parindent}{\z@}%
+\setlength{\parfillskip}{\z@ \@plus 1fil}%
+\@starttoc{lol}%
+\if@restonecol\twocolumn\fi
+\endgroup
+}
+\makeatother% --> \makeatletter
+%für tabellen
+\usepackage{multirow}
+%\newcolumntype{C}[1]{>{\centering}m{#1}}
+%\usepackage{tabularx}
+
+
+% für TODO-Notes
+\usepackage{color}
+\usepackage{tikz}
+
+% für mathematische symbole
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+
+% für Einbinden von .pdf's
+\usepackage{pdfpages}
+
+% wegen deutschen Umlauten
+\usepackage[utf8]{inputenc}
+
+% für Seitenlayout
+\pagestyle{useheadings}
+
+\usepackage{amsthm}
+% für Zeilennummern
+\usepackage{lineno}
+% Einschalten der ZN
+%%%\linenumbers
+% Setzen der ZN
+%%%\modulolinenumbers[1]
+
+% BEGIN TODO-Notes support
+%{{{
+\makeatletter \newcommand \listoftodos{\section*{Todo list} \@starttoc{tdo}}
+\newcommand\l@todo[2]
+    {\par\noindent \textit{#2}, \parbox{10cm}{#1}\par} \makeatother
+
+\definecolor{orange}{rgb}{1,0.5,0}
+\tikzstyle{notestyle} = [draw=black, fill=orange, text width = 2.5cm]
+\tikzstyle{notestyleleft} = [notestyle]
+\tikzstyle{connectstyle} = [draw = orange, thick]
+% Command for inserting a todo item
+\newcommand{\todo}[1]{%
+% Add to todo list
+\addcontentsline{tdo}{todo}{\protect{#1}}%
+%
+\begin{tikzpicture}[remember picture, baseline=-0.75ex]%
+    \node [coordinate] (inText) {};
+\end{tikzpicture}%
+%
+% Make the margin par
+\marginpar[%
+{% Draw note in left margin
+    \tikz[remember picture] \draw node[notestyleleft] (inNote) {#1};%
+    \begin{tikzpicture}[remember picture, overlay]%
+        \draw[connectstyle]
+            ([yshift=-0.2cm] inText)
+                -| ([xshift=0.2cm] inNote.east)
+                -| (inNote.east);
+    \end{tikzpicture}%
+}%
+]{% Draw note in right margin
+    \tikz[remember picture] \draw node[notestyle] (inNote) {#1};%
+    \begin{tikzpicture}[remember picture, overlay]%
+        \draw[connectstyle]
+            ([yshift=-0.2cm] inText)
+                -| ([xshift=-0.2cm] inNote.west)
+                -| (inNote.west);
+    \end{tikzpicture}%
+}%
+}%
+%}}}
+% END TODO-Notes support
+
+\usepackage{acronym}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{graphics, epsfig, psfrag}
+
+% listing definitions from cf
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\lstdefinelanguage{L}
+  {morekeywords={Oracle,if,then,else,Finalize,return,Initialize,Encrypt,Decrypt,
+  false,Hash,true,Tag,Verify,AuxVerify,Extract,and,or,AuxDecrypt,Append,for,do,
+  Encryption,Decryption,GenerateCoins,in},
+  sensitive=false,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morecomment=[s]{(*}{*)},
+}
+\lstset{mathescape=true,language=L,basicstyle=\small,frame=none}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+\lstset{emph={GenerateCoins,Oracle,Finalize,Initialize,Encrypt,Hash,Decrypt,Verify,Tag},emphstyle={\bfseries\underbar}}
+
+
+\input{../deckblatt/deckblatt}
+\frontmatter
+\input{../chapter/acknowledgement}
+\input{../chapter/abstract}
+
+\tableofcontents
+\listoffigures
+%keine seitenzahl auf dem deckblatt
+%\pagestyle{empty}
+\input{../chapter/legend}
+\mainmatter
+
+\input{../chapter/introduction}
+
+
+\bibliographystyle{alpha} % plain = [1], alpha = [DKS01]
+\bibliography{../quellen/references}
+\input{../chapter/affidavit.tex}
+
+\appendix
+\input{../chapter/appendix.tex}
+
+\end{document}
