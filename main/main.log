@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  25 AUG 2014 14:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  25 AUG 2014 18:18
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1667,32 +1667,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
 ]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-
- []
-
 [3
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [4]
+] [4]) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [5]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
-[5
+[6
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [6]
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [7] [8]
+[9] [10]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[7
+[11
 
-] [8]
+] [12]
 Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
@@ -1702,28 +1698,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [9]
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [13]
 Chapter 6.
-[10
+[14
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [11]
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [15]
 Chapter 7.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [12
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [16
 
 ]
 Chapter 8.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [13
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [17
 
 ]
 Chapter 9.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [14
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [18
 
 ]
 Chapter 10.
-) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [15
+) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [19
 
 ])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [16
+(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [20
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
@@ -1731,7 +1727,7 @@ Chapter 10.
 Package caption Warning: Unused \captionsetup[subfloat] on input line 244.
 See the caption package documentation for explanation.
 
-[17
+[21
 
 ] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
 
@@ -1889,13 +1885,13 @@ supp-pdf.mkii
 
  ) 
 Here is how much of TeX's memory you used:
- 22861 strings out of 493921
- 412322 string characters out of 3144879
- 502696 words of memory out of 3000000
- 25579 multiletter control sequences out of 15000+200000
- 65571 words of font info for 54 fonts, out of 3000000 for 9000
+ 22862 strings out of 493921
+ 412336 string characters out of 3144879
+ 512696 words of memory out of 3000000
+ 25580 multiletter control sequences out of 15000+200000
+ 68355 words of font info for 55 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,9n,60p,856b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,9n,60p,1474b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
@@ -1908,9 +1904,9 @@ TeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmsso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
 sy10.pfb>
-Output written on main.pdf (22 pages, 229903 bytes).
+Output written on main.pdf (26 pages, 244557 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,50 +7,50 @@
 \contentsline {paragraph}{\nonumberline Annotations}{3}
 \contentsline {section}{\numberline {3.1}Museums}{3}
 \contentsline {paragraph}{\nonumberline Annotations}{3}
-\contentsline {section}{\numberline {3.2}Public single-user interfaces}{4}
-\contentsline {paragraph}{\nonumberline Annotations}{4}
-\contentsline {section}{\numberline {3.3}Tangible Interfaces}{4}
-\contentsline {paragraph}{\nonumberline Annotations}{4}
-\contentsline {section}{\numberline {3.4}Virtual Reality}{4}
-\contentsline {paragraph}{\nonumberline Annotations}{4}
-\contentsline {chapter}{\numberline {4}Museums}{5}
+\contentsline {section}{\numberline {3.2}Public single-user interfaces}{5}
 \contentsline {paragraph}{\nonumberline Annotations}{5}
-\contentsline {section}{\numberline {4.1}Requirement analysis}{5}
+\contentsline {section}{\numberline {3.3}Tangible Interfaces}{5}
 \contentsline {paragraph}{\nonumberline Annotations}{5}
-\contentsline {section}{\numberline {4.2}Further investigation}{6}
+\contentsline {section}{\numberline {3.4}Virtual Reality}{5}
+\contentsline {paragraph}{\nonumberline Annotations}{5}
+\contentsline {chapter}{\numberline {4}Museums}{6}
 \contentsline {paragraph}{\nonumberline Annotations}{6}
-\contentsline {section}{\numberline {4.3}Determination}{6}
+\contentsline {section}{\numberline {4.1}Requirement analysis}{6}
 \contentsline {paragraph}{\nonumberline Annotations}{6}
-\contentsline {chapter}{\numberline {5}Conception}{7}
+\contentsline {section}{\numberline {4.2}Further investigation}{7}
 \contentsline {paragraph}{\nonumberline Annotations}{7}
-\contentsline {section}{\numberline {5.1}System design}{7}
+\contentsline {section}{\numberline {4.3}Determination}{7}
 \contentsline {paragraph}{\nonumberline Annotations}{7}
-\contentsline {section}{\numberline {5.2}Design options}{8}
-\contentsline {paragraph}{\nonumberline Annotations}{8}
-\contentsline {section}{\numberline {5.3}Constraints}{8}
-\contentsline {paragraph}{\nonumberline Annotations}{8}
-\contentsline {section}{\numberline {5.4}Final concept}{8}
-\contentsline {paragraph}{\nonumberline Annotations}{8}
-\contentsline {section}{\numberline {5.5}Testing}{9}
-\contentsline {paragraph}{\nonumberline Annotations}{9}
-\contentsline {chapter}{\numberline {6}Implementation}{10}
-\contentsline {paragraph}{\nonumberline Annotations}{10}
-\contentsline {section}{\numberline {6.1}Interactive Museum Installation - Libraries}{10}
-\contentsline {paragraph}{\nonumberline Annotations}{10}
-\contentsline {section}{\numberline {6.2}Interactive Museum Installation - Administration-software}{10}
-\contentsline {paragraph}{\nonumberline Annotations}{10}
-\contentsline {section}{\numberline {6.3}Interactive Museum Installation - Presentation-software}{11}
+\contentsline {chapter}{\numberline {5}Conception}{11}
 \contentsline {paragraph}{\nonumberline Annotations}{11}
-\contentsline {section}{\numberline {6.4}Interactive Museum Installation - Presentation-remote}{11}
+\contentsline {section}{\numberline {5.1}System design}{11}
 \contentsline {paragraph}{\nonumberline Annotations}{11}
-\contentsline {section}{\numberline {6.5}Interactive Museum Installation - Statistics-tool}{11}
-\contentsline {paragraph}{\nonumberline Annotations}{11}
-\contentsline {chapter}{\numberline {7}Installation}{12}
+\contentsline {section}{\numberline {5.2}Design options}{12}
 \contentsline {paragraph}{\nonumberline Annotations}{12}
-\contentsline {chapter}{\numberline {8}Evaluation}{13}
+\contentsline {section}{\numberline {5.3}Constraints}{12}
+\contentsline {paragraph}{\nonumberline Annotations}{12}
+\contentsline {section}{\numberline {5.4}Final concept}{12}
+\contentsline {paragraph}{\nonumberline Annotations}{12}
+\contentsline {section}{\numberline {5.5}Testing}{13}
 \contentsline {paragraph}{\nonumberline Annotations}{13}
-\contentsline {chapter}{\numberline {9}Discussuion}{14}
+\contentsline {chapter}{\numberline {6}Implementation}{14}
 \contentsline {paragraph}{\nonumberline Annotations}{14}
-\contentsline {chapter}{\numberline {10}Future Work}{15}
-\contentsline {chapter}{\nonumberline Bibliography}{16}
-\contentsline {subsubsection}{\nonumberline Affidavit}{17}
+\contentsline {section}{\numberline {6.1}Interactive Museum Installation - Libraries}{14}
+\contentsline {paragraph}{\nonumberline Annotations}{14}
+\contentsline {section}{\numberline {6.2}Interactive Museum Installation - Administration-software}{14}
+\contentsline {paragraph}{\nonumberline Annotations}{14}
+\contentsline {section}{\numberline {6.3}Interactive Museum Installation - Presentation-software}{15}
+\contentsline {paragraph}{\nonumberline Annotations}{15}
+\contentsline {section}{\numberline {6.4}Interactive Museum Installation - Presentation-remote}{15}
+\contentsline {paragraph}{\nonumberline Annotations}{15}
+\contentsline {section}{\numberline {6.5}Interactive Museum Installation - Statistics-tool}{15}
+\contentsline {paragraph}{\nonumberline Annotations}{15}
+\contentsline {chapter}{\numberline {7}Installation}{16}
+\contentsline {paragraph}{\nonumberline Annotations}{16}
+\contentsline {chapter}{\numberline {8}Evaluation}{17}
+\contentsline {paragraph}{\nonumberline Annotations}{17}
+\contentsline {chapter}{\numberline {9}Discussuion}{18}
+\contentsline {paragraph}{\nonumberline Annotations}{18}
+\contentsline {chapter}{\numberline {10}Future Work}{19}
+\contentsline {chapter}{\nonumberline Bibliography}{20}
+\contentsline {subsubsection}{\nonumberline Affidavit}{21}
