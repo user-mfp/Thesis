@@ -25,7 +25,7 @@
 	%\item[Begriff] Erklärung von Begriff
 %\end{description}
 
-\paragraph{Annotations}
+\section*{Annotations}
 
 \begin{itemize}
 	\item Short overview, about what has been build
@@ -33,7 +33,7 @@
 	\\
 	\item System of libraries for pointing interaction
 	\item Information system (Information On Demand)
-	\item 'Uncharted territory' $\to$ technical focus
+	\item 'Uncharted territory' \rightarrow technical focus
 	\item Template solution / 'just a proof of concept'
   \\
 	\item Motivation

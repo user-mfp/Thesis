@@ -1,0 +1,78 @@
+\chapter{Related Work}
+\label{related_work}
+
+\section*{Annotations}
+
+\begin{itemize}
+	\item Backgrounds
+	\begin{itemize}
+		\item Historical
+		\item Technical
+	\end{itemize}
+	\item Application areas
+	\\
+	\item Not to much detail
+	\item Only in respect to the thesis' topic
+\end{itemize}
+
+\section{Museums}
+\label{related_work_museums}
+
+\section*{Annotations}
+                           
+\begin{itemize}
+	\item Historical evolution
+	\begin{itemize}
+		\item Museums are believed to be old fashioned
+		\item Mostly willing to experiment (Examples)
+		\begin{itemize}
+			\item Dioramas
+			\item ...
+			\item Animatronics
+			\item Robotics
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\section{Public single-user interfaces}
+\label{related_work_single}
+
+\section*{Annotations}
+                  
+\begin{itemize}
+	\item Human behavior concerning public interfaces
+	\begin{itemize}
+		\item self-service at train-stations
+		\item public interfaces, such as Tobias Fischer's \textit{SMS-Schleuder für Fassaden}
+		\item Intuitive usage vs. inhibition
+	\end{itemize}
+\end{itemize}
+
+\section{Tangible Interfaces}
+\label{related_work_tangible}
+
+\section*{Annotations}
+                
+\begin{itemize}
+	\item Technologies for input / interaction
+	\item Hands-free
+	\item Gestural interaction (Kinect)
+\end{itemize}
+
+\section{Virtual Reality}
+\label{related_work_vr}
+
+\section*{Annotations}
+                
+\begin{itemize}
+	\item Input
+	\begin{itemize}
+		\item Metaphors and devices
+		\begin{itemize}
+			\item Navigation and selection in 3d space
+			\item Possibilities
+			\item Difficulties
+			\item Constraints
+		\end{itemize}
+	\end{itemize}
+\end{itemize}

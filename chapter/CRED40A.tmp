@@ -1,0 +1,111 @@
+\chapter{Introduction}
+\label{introduction}
+%\textbf{''In short: Form matters.}'' -- Bellare and Rogaway\newline%\cite{Bellare04thegameplaying}}\newline
+\begin{center}
+\textbf{''All modern cryptographic systems are breakable in principle; it is just a question of how long it takes.''} -- Bellare and Rogaway from \cite{Bellare05}\newline
+\end{center}
+
+\section*{Security}
+Security is a criterion for how well some object is steeled against any form of aggressors. The term security is present in nearly all areas of the world
+we are living in. If you want to protect your home against intruders; if you want to avoid people stealing things from a shopping center; if you want
+your child to be safe in school; if you want to save your country from wars or other political
+disagreements or if you want to see your money safe and untouchable for others, it is all security.
+
+This is just a small choice of realms where security is anchored and necessary. With the arrival in the computer age, IT security was born,
+which includes the need to keep third parties from reading your secret information, to save your applications from crashing or being destroyed or to
+install a network which should keep people from hacking your servers. And finally, the area of cryptography is anxious to increase security in
+all areas where it is necessary.
+
+\begin{itemize}
+	\item Erste
+	\item Zweite
+	\begin{itemize}
+		\item Dritte
+	\end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+	\item Hallo
+	\item Du
+	\begin{enumerate}
+		\item Daaa
+		\item !!!
+	\end{enumerate}
+\end{enumerate}
+
+\begin{description}
+	\item[Begriff] Erklärung von Begriff
+\end{description}}
+
+\section*{Security and Cryptography}
+Cryptography -- the science of hiding information in practice and theory -- is a very large field. The techniques developed in cryptography
+are used to assure that some confidential data stays confidential and no adversary can reach them. Security of data, authenticity of an author
+and the integrity of data are also goals of cryptography. To be sure that some cryptographic system is secure, a proof of its security against
+an imaginable adversary or more than one has to be presented. Thus, assuming such a proof exists, a system can be described as being provably secure.
+A security proof is often done by assuming that a specific adversary to the system exists and the proof shows that the success probability of
+this adversary is for example smaller than some chosen threshold.
+
+The statement from Bellare and Rogaway given above describes some fundamental knowledge about cryptographic systems. If an adversary has access to
+infinite resources like time or storage it can break the most of the existing cryptographic systems. This is obvious, this is true, but this does not conform to
+the real world. An adversary is always restricted by its resources and so security proofs are mostly done by upper bound on the probability that some given
+adversary is able to break some given construct. A system is called secure if no practical adversary to this system exists.
+A counterexample, which cannot be broken with infinite resources is the One-Time-Pad (OTP) \cite{DBLP:books/sp/voecking2011/Tantau11}, if it is used correctly,
+i.e. a new key -- which has the same length as the message -- is used for every new encryption.
+The OTP was introduced by Gilbert Vernam in 1918 and applied the first time by Joseph O. Mauborgne.
+
+\section*{Game-Playing Proofs}
+This master thesis deals with a special case of security proofs called game-playing proofs. ''In our opinion, many proofs in cryptography have become
+essentially unverifiable. Our field may be approaching a crisis of rigor [$\hdots$] game-playing may play a role in the answer.''
+This cite is from \cite{DBLP:conf/eurocrypt/BellareR06} and the authors claim that game-playing proofs are usually less error-prone and better structured
+than normal proofs. Thus, they give a great opportunity to increase the understanding of security proofs.
+
+When we began to learn the concepts of game-playing proofs, we realized that the given descriptions and proofs have a very steep learning curve.
+So it was quite hard to understand the complex methodology due to the lack of a tutorial. To us, there was a need of an introduction
+that helps us and other developing a solid understanding of the concept of game-playing proofs. The examples given in \cite{DBLP:conf/eurocrypt/BellareR06}
+are from our point of view too complex to introduce game-playing and thus we decided to give some basic examples to you which are easier to understand
+while showing the basic techniques applied in the game-playing scenario. After reading this thesis one should be able to understand
+some more complex examples like the proof for the CBC MAC or the triple encryption given in \cite{DBLP:conf/eurocrypt/BellareR06} and
+should be able to generate first examples on one's own. To convince the reader to use game-playing proofs instead of normal proofs we give an example
+of these two approaches in the proof of the PRP/PRF switching lemma in Chapter \ref{PRP/PRF}. Furthermore, the whole thesis should suggest the
+well chosen structure and the simplicity of game-playing proofs in comparison to normal proofs to the reader.
+
+Everyone knows what a game is. And games can have alot of different characteristics and numbers of players. In the scenario of game-playing proofs,
+two players are usually considered, an adversary $A$ and a challenger $C$; and a game $G$ is constructed in regard to some rules and restrictions given
+to both the challenger $C$ and the adversary $A$. The challenger itself provides the game $G$ to $A$. An example for such a challenge can be given by
+describing the \textit{shell game}. As we can see in Figure \ref{fig:shell_game} the challenger $C$ provides the game $G$ by hiding a small ball under one out of
+three shells and shuffling in front of the player, i.e., the adversary $A$. After $C$ stops, $A$ has to decide, under which shell the ball lies.
+
+%\begin{center}
+%\begin{figure}[htb!]
+%\centering
+    %\psfrag{Adversary A}[cc][cc]{Adversary $A$}
+    %\psfrag{Challenger C}[cc][cc]{Challenger $C$}
+    %\psfrag{Choice}[cc][cc]{Choice}
+    %\psfrag{Game G}[cc][cc]{Game $G$}
+    %\psfrag{hide ball and shuffle}[cc][cc]{hide ball / shuffle}
+    %\psfrag{observe}[cc][cc]{observe}
+    %\psfrag{Success/Fail}[cc][cc]{Success/Fail}
+    %\includegraphics[scale=0.4]{../pics/shell_game}
+%\caption{The shell game considering an adversary $A$ and a challenger $C$.}
+%\label{fig:shell_game}
+%\end{figure}
+%\end{center}
+
+In this scenario, considering an adversary which has only one chance to find the ball, $A$ has a success probability of at least $1/3$ under the assumption
+that the challenger $C$ is an honest player. The probability can be higher than $1/3$, if the power of observation of the adversary is taken into consideration.
+This example can be extended to a so called \textit{chain of games}. A \textit{chain of games} is generated by transforming the orginal game (in this case the
+game described as above) which leads to a new game $H$. A transformation of Game $H$ will lead to another game $I$ and so on. At the end of a \textit{chain of games},
+a terminal game is placed. The terminal game is usually reducable to a mathematic hard problem and thus, the success probability of an adversary in the context
+of the terminal game is negligible. A chain can also be defined the other way around, s.t. the chain ends with the original game.
+For our example a new game $H$ can be achieved by adding another shell. Considering again an adversary $A$ with only one chance to find the ball,
+its success probability for game $H$ is at least $1/4$.
+
+\section*{Outline}
+This guide provides the basic knowledge about game-playing in the first and second chapter by introducing the game-playing technique itself, showing some
+widely spread examples and introducing pseudorandom functions and permutations, respectively.
+Chapter \ref{chap:playing_techniques} and \ref{chap:hopping_techniques} describe some techniques to build up a game and to generate a \textit{chain of games}.
+Beneith the definition of these techniques we are showing easy to understand examples, where these techniques can be applied in games.
+Chapter \ref{chap:FAQ} concludes this tutorial with a question-and-answer part with the most frequently asked questions that arose when
+giving this thesis to some of our fellow students.
+
+

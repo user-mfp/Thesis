@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=444
-NormalPos.bottom=576
+NormalPos.right=721
+NormalPos.bottom=888
 Class=LaTeXView
-Document=..\deckblatt\deckblatt.tex
+Document=Makefile
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=398
+TopLine=28
+Cursor=932
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=444
-NormalPos.bottom=576
+NormalPos.right=721
+NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\affidavit.tex
+Document=preambel\preambel.tex
 
 [Frame1_View0,0]
-TopLine=0
-Cursor=0
+TopLine=95
+Cursor=2979
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=444
-NormalPos.bottom=576
+NormalPos.right=721
+NormalPos.bottom=888
 Class=LaTeXView
 Document=main.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=217
+TopLine=187
+Cursor=6067
 
 [Frame3]
 Flags=0
@@ -65,34 +65,16 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=444
-NormalPos.bottom=576
+NormalPos.right=721
+NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\introduction.tex
+Document=..\chapter\related work.tex
 
 [Frame3_View0,0]
-TopLine=122
-Cursor=6251
-
-[Frame4]
-Flags=0
-ShowCmd=1
-MinPos.x=-1
-MinPos.y=-1
-MaxPos.x=-1
-MaxPos.y=-1
-NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=444
-NormalPos.bottom=576
-Class=LaTeXView
-Document=Makefile
-
-[Frame4_View0,0]
-TopLine=28
-Cursor=1660
+TopLine=0
+Cursor=43
 
 [SessionInfo]
-FrameCount=5
-ActiveFrame=0
+FrameCount=4
+ActiveFrame=3
 

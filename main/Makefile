@@ -30,6 +30,9 @@ OUTFILES = *.dvi *.ps
 default:	ma clean
 #.PHONY:		realclean clean ma
 
+fast:
+	$(PDFLATEX) $(PROJECT)
+	
 ma:
 	@echo "1st latex run..."
 	$(LATEX) -interaction batchmode $(PROJECT)
