@@ -1,20 +1,7 @@
-\begin{thebibliography}{Tan11}
+\begin{thebibliography}{Mus14}
 
-\bibitem[BR05]{Bellare05}
-Mihir Bellare and Phillip Rogaway.
-\newblock Introduction to modern cryptography.
-\newblock In {\em UCSD CSE 207 Course Notes}, 2005.
-
-\bibitem[BR06]{DBLP:conf/eurocrypt/BellareR06}
-Mihir Bellare and Phillip Rogaway.
-\newblock The security of triple encryption and a framework for code-based
-  game-playing proofs.
-\newblock In {\em EUROCRYPT}, pages 409--426, 2006.
-
-\bibitem[Tan11]{DBLP:books/sp/voecking2011/Tantau11}
-Till Tantau.
-\newblock The one-time pad algorithm - the simplest and most secure way to keep
-  secrets.
-\newblock In {\em Algorithms Unplugged}, pages 141--146. 2011.
+\bibitem[Mus14]{ThueringerMuseumsverbandOrte}
+Th\"uringer Museumsverband.
+\newblock {Liste der Museen in Th\"uringen}, August 2014.
 
 \end{thebibliography}

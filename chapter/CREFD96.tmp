@@ -70,25 +70,19 @@
 
 In order to finding a museum to cooperate with several steps had to be made. They included getting an overview of all museums in Weimar, finding several candidates for that cooperation, scouting those candidates and getting in contact with the most promising of them, and, finally, discussing possible concepts within their exhibitions.
 \\
-The first step was to find out about all the museums in Weimar and close by. So I looked them up on the website of Museumsverband Thüringen~\cite{ThueringerMuseumsverbandOrte} see Table \ref{tab:museums_amounts}, where there is a list of all members with links to further information. This list included museums in Weimar, Jena and Erfurt. Some were run privately, others by a foundation or a club, and a few by a public owner. Since there was a total of fifty museums and half of them in Weimar alone, there had to be a preselection.
+The first step was to find out about all the museums in Weimar and close by. So I looked them up on the website of Museumsverband Thüringen [...], where there is a list of all members with links to further information. This list included museums in Weimar, Jena and Erfurt. Some were run privately, others by a foundation or a club, and a few by a public owner. Since there was a total of fifty museums and half of them in Weimar alone, there had to be a preselection.
 
-\begin{table}[]
-	\centering
-	\begin{tabular}{ bp{4em} nr }
-		%\textbf{Town} & \textbf{Amount} \\ 
-		\rowstyle{\bfseries}
-		Town & Amount \\
-		\toprule
-		Weimar & 26 \\ 
-		Erfurt & 12 \\ 
-		Jena & 12 \\ 
-		Apolda & 1 \\ 
-		\bottomrule
-		Total & 51 \\ 
-	\end{tabular}
-	\caption{Amount of museums in the Weimar region.}
-	\label{tab:museums_amounts}
-\end{table}
+\begin{center}
+	\usepackage[table]{xcolor}
+		\begin{tabular}{l | r }
+			\cellcolor[gray]{0.5}Stadt & \cellcolor[gray]{0.5}Anzahl \\ 
+			\hline
+			Weimar & 26 \\ 
+			Erfurt & 12 \\ 
+			Jena & 12 \\ 
+			Apolda & 1 \\ 
+		\end{tabular}
+\end{center}
 
 Hence, as the following step, only museums in Weimar were chosen. In addition, the museums run by Klassikstiftung were taken out of consideration, for the foundation seemingly being too big and too inflexible concerning innovation in their historic premises. Some very small museums were struck off the list as well. This left four candidates remaining. They were Pavillon Presse, Pallais Schardt, Bienenmuseum and Museum für Ur- und Frühgeschichte Thüringens.
 \\

@@ -12,9 +12,9 @@
 \usepackage{ifpdf} %\ifpdf \else \fi
 \usepackage{calc} % Calculation with LaTeX
 \usepackage[english]{babel} % Languagesetting / change to ngerman if needed
-%\usepackage[table]{xcolor} % Farben
+\usepackage[table]{xcolor} % Farben
 \usepackage[usenames,dvipsnames]{color} % Farben
-\usepackage[]{graphicx} % Bilder
+%\usepackage[]{graphicx} % Bilder
 \usepackage{epstopdf} %% If an eps image is detected, epstopdf is automatically called to convert it to pdf format.
 \usepackage[]{amsmath} % Amsmath - Mathematik Basispaket
 \usepackage{ragged2e} % Besserer Flatternsatz (Linksbuendig, statt Blocksatz)
@@ -255,8 +255,3 @@
 %------------------------------------------------------------------------
 
 
-\newcolumntype{b}{>{\global\let\currentrowstyle\relax}}
-\newcolumntype{n}{>{\currentrowstyle}}
-\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
-  #1\ignorespaces
-}
