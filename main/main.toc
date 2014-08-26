@@ -47,6 +47,8 @@
 \contentsline {paragraph}{\nonumberline Annotations}{15}
 \contentsline {chapter}{\numberline {7}Installation}{16}
 \contentsline {paragraph}{\nonumberline Annotations}{16}
+\contentsline {section}{\numberline {7.1}Lab-setup}{16}
+\contentsline {section}{\numberline {7.2}Final museum-setup}{16}
 \contentsline {chapter}{\numberline {8}Evaluation}{17}
 \contentsline {paragraph}{\nonumberline Annotations}{17}
 \contentsline {chapter}{\numberline {9}Discussuion}{18}
