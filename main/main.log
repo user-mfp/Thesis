@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  26 AUG 2014 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  28 AUG 2014 16:38
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1495,31 +1495,31 @@ Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
 \c@theorem=\count177
 
 
-Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 179.
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 181.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 179.
-LaTeX Font Info:    ... okay on input line 179.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 179.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 179.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 181.
+LaTeX Font Info:    ... okay on input line 181.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 181.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 181.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    ... okay on input line 181.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1535,7 +1535,7 @@ LaTeX Font Info:    ... okay on input line 179.
 \makeMPintoPDFobject=\count183
 \everyMPtoPDFconversion=\toks53
 ) ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 179.
+LaTeX Info: Redefining \selectfont on input line 181.
 \AtBeginShipoutBox=\box50
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1570,66 +1570,28 @@ Non-PDF special ignored!
 
 
 {C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 199.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 201.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-(C:\Users\User\Documents\GitHub\Thesis\main\main.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 8.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 8.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 8.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 8.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 8.
-LaTeX Font Info:    Try loading font information for U+msa on input line 8.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 8.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-])
+(C:\Users\User\Documents\GitHub\Thesis\main\main.toc)
 \tf@toc=\write6
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 200.
- [2]
+ [1
+
+
+]
 (C:\Users\User\Documents\GitHub\Thesis\main\main.lof)
 \tf@lof=\write7
- [3
+ [2
 
 ]
 (C:\Users\User\Documents\GitHub\Thesis\main\main.lot)
 \tf@lot=\write8
 
-(C:\Users\User\Documents\GitHub\Thesis\chapter\legend.tex [4
+(C:\Users\User\Documents\GitHub\Thesis\chapter\legend.tex [3
 
-]) [5
+]) [4
 
 ]
 (C:\Users\User\Documents\GitHub\Thesis\chapter\abstract.tex
@@ -1663,7 +1625,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--34
 
  []
 
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 36.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 36.
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 36.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 36.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 36.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 36.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 36.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
@@ -1681,7 +1679,10 @@ although it is yet undefined on input line 42.
 Chapter 3.
 [3
 
-] [4]) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [5]
+]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 57.
+ [4]) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [5]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
@@ -1692,20 +1693,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
 ]
 
+Package natbib Warning: Citation `ThueringerMuseumsverbandOrte' on page 7 undef
+ined on input line 73.
+
+
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 75.
 
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [7] [8]
-[9] [10]
+[7] [8] <../pics/Original.png, id=58, 368.25478pt x 276.19109pt>
+File: ../pics/Original.png Graphic file (type png)
+
+<use ../pics/Original.png>
+Package pdftex.def Info: ../pics/Original.png used on input line 106.
+(pdftex.def)             Requested size: 334.60571pt x 250.95497pt.
+)
+(C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [9] [10] [11 <C:/
+Users/User/Documents/GitHub/Thesis/pics/Original.png>]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[11
+[12
 
-] [12]
+] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
@@ -1715,38 +1727,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [13]
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [14]
 Chapter 6.
-[14
+[15
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [15]
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [16]
 Chapter 7.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [16
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [17
 
 ]
 Chapter 8.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [17
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [18
 
 ]
 Chapter 9.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [18
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [19
 
 ]
 Chapter 10.
-) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [19
+) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [20
 
 ])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [20
+(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [21
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
 
-Package caption Warning: Unused \captionsetup[subfloat] on input line 244.
+Package natbib Warning: There were undefined citations.
+
+
+Package caption Warning: Unused \captionsetup[subfloat] on input line 246.
 See the caption package documentation for explanation.
 
-[21
+[22
 
-] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
+] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 
  *File List*
  scrbook.cls    2013/12/19 v3.12 KOMA-Script document class (book)
@@ -1877,18 +1897,19 @@ inputenc.sty    2008/03/30 v1.1d Input encoding file
 supp-pdf.mkii
 ../deckblatt/deckblatt.tex
   t1lmss.fd    2009/10/30 v1.6 Font defs for Latin Modern
+../chapter/legend.tex
+../chapter/abstract.tex
+  ts1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
+../chapter/introduction.tex
   ot1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
   omllmm.fd    2009/10/30 v1.6 Font defs for Latin Modern
  omslmsy.fd    2009/10/30 v1.6 Font defs for Latin Modern
  omxlmex.fd    2009/10/30 v1.6 Font defs for Latin Modern
     umsa.fd    2013/01/14 v3.01 AMS symbols A
     umsb.fd    2013/01/14 v3.01 AMS symbols B
-../chapter/legend.tex
-../chapter/abstract.tex
-  ts1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
-../chapter/introduction.tex
 ../chapter/related_work.tex
 ../chapter/museums.tex
+../pics/Original.png
 ../chapter/conception.tex
 ../chapter/implementation.tex
 ../chapter/installation.tex
@@ -1900,12 +1921,15 @@ supp-pdf.mkii
 ../chapter/appendix.tex
  ***********
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 22892 strings out of 493921
- 412769 string characters out of 3144879
- 513743 words of memory out of 3000000
- 25607 multiletter control sequences out of 15000+200000
+ 22903 strings out of 493921
+ 412977 string characters out of 3144879
+ 506743 words of memory out of 3000000
+ 25615 multiletter control sequences out of 15000+200000
  74340 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,10n,60p,1474b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1922,9 +1946,9 @@ ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
 msso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
 
-Output written on main.pdf (27 pages, 280863 bytes).
+Output written on main.pdf (27 pages, 3610612 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

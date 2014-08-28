@@ -17,7 +17,7 @@ BIBTEX		=bibtex
 #latexmk integriert den bibtex-aufruf, kann allerdings makeindex moeglicherweise
 #nicht mit dem nomencl-package anwenden
 LATEXMK		=latexmk
-RM			=rm -f
+RM			=del
 
 PROJECT = main
 #bachelorarbeit_lsi.tex
@@ -42,7 +42,7 @@ ma:
 	$(LATEX) -interaction batchmode $(PROJECT)
 	@echo "3rd latex run... (pdflatex)"
 	$(LATEX) -interaction batchmode -shell-escape $(PROJECT)
-	dvipdfm $(PROJECT).dvi
+#	dvipdfm $(PROJECT).dvi
 	@echo "complete... output: " $(PROJECT).pdf
 
 make debug:
@@ -57,7 +57,7 @@ make debug:
 	$(LATEX) $(PROJECT)
 	@echo "3rd latex run... (pdflatex)"
 	$(LATEX) -shell-escape $(PROJECT)
-	dvipdfm $(PROJECT).dvi
+#	dvipdfm $(PROJECT).dvi
 	@echo "complete... output: " $(PROJECT).pdf
 
 clean::
