@@ -15,10 +15,21 @@
 
 \section{Lab-setup}
 
-Something about the Lab- and Summaery-setups...
+All about the Lab- and Summaery-setups...
 
 
 
 \section{Final museum-setup}
 
-Something about the final setup in the museum...
+\begin{itemize}
+	\item Automatic boot at 8:30am [Bios]
+	\item Runnging
+	\item Logfiles for each \textit{Session-Event}
+	\begin{itemize}
+		\item Start Session: User in interaction zone (Exhibition.UserPosition +/- Threshold from SessionHandler := 250mm)
+		\item New Target: User pointing at a target
+		\item Target Selected: Dwelltime (Exhibition.SelectionTime := 700ms) starts slide show for selected target
+		\item End Session: User leaves interaction zone
+	\end{itemize}
+	\item Automatic shutdown at 4:45pm [Software]
+\end{itemize}
