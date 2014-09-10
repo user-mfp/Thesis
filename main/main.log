@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  2 SEP 2014 11:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  10 SEP 2014 16:03
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1684,76 +1684,83 @@ although it is yet undefined on input line 143.
 [5]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--9
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
 
 Package natbib Warning: Citation `ThueringerMuseumsverbandOrte' on page 6 undef
-ined on input line 14.
+ined on input line 16.
 
 [6
 
 ] [7] [8]
-Overfull \hbox (4.54346pt too wide) in paragraph at lines 130--131
+Overfull \hbox (4.54346pt too wide) in paragraph at lines 134--135
 []\T1/lmr/m/n/10.95 Interdisciplinary work ex-pe-ri-ence (Schlen-der, Kick-Flic
 k-able In-ter-faces) 
  []
 
 
+LaTeX Warning: Reference `museums_requirement' on page 9 undefined on input lin
+e 141.
+
+
 Package natbib Warning: Citation `ThueringerMuseumsverbandOrte' on page 9 undef
-ined on input line 152.
+ined on input line 156.
 
 [9]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 154.
+               Default added (so using `tbp') on input line 158.
 
 [10] <../pics/Original.png, id=67, 368.25478pt x 276.19109pt>
 File: ../pics/Original.png Graphic file (type png)
 
 <use ../pics/Original.png>
-Package pdftex.def Info: ../pics/Original.png used on input line 185.
+Package pdftex.def Info: ../pics/Original.png used on input line 189.
 (pdftex.def)             Requested size: 418.25555pt x 313.69373pt.
-)
-(C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [11 <C:/Users/Use
-r/Documents/GitHub/Thesis/pics/Original.png>] [12] [13]
+ [11])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [12 <C:/Users/Use
+r/Documents/GitHub/Thesis/pics/Original.png>] [13] [14]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-[14
+[15
 
-] [15] [16])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [17]
+] [16] [17] [18])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [19]
 Chapter 5.
-[18
+[20
 
-] [19] [20]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [2
-1]
+] [21] [22]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [2
+3]
 Chapter 6.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [22
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [24
 
 ]
 Chapter 7.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [23
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [25
 
 ]
 Chapter 8.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [24
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [26
 
 ]
 Chapter 9.
 
-LaTeX Warning: Reference `related_work' on page 25 undefined on input line 7.
+LaTeX Warning: Reference `introduction' on page 27 undefined on input line 7.
+
+
+LaTeX Warning: Reference `related_work' on page 27 undefined on input line 7.
 
 )
 No file main.bbl.
-(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [25
+(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [27
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
@@ -1764,7 +1771,7 @@ Package natbib Warning: There were undefined citations.
 Package caption Warning: Unused \captionsetup[subfloat] on input line 246.
 See the caption package documentation for explanation.
 
-[26
+[28
 
 ] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
 
@@ -1924,13 +1931,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22906 strings out of 493921
- 412699 string characters out of 3144879
+ 22910 strings out of 493921
+ 412776 string characters out of 3144879
  504743 words of memory out of 3000000
- 25623 multiletter control sequences out of 15000+200000
+ 25627 multiletter control sequences out of 15000+200000
  74340 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,10n,60p,1474b,532s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,10n,60p,1474b,526s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
@@ -1944,9 +1951,9 @@ ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
 msso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
 
-Output written on main.pdf (32 pages, 3625962 bytes).
+Output written on main.pdf (34 pages, 3630580 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 166 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
