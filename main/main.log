@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  10 SEP 2014 16:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  10 SEP 2014 16:37
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1723,14 +1723,14 @@ Package pdftex.def Info: ../pics/Original.png used on input line 189.
 (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [12 <C:/Users/Use
 r/Documents/GitHub/Thesis/pics/Original.png>] [13] [14]
 Chapter 4.
+[15
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+]
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-[15
-
-] [16] [17] [18])
+[16] [17] [18])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [19]
 Chapter 5.
 [20
@@ -1951,7 +1951,7 @@ ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
 msso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
 
-Output written on main.pdf (34 pages, 3630580 bytes).
+Output written on main.pdf (34 pages, 3631048 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
