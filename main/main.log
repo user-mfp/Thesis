@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  12 SEP 2014 13:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  17 SEP 2014 19:07
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -397,6 +397,14 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip66
 \JustifyingParindent=\skip67
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks20
+\extratabsurround=\skip68
+\backup@length=\skip69
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
@@ -529,14 +537,14 @@ Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count106
-\l_MT_multwidth_dim=\dimen117
-\origjot=\skip68
-\l_MT_shortvdotswithinadjustabove_dim=\dimen118
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen119
-\l_MT_above_intertext_sep=\dimen120
-\l_MT_below_intertext_sep=\dimen121
-\l_MT_above_shortintertext_sep=\dimen122
-\l_MT_below_shortintertext_sep=\dimen123
+\l_MT_multwidth_dim=\dimen119
+\origjot=\skip70
+\l_MT_shortvdotswithinadjustabove_dim=\dimen120
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen121
+\l_MT_above_intertext_sep=\dimen122
+\l_MT_below_intertext_sep=\dimen123
+\l_MT_above_shortintertext_sep=\dimen124
+\l_MT_below_shortintertext_sep=\dimen125
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\was\icomma.sty
 Package: icomma 2002/03/10 v2.0 (WaS)
@@ -553,35 +561,26 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen124
-\lightrulewidth=\dimen125
-\cmidrulewidth=\dimen126
-\belowrulesep=\dimen127
-\belowbottomsep=\dimen128
-\aboverulesep=\dimen129
-\abovetopsep=\dimen130
-\cmidrulesep=\dimen131
-\cmidrulekern=\dimen132
-\defaultaddspace=\dimen133
+\heavyrulewidth=\dimen126
+\lightrulewidth=\dimen127
+\cmidrulewidth=\dimen128
+\belowrulesep=\dimen129
+\belowbottomsep=\dimen130
+\aboverulesep=\dimen131
+\abovetopsep=\dimen132
+\cmidrulesep=\dimen133
+\cmidrulekern=\dimen134
+\defaultaddspace=\dimen135
 \@cmidla=\count107
 \@cmidlb=\count108
-\@aboverulesep=\dimen134
-\@belowrulesep=\dimen135
+\@aboverulesep=\dimen136
+\@belowrulesep=\dimen137
 \@thisruleclass=\count109
 \@lastruleclass=\count110
-\@thisrulewidth=\dimen136
+\@thisrulewidth=\dimen138
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen137
-\extrarowheight=\dimen138
-\NC@list=\toks20
-\extratabsurround=\skip69
-\backup@length=\skip70
-)
 \TX@col@width=\dimen139
 \TX@old@table=\dimen140
 \TX@old@col=\dimen141
@@ -750,7 +749,7 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 160.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 161.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -771,7 +770,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 57.11986pt
 (typearea)              \baselineskip   = 16.31996pt
-(typearea)              on input line 160.
+(typearea)              on input line 161.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrpage2.sty
 Package: scrpage2 2013/12/19 v3.12 KOMA-Script package (page head and foot)
@@ -779,15 +778,15 @@ LaTeX Info: Redefining \pagemark on input line 174.
 )
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `sectioning' that is an alias of element
-(scrkbase)             `disposition' on input line 203.
+(scrkbase)             `disposition' on input line 204.
 Package scrkbase Info: You've told me to redefine the font selection of the
 (scrkbase)             element `pagehead' that is an alias of element
-(scrkbase)             `pageheadfoot' on input line 206.
+(scrkbase)             `pageheadfoot' on input line 207.
 
 
 Package scrkbase Warning: `pagehead' is only an alias of `pageheadfoot'.
 (scrkbase)                Font of page foot may also be changed on input line 2
-06.
+07.
 
 ) (C:\Users\User\Documents\GitHub\Thesis\main\preambel/Hyphenation.tex)
 (C:\Users\User\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
@@ -1576,38 +1575,38 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 201.
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\User\Documents\GitHub\Thesis\main\main.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 7.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 7.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 7.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 7.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 7.
+(Font)              <10.95> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 7.
+(Font)              <8> on input line 6.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 7.
-LaTeX Font Info:    Try loading font information for U+msa on input line 7.
+(Font)              <6> on input line 6.
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 7.
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1649,16 +1648,15 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 7.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-(C:\Users\User\Documents\GitHub\Thesis\chapter\introduction.tex [1
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\introduction.tex [1
 
 
 ]
 Chapter 2.
-
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 31.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 Underfull \hbox (badness 10000) in paragraph at lines 32--34
 
  []
@@ -1683,95 +1681,60 @@ although it is yet undefined on input line 143.
 ) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex
 [5]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Package natbib Warning: Citation `ThueringerMuseumsverbandOrte' on page 6 undef
-ined on input line 16.
-
 [6
 
-] [7] [8]
-Overfull \hbox (4.54346pt too wide) in paragraph at lines 134--135
-[]\T1/lmr/m/n/10.95 Interdisciplinary work ex-pe-ri-ence (Schlen-der, Kick-Flic
-k-able In-ter-faces) 
- []
-
-
-LaTeX Warning: Reference `museums_requirement' on page 9 undefined on input lin
-e 141.
-
-
-Package natbib Warning: Citation `ThueringerMuseumsverbandOrte' on page 9 undef
-ined on input line 156.
-
-[9]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 158.
-
-[10] <../pics/Original.png, id=67, 368.25478pt x 276.19109pt>
-File: ../pics/Original.png Graphic file (type png)
-
-<use ../pics/Original.png>
-Package pdftex.def Info: ../pics/Original.png used on input line 189.
-(pdftex.def)             Requested size: 418.25555pt x 313.69373pt.
- [11])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [12 <C:/Users/Use
-r/Documents/GitHub/Thesis/pics/Original.png>] [13] [14]
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [7]
 Chapter 4.
-[15
+[8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[16] [17] [18])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [19]
+[9] [10] [11])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [12]
 Chapter 5.
-[20
+[13
 
-] [21] [22]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [2
-3]
+] [14] [15]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [1
+6]
 Chapter 6.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [24
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [17
 
 ]
 Chapter 7.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [25
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [18
 
 ]
 Chapter 8.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [26
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [19
 
 ]
 Chapter 9.
 
-LaTeX Warning: Reference `introduction' on page 27 undefined on input line 7.
+LaTeX Warning: Reference `introduction' on page 20 undefined on input line 7.
 
 
-LaTeX Warning: Reference `related_work' on page 27 undefined on input line 7.
+LaTeX Warning: Reference `related_work' on page 20 undefined on input line 7.
 
-)
-No file main.bbl.
-(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [27
+) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [20
+
+]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [21
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
 
-Package natbib Warning: There were undefined citations.
-
-
-Package caption Warning: Unused \captionsetup[subfloat] on input line 246.
+Package caption Warning: Unused \captionsetup[subfloat] on input line 247.
 See the caption package documentation for explanation.
 
-[28
+[22
 
 ] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
 
@@ -1819,6 +1782,7 @@ pdftexcmds.sty    2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
   amsopn.sty    1999/12/14 v2.01 operator names
 ragged2e.sty    2009/05/21 v2.1 ragged2e Package (MS)
 everysel.sty    2011/10/28 v1.2 EverySelectfont Package (MS)
+   array.sty    2008/09/09 v2.4c Tabular extension package (FMi)
  fontenc.sty
    t1enc.def    2005/09/27 v1.99g Standard LaTeX file
 textcomp.sty    2005/09/27 v1.99g Standard LaTeX package
@@ -1831,7 +1795,6 @@ mathtools.sty    2014/07/16 v1.15 mathematical typesetting tools
 amsfonts.sty    2013/01/14 v3.01 Basic AMSFonts support
 booktabs.sty    2005/04/14 v1.61803 publication quality tables
 tabularx.sty    1999/01/07 v2.07 `tabularx' package (DPC)
-   array.sty    2008/09/09 v2.4c Tabular extension package (FMi)
      url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
 footmisc.sty    2011/06/06 v5.5b a miscellany of footnote facilities
 varioref.sty    2011/10/02 v1.4z package for extended references (FMi)
@@ -1912,16 +1875,16 @@ supp-pdf.mkii
     umsb.fd    2013/01/14 v3.01 AMS symbols B
 ../chapter/legend.tex
 ../chapter/abstract.tex
-  ts1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
 ../chapter/introduction.tex
+  ts1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
 ../chapter/museums.tex
-../pics/Original.png
 ../chapter/conception.tex
 ../chapter/implementation.tex
 ../chapter/installation.tex
 ../chapter/evaluation.tex
 ../chapter/discussion.tex
 ../chapter/future_work.tex
+    main.bbl
 ../chapter/affidavit.tex
 ../chapter/appendix.tex
  ***********
@@ -1931,13 +1894,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22910 strings out of 493921
- 412776 string characters out of 3144879
+ 22898 strings out of 493921
+ 412619 string characters out of 3144879
  504743 words of memory out of 3000000
- 25627 multiletter control sequences out of 15000+200000
+ 25616 multiletter control sequences out of 15000+200000
  74340 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,10n,60p,1474b,526s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,9n,60p,1475b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
@@ -1951,9 +1914,9 @@ ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
 msso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
 
-Output written on main.pdf (34 pages, 3631048 bytes).
+Output written on main.pdf (28 pages, 287780 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
+ 144 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
