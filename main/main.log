@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  17 SEP 2014 19:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  27 SEP 2014 11:48
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1673,60 +1673,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
 Package acronym Info: Label `acro:IMI' newly defined as it shall be overridden
 although it is yet undefined on input line 42.
+Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
+although it is yet undefined on input line 43.
 [2
 
 ] [3] [4]
 Package acronym Info: Label `acro:HMD' newly defined as it shall be overridden
-although it is yet undefined on input line 143.
+although it is yet undefined on input line 144.
 ) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex
 [5]
 Chapter 3.
+Package acronym Info: Label `acro:FSD' newly defined as it shall be overridden
+although it is yet undefined on input line 35.
 [6
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [7]
+]
+Package acronym Info: Label `acro:MVT' newly defined as it shall be overridden
+although it is yet undefined on input line 73.
+ [7]
+Overfull \hbox (3.04507pt too wide) in paragraph at lines 184--185
+ \T1/lmss/m/n/10.95 Deutsches Bi-enen-mu-seum[] \T1/lmr/m/n/10.95 The mu-seum i
+s run by the bee-keep-ers as-so-ci-a-tion of Thuringia.
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+
+ []
+
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [9]
 Chapter 4.
-[8
+[10
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[9] [10] [11])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [12]
+[11] [12] [13])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [14]
 Chapter 5.
-[13
+[15
 
-] [14] [15]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex [1
-6]
+] [16]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
+[17]
 Chapter 6.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [17
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [18
 
 ]
 Chapter 7.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [18
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [19
 
 ]
 Chapter 8.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [19
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [20
 
 ]
 Chapter 9.
 
-LaTeX Warning: Reference `introduction' on page 20 undefined on input line 7.
+LaTeX Warning: Reference `introduction' on page 21 undefined on input line 7.
 
 
-LaTeX Warning: Reference `related_work' on page 20 undefined on input line 7.
+LaTeX Warning: Reference `related_work' on page 21 undefined on input line 7.
 
-) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [20
+) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [21
 
-]
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [21
+])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [22
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
@@ -1734,7 +1749,7 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 Package caption Warning: Unused \captionsetup[subfloat] on input line 247.
 See the caption package documentation for explanation.
 
-[22
+[23
 
 ] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
 
@@ -1894,10 +1909,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22898 strings out of 493921
- 412619 string characters out of 3144879
+ 22920 strings out of 493921
+ 412936 string characters out of 3144879
  504743 words of memory out of 3000000
- 25616 multiletter control sequences out of 15000+200000
+ 25638 multiletter control sequences out of 15000+200000
  74340 words of font info for 57 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,9n,60p,1475b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1914,9 +1929,9 @@ ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
 msso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
 
-Output written on main.pdf (28 pages, 287780 bytes).
+Output written on main.pdf (29 pages, 299863 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

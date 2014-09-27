@@ -1,0 +1,140 @@
+\chapter{Conception}
+\label{conception}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+%------------------------------------------------------------------------------------------
+
+\section{System design}
+\label{conception_system}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item User perspective
+	\begin{itemize}
+		\item Visitor
+		\item Curator / staff
+	\end{itemize}
+	\item System view
+	\\
+	\item Development of ideas according to the plan
+	\begin{itemize}
+		\item Method of elimination
+		\item Feasibility
+		\begin{itemize}
+			\item Effort
+			\item Cost
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+%------------------------------------------------------------------------------------------
+
+\section{Design options}
+\label{conception_design}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item Possibilities of hard- and software
+	\item Capabilities of a single programmer (me)
+\end{itemize}
+
+%------------------------------------------------------------------------------------------
+
+\section{Constraints}
+\label{conception_constraints}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item Technical
+	\item From the museums perspective
+	\begin{itemize}
+		\item Size
+		\item Cost
+		\item Inclusion
+	\end{itemize}
+	\item Limitations of hard- and software
+	\item Capabilities of a single programmer (me)
+\end{itemize}
+
+%------------------------------------------------------------------------------------------
+
+\section{Final concept}
+\label{conception_final}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'Pflichtenheft'-criteria
+	\begin{itemize}
+		\item Must
+		\begin{itemize}
+			\item 
+		\end{itemize}
+		\item Should
+		\begin{itemize}
+			\item 
+		\end{itemize}
+		\item Could
+		\begin{itemize}
+			\item 
+		\end{itemize}
+		\item See appendix
+	\end{itemize}
+	\item Contract 
+		\begin{itemize}
+			\item MUFT, BUW and me
+			\item Avoid misconceptions
+			\item Commitments / Obligations
+			\item Responsibilities
+			\item Boundaries
+			\item Legal stuff
+			\item See appendix
+		\end{itemize}
+\end{itemize}
+
+%------------------------------------------------------------------------------------------
+
+\section{Testing}
+\label{conception_testing}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item Test of pointing accuracy
+	\item \textit{Images and skeches}
+	\begin{enumerate}
+		\item One, centered Point I
+		\begin{itemize}
+			\item Only Pointing
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item See appendix
+		\end{itemize}
+		\item One centered Point II
+		\begin{itemize}
+			\item Pointing, Aiming and Combined
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item See appendix
+		\end{itemize}
+	\end{enumerate}
+	\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
+	\begin{itemize}
+		\item Description of Eye-Hand Mismatch [ref]
+		\item \textit{Sketches of classification}
+	\end{itemize}
+	\item Test of algorithm's accuracy
+	\begin{itemize}
+		\item Target = '90 percent of all values within a 10cm radius of mean value'
+		\item Differentiation between real and virtual point
+		\item Necessity of 1:1-mapping of real and virtual point
+	\end{itemize}
+\end{itemize}

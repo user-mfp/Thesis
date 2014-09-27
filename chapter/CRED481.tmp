@@ -1,21 +1,19 @@
 \chapter{Implementation}
 \label{implementation}
 
-The IMI-system consists of two main parts. First, the hardware part involves the physical tracking and computing of its data in the background. Second, the software part, which includes the IMI-libraries and IMI-softwares utilizing them, provides the \ac{UI}s.
+\paragraph{Annotations}
 
-%\paragraph{Annotations}
-%
-%\begin{itemize}
-	%\item Explanation of functionalities
-	%\item Diagrams
-	%\begin{itemize}
-		%\item Classes
-		%\item Sequences
-	%\end{itemize}
-	%\item Sketches
-%\end{itemize}
+\begin{itemize}
+	\item Explanation of functionalities
+	\item Diagrams
+	\begin{itemize}
+		\item Classes
+		\item Sequences
+	\end{itemize}
+	\item Sketches
+\end{itemize}
 
-%------------------------------------------------------------------------------
+
 
 \section{Interactive Museum Installation - Libraries}
 \label{implementation_libraries}
@@ -88,8 +86,7 @@ The IMI-system consists of two main parts. First, the hardware part involves the
 	\begin{itemize}
 		\item Check for Exhibition
 		\item Pre-calculate Lookup for exhibit-selection (saves processing power)
-		\item Recognize visitors
-		\item Identify user by predefined UserPosition 
+		\item 
 	\end{itemize}
 \end{itemize}
 
@@ -102,16 +99,7 @@ The IMI-system consists of two main parts. First, the hardware part involves the
 
 \begin{itemize}
 	\item 'What is the presentation-remote?'
-	\begin{itemize}
-		\item Microsoft Gadgeteer-Device
-		\item Bluetooth / WiFi-connection to PC
-		\item For lecturers in order to explain exhibits themselves
-	\end{itemize}
 	\item 'What does it do?'
-	\begin{itemize}
-		\item Automatically connect to Presentation-software
-		\item Toggle Presentation-software's blindness
-	\end{itemize}
 \end{itemize}
 
 
@@ -122,9 +110,6 @@ The IMI-system consists of two main parts. First, the hardware part involves the
 \paragraph{Annotations}
 
 \begin{itemize}
-	\item 'What is the statistics-tool and what does it do?'
-	\begin{itemize}
-		\item Small tool to evaluate logged user-data
-		\item Statistics, such as average length of stay/session, exhibits chosen and how many transitions 
-	\end{itemize}
+	\item 'What is the statistics-tool?'
+	\item 'What does it do?'
 \end{itemize}
