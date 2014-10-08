@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  27 SEP 2014 11:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  8 OCT 2014 14:40
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1575,38 +1575,38 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 201.
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\User\Documents\GitHub\Thesis\main\main.toc
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 6.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 6.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 6.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 6.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <10.95> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+(Font)              <6> on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1653,74 +1653,57 @@ Class scrbook Warning: \float@addtolists detected!
 
 ]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 31.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 27.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+) [2
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
-
- []
-
-Package acronym Info: Label `acro:IMI' newly defined as it shall be overridden
-although it is yet undefined on input line 42.
-Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
-although it is yet undefined on input line 43.
-[2
-
-] [3] [4]
+] [3]
 Package acronym Info: Label `acro:HMD' newly defined as it shall be overridden
-although it is yet undefined on input line 144.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex
-[5]
+although it is yet undefined on input line 128.
+)
+(C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [4]
 Chapter 3.
 Package acronym Info: Label `acro:FSD' newly defined as it shall be overridden
-although it is yet undefined on input line 35.
-[6
+although it is yet undefined on input line 34.
+[5
 
 ]
 Package acronym Info: Label `acro:MVT' newly defined as it shall be overridden
-although it is yet undefined on input line 73.
- [7]
-Overfull \hbox (3.04507pt too wide) in paragraph at lines 184--185
+although it is yet undefined on input line 72.
+ [6]
+Overfull \hbox (3.04507pt too wide) in paragraph at lines 183--184
  \T1/lmss/m/n/10.95 Deutsches Bi-enen-mu-seum[] \T1/lmr/m/n/10.95 The mu-seum i
 s run by the bee-keep-ers as-so-ci-a-tion of Thuringia.
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 192--196
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [9]
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [8]
 Chapter 4.
-[10
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[11] [12] [13])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [14]
+[9
+
+] [10] [11] [12])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [13]
 Chapter 5.
-[15
+Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
+although it is yet undefined on input line 4.
+[14
 
-] [16]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
-[17]
+] [15]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
+[16]
 Chapter 6.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [18
+[17
 
-]
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [18]
 Chapter 7.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
@@ -1909,29 +1892,30 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22920 strings out of 493921
- 412936 string characters out of 3144879
- 504743 words of memory out of 3000000
+ 22922 strings out of 493921
+ 412959 string characters out of 3144879
+ 503743 words of memory out of 3000000
  25638 multiletter control sequences out of 15000+200000
- 74340 words of font info for 57 fonts, out of 3000000 for 9000
+ 77545 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 64i,9n,60p,1475b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
+ 64i,9n,60p,1475b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr
 10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
-msso10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-
-Output written on main.pdf (29 pages, 299863 bytes).
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/lm/lmss12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss17.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (29 pages, 341353 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

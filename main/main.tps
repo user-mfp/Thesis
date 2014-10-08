@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\museums.tex
+Document=main.tex
 
 [Frame0_View0,0]
-TopLine=72
-Cursor=4526
+TopLine=0
+Cursor=3374
 
 [Frame1]
 Flags=0
@@ -32,11 +32,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\evaluation.tex
+Document=..\chapter\museums.tex
 
 [Frame1_View0,0]
-TopLine=0
-Cursor=401
+TopLine=227
+Cursor=11642
 
 [Frame2]
 Flags=0
@@ -50,11 +50,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=preambel\preambel.tex
+Document=..\chapter\introduction.tex
 
 [Frame2_View0,0]
-TopLine=12
-Cursor=1171
+TopLine=0
+Cursor=41
 
 [Frame3]
 Flags=0
@@ -68,11 +68,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\introduction.tex
+Document=..\chapter\conception.tex
 
 [Frame3_View0,0]
-TopLine=105
-Cursor=503
+TopLine=21
+Cursor=2757
 
 [Frame4]
 Flags=0
@@ -86,11 +86,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\abstract.tex
+Document=..\chapter\legend.tex
 
 [Frame4_View0,0]
 TopLine=0
-Cursor=451
+Cursor=335
 
 [Frame5]
 Flags=0
@@ -104,11 +104,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\legend.tex
+Document=..\chapter\implementation.tex
 
 [Frame5_View0,0]
 TopLine=0
-Cursor=291
+Cursor=361
 
 [Frame6]
 Flags=0
@@ -122,11 +122,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\related_work.tex
+Document=..\chapter\discussion.tex
 
 [Frame6_View0,0]
-TopLine=76
-Cursor=687
+TopLine=0
+Cursor=216
 
 [Frame7]
 Flags=0
@@ -140,11 +140,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\installation.tex
+Document=..\chapter\future_work.tex
 
 [Frame7_View0,0]
 TopLine=0
-Cursor=254
+Cursor=486
 
 [Frame8]
 Flags=0
@@ -158,11 +158,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\implementation.tex
+Document=..\chapter\evaluation.tex
 
 [Frame8_View0,0]
 TopLine=0
-Cursor=550
+Cursor=401
 
 [Frame9]
 Flags=0
@@ -176,11 +176,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\conception.tex
+Document=preambel\preambel.tex
 
 [Frame9_View0,0]
 TopLine=0
-Cursor=0
+Cursor=1515
 
 [Frame10]
 Flags=0
@@ -194,11 +194,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=main.tex
+Document=..\chapter\abstract.tex
 
 [Frame10_View0,0]
-TopLine=97
-Cursor=3546
+TopLine=0
+Cursor=451
 
 [Frame11]
 Flags=0
@@ -212,11 +212,11 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\future_work.tex
+Document=..\chapter\related_work.tex
 
 [Frame11_View0,0]
-TopLine=0
-Cursor=486
+TopLine=77
+Cursor=687
 
 [Frame12]
 Flags=0
@@ -230,13 +230,13 @@ NormalPos.top=26
 NormalPos.right=917
 NormalPos.bottom=888
 Class=LaTeXView
-Document=..\chapter\discussion.tex
+Document=..\chapter\installation.tex
 
 [Frame12_View0,0]
 TopLine=0
-Cursor=216
+Cursor=254
 
 [SessionInfo]
 FrameCount=13
-ActiveFrame=0
+ActiveFrame=3
 
