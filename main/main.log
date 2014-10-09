@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  8 OCT 2014 14:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  9 OCT 2014 15:06
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1653,78 +1653,98 @@ Class scrbook Warning: \float@addtolists detected!
 
 ]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 27.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 10.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2
+)
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
-] [3]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+[2
+
+] [3] [4]
 Package acronym Info: Label `acro:HMD' newly defined as it shall be overridden
 although it is yet undefined on input line 128.
-)
-(C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [4]
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex
+[5]
 Chapter 3.
 Package acronym Info: Label `acro:FSD' newly defined as it shall be overridden
 although it is yet undefined on input line 34.
-[5
+[6
 
 ]
 Package acronym Info: Label `acro:MVT' newly defined as it shall be overridden
 although it is yet undefined on input line 72.
- [6]
+ [7]
 Overfull \hbox (3.04507pt too wide) in paragraph at lines 183--184
  \T1/lmss/m/n/10.95 Deutsches Bi-enen-mu-seum[] \T1/lmr/m/n/10.95 The mu-seum i
 s run by the bee-keep-ers as-so-ci-a-tion of Thuringia.
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [8]
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [9]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[9
+[10
 
-] [10] [11] [12])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [13]
+] [11] [12] [13])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [14]
 Chapter 5.
 Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
-[14
+[15
 
-] [15]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
-[16]
+] [16]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
+[17]
 Chapter 6.
-[17
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [18]
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+[18
+
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [19]
 Chapter 7.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [19
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [20
 
 ]
 Chapter 8.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [20
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [21
 
 ]
 Chapter 9.
 
-LaTeX Warning: Reference `introduction' on page 21 undefined on input line 7.
+LaTeX Warning: Reference `introduction' on page 22 undefined on input line 7.
 
 
-LaTeX Warning: Reference `related_work' on page 21 undefined on input line 7.
+LaTeX Warning: Reference `related_work' on page 22 undefined on input line 7.
 
-) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [21
+) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [22
 
 ])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [22
+(C:\Users\User\Documents\GitHub\Thesis\chapter\affidavit.tex [23
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
@@ -1732,7 +1752,7 @@ LaTeX Warning: Reference `related_work' on page 21 undefined on input line 7.
 Package caption Warning: Unused \captionsetup[subfloat] on input line 247.
 See the caption package documentation for explanation.
 
-[23
+[24
 
 ] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
 
@@ -1894,13 +1914,13 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  22922 strings out of 493921
  412959 string characters out of 3144879
- 503743 words of memory out of 3000000
+ 505743 words of memory out of 3000000
  25638 multiletter control sequences out of 15000+200000
  77545 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,9n,60p,1475b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files (x86)/
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/
 MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr
@@ -1913,9 +1933,9 @@ ype1/public/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (29 pages, 341353 bytes).
+Output written on main.pdf (30 pages, 344107 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
