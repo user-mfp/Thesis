@@ -2,49 +2,49 @@
 \contentsline {subsubsection}{\nonumberline Affidavit}{v}
 \contentsline {chapter}{\numberline {1}Abstract}{1}
 \contentsline {chapter}{\numberline {2}Introduction}{2}
-\contentsline {chapter}{\numberline {3}Background and Motivation}{3}
-\contentsline {section}{\numberline {3.1}Museums}{3}
-\contentsline {section}{\numberline {3.2}Public Interfaces}{4}
-\contentsline {paragraph}{\nonumberline Public Interfaces - Annotations}{4}
-\contentsline {paragraph}{\nonumberline Single User-Interfaces - Annotations}{5}
-\contentsline {section}{\numberline {3.3}Tangible Interfaces}{5}
-\contentsline {section}{\numberline {3.4}Virtual Reality}{5}
-\contentsline {paragraph}{\nonumberline Annotations}{5}
-\contentsline {section}{\numberline {3.5}Goal}{6}
+\contentsline {chapter}{\numberline {3}Background and Motivation}{4}
+\contentsline {section}{\numberline {3.1}Museums}{4}
+\contentsline {section}{\numberline {3.2}Public Interfaces}{5}
+\contentsline {paragraph}{\nonumberline Public Interfaces - Annotations}{5}
+\contentsline {paragraph}{\nonumberline Single User-Interfaces - Annotations}{6}
+\contentsline {section}{\numberline {3.3}Tangible Interfaces}{6}
+\contentsline {section}{\numberline {3.4}Virtual Reality}{6}
 \contentsline {paragraph}{\nonumberline Annotations}{6}
-\contentsline {chapter}{\numberline {4}Partnering}{7}
-\contentsline {section}{\numberline {4.1}Requirement analysis}{7}
-\contentsline {section}{\numberline {4.2}Further investigation}{8}
-\contentsline {section}{\numberline {4.3}Determination}{9}
-\contentsline {paragraph}{\nonumberline Deutsches Bienenmuseum}{10}
-\contentsline {paragraph}{\nonumberline Palais Schardt}{10}
-\contentsline {paragraph}{\nonumberline Museum f\IeC {\"u}r Ur- und Fr\IeC {\"u}hgeschichte Th\IeC {\"u}ringens}{10}
-\contentsline {chapter}{\numberline {5}Conception}{11}
-\contentsline {section}{\numberline {5.1}System design}{11}
-\contentsline {section}{\numberline {5.2}Constraints}{12}
-\contentsline {paragraph}{\nonumberline Annotations}{12}
-\contentsline {section}{\numberline {5.3}Final concept}{13}
+\contentsline {section}{\numberline {3.5}Goal}{7}
+\contentsline {paragraph}{\nonumberline Annotations}{7}
+\contentsline {chapter}{\numberline {4}Partnering}{8}
+\contentsline {section}{\numberline {4.1}Requirement analysis}{8}
+\contentsline {section}{\numberline {4.2}Further investigation}{9}
+\contentsline {section}{\numberline {4.3}Determination}{10}
+\contentsline {paragraph}{\nonumberline Deutsches Bienenmuseum}{11}
+\contentsline {paragraph}{\nonumberline Palais Schardt}{11}
+\contentsline {paragraph}{\nonumberline Museum f\IeC {\"u}r Ur- und Fr\IeC {\"u}hgeschichte Th\IeC {\"u}ringens}{11}
+\contentsline {chapter}{\numberline {5}Conception}{12}
+\contentsline {section}{\numberline {5.1}System design}{12}
+\contentsline {section}{\numberline {5.2}Constraints}{13}
 \contentsline {paragraph}{\nonumberline Annotations}{13}
-\contentsline {section}{\numberline {5.4}Testing}{14}
+\contentsline {section}{\numberline {5.3}Final concept}{14}
 \contentsline {paragraph}{\nonumberline Annotations}{14}
-\contentsline {chapter}{\numberline {6}Implementation}{16}
-\contentsline {section}{\numberline {6.1}Interactive Museum Installation - Libraries}{16}
-\contentsline {paragraph}{\nonumberline Annotations}{16}
-\contentsline {section}{\numberline {6.2}Interactive Museum Installation - Administration-software}{16}
-\contentsline {paragraph}{\nonumberline Annotations}{16}
-\contentsline {section}{\numberline {6.3}Interactive Museum Installation - Presentation-software}{17}
+\contentsline {section}{\numberline {5.4}Testing}{15}
+\contentsline {paragraph}{\nonumberline Annotations}{15}
+\contentsline {chapter}{\numberline {6}Implementation}{17}
+\contentsline {section}{\numberline {6.1}Interactive Museum Installation - Libraries}{17}
 \contentsline {paragraph}{\nonumberline Annotations}{17}
-\contentsline {section}{\numberline {6.4}Interactive Museum Installation - Presentation-remote}{18}
+\contentsline {section}{\numberline {6.2}Interactive Museum Installation - Administration-software}{17}
+\contentsline {paragraph}{\nonumberline Annotations}{17}
+\contentsline {section}{\numberline {6.3}Interactive Museum Installation - Presentation-software}{18}
 \contentsline {paragraph}{\nonumberline Annotations}{18}
-\contentsline {section}{\numberline {6.5}Interactive Museum Installation - Statistics-tool}{18}
-\contentsline {paragraph}{\nonumberline Annotations}{18}
-\contentsline {chapter}{\numberline {7}Installation}{19}
+\contentsline {section}{\numberline {6.4}Interactive Museum Installation - Presentation-remote}{19}
 \contentsline {paragraph}{\nonumberline Annotations}{19}
-\contentsline {section}{\numberline {7.1}Lab-setup}{19}
-\contentsline {section}{\numberline {7.2}Final museum-setup}{19}
-\contentsline {chapter}{\numberline {8}Evaluation}{21}
-\contentsline {paragraph}{\nonumberline Annotations}{21}
-\contentsline {chapter}{\numberline {9}Discussuion}{22}
+\contentsline {section}{\numberline {6.5}Interactive Museum Installation - Statistics-tool}{19}
+\contentsline {paragraph}{\nonumberline Annotations}{19}
+\contentsline {chapter}{\numberline {7}Installation}{20}
+\contentsline {paragraph}{\nonumberline Annotations}{20}
+\contentsline {section}{\numberline {7.1}Lab-setup}{20}
+\contentsline {section}{\numberline {7.2}Final museum-setup}{20}
+\contentsline {chapter}{\numberline {8}Evaluation}{22}
 \contentsline {paragraph}{\nonumberline Annotations}{22}
-\contentsline {chapter}{\numberline {10}Future Work}{23}
-\contentsline {chapter}{\nonumberline Bibliography}{24}
+\contentsline {chapter}{\numberline {9}Discussuion}{23}
+\contentsline {paragraph}{\nonumberline Annotations}{23}
+\contentsline {chapter}{\numberline {10}Future Work}{24}
+\contentsline {chapter}{\nonumberline Bibliography}{25}

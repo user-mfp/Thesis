@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  15 OCT 2014 17:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.25)  20 OCT 2014 14:44
 entering extended mode
 **main
 (C:\Users\User\Documents\GitHub\Thesis\main\main.tex
@@ -1656,9 +1656,15 @@ Class scrbook Warning: \float@addtolists detected!
 
 ]
 Chapter 2.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\motivation.tex [2
+Package acronym Info: Label `acro:RFID' newly defined as it shall be overridden
+
+although it is yet undefined on input line 19.
+[2
 
 ]
+Package acronym Info: Label `acro:FSD' newly defined as it shall be overridden
+although it is yet undefined on input line 31.
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\motivation.tex [3]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--6
@@ -1668,74 +1674,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 32.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
+) [4
 
-] [4]
+] [5] [6]
 Package acronym Info: Label `acro:HMD' newly defined as it shall be overridden
-although it is yet undefined on input line 122.
- [5])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [6]
+although it is yet undefined on input line 130.
+)
+(C:\Users\User\Documents\GitHub\Thesis\chapter\museums.tex [7]
 Chapter 4.
-Package acronym Info: Label `acro:FSD' newly defined as it shall be overridden
-although it is yet undefined on input line 34.
-[7
+[8
 
 ]
 Package acronym Info: Label `acro:MVT' newly defined as it shall be overridden
 although it is yet undefined on input line 72.
- [8]
+ [9]
 Overfull \hbox (3.04507pt too wide) in paragraph at lines 183--184
  \T1/lmss/m/n/10.95 Deutsches Bi-enen-mu-seum[] \T1/lmr/m/n/10.95 The mu-seum i
 s run by the bee-keep-ers as-so-ci-a-tion of Thuringia.
  []
 
-[9]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [10]
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\conception.tex [11]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--17
 
  []
 
-[11
+[12
 
-] [12] [13] [14])
-(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [15]
+] [13] [14] [15])
+(C:\Users\User\Documents\GitHub\Thesis\chapter\implementation.tex [16]
 Chapter 6.
 Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
-[16
+[17
 
-] [17]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
-[18]
+] [18]) (C:\Users\User\Documents\GitHub\Thesis\chapter\installation.tex
+[19]
 Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
-[19
+[20
 
-]) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [20]
+]) (C:\Users\User\Documents\GitHub\Thesis\chapter\evaluation.tex [21]
 Chapter 8.
 Package acronym Info: Label `acro:LOS' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [21
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\discussion.tex [22
 
 ]
 Chapter 9.
-) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [22
+) (C:\Users\User\Documents\GitHub\Thesis\chapter\future_work.tex [23
 
 ]
 Chapter 10.
 
-LaTeX Warning: Reference `related_work' on page 23 undefined on input line 7.
+LaTeX Warning: Reference `related_work' on page 24 undefined on input line 7.
 
-) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [23
+) (C:\Users\User\Documents\GitHub\Thesis\main\main.bbl [24
 
 ])
 (C:\Users\User\Documents\GitHub\Thesis\chapter\appendix.tex)
@@ -1743,7 +1747,7 @@ LaTeX Warning: Reference `related_work' on page 23 undefined on input line 7.
 Package caption Warning: Unused \captionsetup[subfloat] on input line 247.
 See the caption package documentation for explanation.
 
-[24
+[25
 
 ] (C:\Users\User\Documents\GitHub\Thesis\main\main.aux)
 
@@ -1904,10 +1908,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 22930 strings out of 493921
- 413206 string characters out of 3144879
+ 22936 strings out of 493921
+ 413265 string characters out of 3144879
  504743 words of memory out of 3000000
- 25643 multiletter control sequences out of 15000+200000
+ 25649 multiletter control sequences out of 15000+200000
  77545 words of font info for 58 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  64i,9n,60p,1475b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1925,9 +1929,9 @@ ype1/public/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (31 pages, 345622 bytes).
+Output written on main.pdf (32 pages, 360063 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -101,8 +101,8 @@ The \textit{medien.welten}-exhibition at \textit{Technisches Museum Wien} was no
 \label{related_work_tangible}
 
 \begin{itemize}
-	\item Paper: 'Token+constraint' Ullmer/Ishii/Jacob
-	\item This way, even orientation could influence the type of information. 
+	\item [Ref: 'Token+constraint' Ullmer/Ishii/Jacob]
+		\\This way, even orientation could influence the type of information. Such a tangible could be made interactive by using \ac{RFID}-technology\footnote{RFID-transponders or -tags do not require any batteries, are cheap and robust. In addition, their range is very limited, which allows several tags on one tangible.}.
 \end{itemize}
 
 %------------------------------------------------------------------------------------------
