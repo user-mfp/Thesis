@@ -31,7 +31,9 @@ default:	ma clean
 #.PHONY:		realclean clean ma
 
 fast:
-	$(PDFLATEX) $(PROJECT)
+	$(PDFLATEX) -interaction batchmode $(PROJECT)
+	
+qc:ma fast clean
 	
 ma:
 	@echo "1st latex run..."

@@ -31,14 +31,17 @@ The name ''museum'' comes from the ancient greek's ''Museion''. It describes an,
 \\
 One of the first high-tech installation of the modern age was the \textit{Diorama}. In 1821, Louis Jacque Mandé Daguerre\footnote{Daguerre is a scene painter and stage designer by trade. He also is the inventor of the first photographic process called daguerreotypy} and the painter Charles Marie Bouton partnered up to develop this spectacle. It is an elaborate combination of painting and lighting~\cite{DioramaDaguerre}. Through ingenious lighting, the paintings became vivid. This way, a diorama could simulate the moods of a whole day within minutes. Thus, it might be seen as an early predecessor of the cinema. Even today, although in much smaller size, dioramas are still thematised~\cite{DioramaSchneider}.
 \\
-The first interactive displays appeared at the \textit{Urania} in Berlin around 1889, when they introduces visitor-activated models and a scientific theater. In 1907 the \textit{Deutsches Museum} in Munich also began experimenting with film and mechanical models, which were operated by visitors~\cite{MuseumsHistoryMcLean}. Later, other museums all over the world followed. Since then the ''[...] \textit{wider museological community's understanding of nature and purpose of interactiveness''} has taken shape. \textit{''This understanding almost invariably involves:
+The first interactive displays appeared at the \textit{Urania} in Berlin around 1889, when they introduces visitor-activated models and a scientific theater. In 1907 the \textit{Deutsches Museum} in Munich also began experimenting with film and mechanical models, which were operated by visitors~\cite{MuseumsHistoryMcLean}. Later, other museums all over the world followed. Since then the \textit{''[...] wider museological community's understanding of nature and purpose of interactiveness''}~\cite{MuseumsHistoryWitcomb} has taken shape and \textit{''this understanding almost invariably involves:
 \begin{enumerate}
 	\item The presence of some technological medium.
 	\item A physical exhibit which is added to the main display.
-	\item A device which the visitor can operate, involving physical activity.''\textnormal{~\cite{MuseumsHistoryWitcomb}}
+	\item A device which the visitor can operate, involving physical activity.''
 \end{enumerate}}
 
-As electronics and microchips evolved, computers became popular and affordable. The technological equipment of museums grew with what was available:
+
+
+
+It started with panoramas, dioramas and later simple mechanics, which moved models. After that basic electronics were included, which illuminated particular exhibits. Microchips and computers became more and more popular and affordable. So, the technological equipment of museums grew with what was available:
 \begin{itemize}
 	\item Guide-Systems (Audio, App and others)
 	\item Info-Terminals w/ Touch Screens
