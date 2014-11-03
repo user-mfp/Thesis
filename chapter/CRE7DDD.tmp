@@ -31,13 +31,12 @@ The name ''museum'' comes from the ancient greek's ''Museion''. It describes an,
 \\
 One of the first high-tech installation of the modern age was the \textit{Diorama}. In 1821, Louis Jacque Mandé Daguerre\footnote{Daguerre is a scene painter and stage designer by trade. He also is the inventor of the first photographic process called daguerreotypy} and the painter Charles Marie Bouton partnered up to develop this spectacle. It is an elaborate combination of painting and lighting~\cite{DioramaDaguerre}. Through ingenious lighting, the paintings became vivid. This way, a diorama could simulate the moods of a whole day within minutes. Thus, it might be seen as an early predecessor of the cinema. Even today, although in much smaller size, dioramas are still thematised~\cite{DioramaSchneider}.
 \\
-The first interactive displays appeared at the \textit{Urania} in Berlin around 1889, when they introduces visitor-activated models and a scientific theater. In 1907 the \textit{Deutsches Museum} in Munich also began experimenting with film and mechanical models, which were operated by visitors~\cite{MuseumsHistoryMcLean}. Later, other museums all over the world followed. Since then the \begin{quote}[...] wider museological community's understanding of nature and purpose of interactiveness \end{quote} has taken shape. \begin{quote}This understanding almost invariably involves:
-	\begin{enumerate}
-		\item The presence of some technological medium.
-		\item A physical exhibit which is added to the main display.
-		\item A device which the visitor can operate, involving physical activity.~\cite{MuseumsHistoryWitcomb}
-	\end{enumerate}
-\end{quote}
+The first interactive displays appeared at the \textit{Urania} in Berlin around 1889, when they introduces visitor-activated models and a scientific theater. In 1907 the \textit{Deutsches Museum} in Munich also began experimenting with film and mechanical models, which were operated by visitors~\cite{MuseumsHistoryMcLean}. Later, other museums all over the world followed. Since then the ''[...] \textit{wider museological community's understanding of nature and purpose of interactiveness''} has taken shape. \textit{''This understanding almost invariably involves:
+\begin{enumerate}
+	\item The presence of some technological medium.
+	\item A physical exhibit which is added to the main display.
+	\item A device which the visitor can operate, involving physical activity.''\textnormal{~\cite{MuseumsHistoryWitcomb}}
+\end{enumerate}}
 
 As electronics and microchips evolved, computers became popular and affordable. The technological equipment of museums grew with what was available and new kinds of devices and installations appeared. Today, nearly every museum has a certain guide system such as an audio guide. It either leads visitors through the museum on a predefined course or a visitor can choose the track according to a given code for each included exhibit. In 2004, Chou et al.  compared different museum guide systems in various categories, which were considered necessary to provide a user-friendly and informative experience. Expositors, tape machines, CD-players and a PDA were judged. The PDA was most versatile and easy to use system~\cite{MuseumGuideSystems} (\textit{Figure 1.}). The described system had the portability of an audio guide, but due to position recognition the PDA would always present the current exhibit. The system could replace common audio guides and immobile information terminals all together. In addition, it still was able to give predefined tours depending on the user's interests.
 \\
@@ -81,27 +80,25 @@ The \textit{medien.welten}-exhibition at \textit{Technisches Museum Wien} was no
 \section{Interfaces and Interaction}
 \label{motivation_interfaces}
 
-The only connecting link between user and system is the interface. It dictates the way of interaction and, therefore, whether the whole systems works or not. A ground breaking system is worth nothing without proper interaction between its operator and it. This presents the need for suitable kinds of input and feedback. Thus, Ben Shneiderman once introduced his \textit{eight golden rules of interface design}:
-\begin{quote}
-	\begin{enumerate}
-		\item Strive for consistency.
-	%Consistent sequences of actions should be required in similar situations; identical terminology should be used in prompts, menus, and help screens; and consistent commands should be employed throughout.
-		\item Enable frequent users to use shortcuts.
-	%As the frequency of use increases, so do the user's desires to reduce the number of interactions and to increase the pace of interaction. Abbreviations, function keys, hidden commands, and macro facilities are very helpful to an expert user.
-		\item Offer informative feedback.
-	%For every operator action, there should be some system feedback. For frequent and minor actions, the response can be modest, while for infrequent and major actions, the response should be more substantial.
-		\item Design dialog to yield closure.
-	%Sequences of actions should be organized into groups with a beginning, middle, and end. The informative feedback at the completion of a group of actions gives the operators the satisfaction of accomplishment, a sense of relief, the signal to drop contingency plans and options from their minds, and an indication that the way is clear to prepare for the next group of actions.
-		\item Offer simple error handling.
-	%As much as possible, design the system so the user cannot make a serious error. If an error is made, the system should be able to detect the error and offer simple, comprehensible mechanisms for handling the error.
-		\item Permit easy reversal of actions.
-	%This feature relieves anxiety, since the user knows that errors can be undone; it thus encourages exploration of unfamiliar options. The units of reversibility may be a single action, a data entry, or a complete group of actions.
-		\item Support internal locus of control.
-	%Experienced operators strongly desire the sense that they are in charge of the system and that the system responds to their actions. Design the system to make users the initiators of actions rather than the responders.
-		\item Reduce short-term memory load.~\textnormal{\cite{DesigningTheUI}}
-	%The limitation of human information processing in short-term memory requires that displays be kept simple, multiple page displays be consolidated, window-motion frequency be reduced, and sufficient training time be allotted for codes, mnemonics, and sequences of actions. 
-	\end{enumerate}
-\end{quote}
+The only connecting link between user and system is the interface. It dictates the way of interaction and, therefore, whether the whole systems works or not. A ground breaking system is worth nothing without proper interaction between its operator and it. This presents the need for suitable kinds of input and feedback. Thus, Ben Shneiderman once introduced his \textit{''eight golden rules of interface design}\footnote{gleiches Kapitel, andere Seite}:
+\textit{\begin{enumerate}
+	\item Strive for consistency.
+%Consistent sequences of actions should be required in similar situations; identical terminology should be used in prompts, menus, and help screens; and consistent commands should be employed throughout.
+	\item Enable frequent users to use shortcuts.
+%As the frequency of use increases, so do the user's desires to reduce the number of interactions and to increase the pace of interaction. Abbreviations, function keys, hidden commands, and macro facilities are very helpful to an expert user.
+	\item Offer informative feedback.
+%For every operator action, there should be some system feedback. For frequent and minor actions, the response can be modest, while for infrequent and major actions, the response should be more substantial.
+	\item Design dialog to yield closure.
+%Sequences of actions should be organized into groups with a beginning, middle, and end. The informative feedback at the completion of a group of actions gives the operators the satisfaction of accomplishment, a sense of relief, the signal to drop contingency plans and options from their minds, and an indication that the way is clear to prepare for the next group of actions.
+	\item Offer simple error handling.
+%As much as possible, design the system so the user cannot make a serious error. If an error is made, the system should be able to detect the error and offer simple, comprehensible mechanisms for handling the error.
+	\item Permit easy reversal of actions.
+%This feature relieves anxiety, since the user knows that errors can be undone; it thus encourages exploration of unfamiliar options. The units of reversibility may be a single action, a data entry, or a complete group of actions.
+	\item Support internal locus of control.
+%Experienced operators strongly desire the sense that they are in charge of the system and that the system responds to their actions. Design the system to make users the initiators of actions rather than the responders.
+	\item Reduce short-term memory load.''~\textnormal{\cite{DesigningTheUI}}
+%The limitation of human information processing in short-term memory requires that displays be kept simple, multiple page displays be consolidated, window-motion frequency be reduced, and sufficient training time be allotted for codes, mnemonics, and sequences of actions. 
+\end{enumerate}}
 
 Following this guideline should yield a well operable interface. However, there still might be particular difficulties for specialized or novel systems. Especially public user-interfaces bring new factors, which are not explicitly included in Shneiderman's rules. How should an interface behave,
 \begin{itemize}
@@ -110,28 +107,28 @@ Following this guideline should yield a well operable interface. However, there 
 	\item if there are multiple users?
 \end{itemize}
 
-The ideal interface should be as intuitive and naturally to use as possible. This requirement was already addressed in 1980 by Richard A. Bolt. He described the \textit{Media Room} at \ac{MIT} as an office with a chair, a wall-sized screen and other analogue or electronic installations. The room's equipment allowed the user to navigate through the \textit{\ac{SDMS}} called \textit{Dataland}. The user would sit down and had several input-devices at its disposal. One of them was a small device that could measure its position and orientation in space. The device was used to calculate where on the big screen the user was pointing. In combination with simple voice-commands the user was able to create and manipulate geometrical primitives~\cite{PutThatThereUI}.
+The ideal interface should be as intuitive and naturally to use as possible. This requirement was already addressed in 1980 by Richard A. Bolt. He described the \textit{Media Room} at \ac{MIT} as an office with a chair, a wall-sized screen and other analogue or electronic installations. The room's equipment allowed the user to navigate through the \textit{\ac{SDMS}} called \textit{''Dataland''}. The user would sit down and had several input-devices at its disposal. One of them was a small device that could measure its position and orientation in space. The device was used to calculate where on the big screen the user was pointing. In combination with simple voice-commands the user was able to create and manipulate geometrical primitives~\cite{PutThatThereUI}.
 \\
-Since then, this seemingly futuristic furnishing could not be established as a common way of interaction. Keyboard and Mouse are still the most widely used input-devices. Meanwhile, touchscreens and voice-recognition are closing the gap though. The principle of \ac{WYSIWYG}\footnote{\ac{WYSIWYG} first came up in the 1970s, when the first office-programs appeared. Due to different resolution-densities of displays and printers, it was necessary to show correct relations of letters and page. Later on, the term was synonymously used for \ac{GUI}-elements.} became of ever greater importance. Many interfaces are designed with Shneiderman's rules and usability in mind. Developments in \ac{HCI} seem promising. More intuitive devices and interfaces are developed and tested thoroughly. 
+Since then, this seemingly futuristic furnishing could not be established as a common way of interaction. Keyboard and Mouse are still the most widely used input-devices. Meanwhile, touchscreens and voice-recognition are closing the gap though. The principle of \ac{WYSIWYG}\footnote{\ac{WYSIWYG} first came up in the 1970s, when the first office-programs appeared. Due to different resolution-densities of displays and printers, it was necessary to show correct relations of letters and page. Later on, the term was synonymously used for \ac{GUI}-elements.} is of ever greater importance. Many interfaces are designed with Shneiderman's rules and usability in mind. Developments in \ac{HCI} seem promising. More intuitive devices and interfaces are developed and tested thoroughly. 
 
-There are basically two types of interfaces. A \ac{SUI} is designed to be operated by only one user, whereas a \ac{MUI} can be operated by a group of users at once. However, there is no strict distinction between the two. People might look over a \ac{SUI}'s user's shoulder and give instructions, or a lone person could operate a \ac{MUI} on its own. Another factor that influences how people use an interface is the occasion. Public interfaces, such as a kiosk system at a cinema or for photo-developing provide a \ac{GUI} on a touchscreen. Those systems are intended to be used by a single user, but might also be confronted with groups. Azad et al. investigated how groups behave around such kiosks. Most groups approached the interface asynchronously. Meaning, one member is interacting with the system, while the others watch. As time passes, the rest of the group might get more active due to \textit{intra-group communication}. They further observed, that \begin{quote}there is a semantic, profound difference between pointing and touching. Users who point are communicating ideas within a social group and may not want the technology to treat it as input.~\cite{AzadMultiUI}\end{quote} Moreover, inter-group communication is also of great importance. Shyness or frustration may inhibit an individual or group from interacting with a system. Other, strange people can ease the use, when the act as an example or explain their actions to those shy or frustrated~\cite{PublicUI}.~\cite{InteractiveExhibits}
+There are basically two types of interfaces. A \ac{SUI} is designed to be operated by only one user, whereas a \ac{MUI} can be operated by a group of persons at once. However, there is no strict distinction between the two. People might look over a \ac{SUI}'s user and give instructions, or a lone person could operate a \ac{MUI} on its own. Another factor that influences how people use an interface is the occasion. Public interfaces, such as a kiosk system at a cinema or for photo-developing provide a \ac{GUI} on a touchscreen. Those systems are intended to be used by a single user, but might also be confronted with groups. Azad et al. investigated how groups behave around such kiosks. Most groups approached the interface asynchronously. Meaning, one member is interacting with the system, while the others watch. As time passes, the rest of the group might get more active due to \textit{intra-group communication}. They further observed, that \textit{''there is a semantic, profound difference between pointing and touching. Users who point are communicating ideas within a social group and may not want the technology to treat it as input.''}~\cite{AzadMultiUI}
 
 Interfaces can not only be categorized by their intended demographics. Input- and output-devices dictate the kind of interaction. As mentioned earlier, keyboard and mouse are being replaced with novel technologies. 
-[...]
+[...]~\cite{TangibleUI}~\cite{PublicUI}~\cite{InteractiveExhibits}
 
-%\begin{enumerate}
-	%\item Anzahl - Interfaces
-	%\begin{enumerate}
-		%\item Single-user interface
-		%\item Multi-user interface
-	%\end{enumerate}
-	%\item Eingabemethoden - Interaction
-	%\begin{enumerate}
-		%\item Established Devices (Keyboard, Mouse, and Touch interaction)
-		%\item Tangible interaction~\cite{TangibleUI}
-		%\item VR-interaction~\cite{VRObjectSelectionCnG}
-	%\end{enumerate}
-%\end{enumerate}
+\begin{enumerate}
+	\item Anzahl - Interfaces
+	\begin{enumerate}
+		\item Single-user interface
+		\item Multi-user interface
+	\end{enumerate}
+	\item Eingabemethoden - Interaction
+	\begin{enumerate}
+		\item Touch interaction
+		\item Tangible interaction
+		\item VR-interaction
+	\end{enumerate}
+\end{enumerate}
 
 %------------------------------------------------------------------------------------------
 
@@ -204,14 +201,5 @@ Interfaces can not only be categorized by their intended demographics. Input- an
 \paragraph{Annotations}
 
 \begin{itemize}
-	\item 'Why did I do, what I did?'
-	\\
-	\textit{''Unfortunately, current user interfaces often lack adequate support for 3D interactions: 2D desktop systems are limited in cases where natural interaction with 3D content is required, and 3D user interfaces consisting of stereoscopic projections and tracked input devices are rarely adopted by ordinary users. The success, both in research and commercial applications, of recent touch-based interfaces raise an interesting possibility. Can the immediacy, control, and expressiveness of recent touch-based natural interfaces be applied to 3D problems?''}~\cite{ForewordCnG}
-	\item 'What did I want to do?'
-	\\
-	\textit{Freehand Selection Gesture Pointing}~\cite{FreehandSelectionCnG}
-	\\
-	\textit{SMSlingshot}~\cite{SMSlingshot}
-	\\
-	\textit{Shared Encounters}~\cite{UrbanHCI}
+	\item 'What did I want to do?'\footnote{anderes Kapitel, gleiche Seite}
 \end{itemize}
