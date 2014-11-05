@@ -83,9 +83,12 @@
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \usepackage{url} % Setzen von URLs. In Verbindung mit hyperref sind diese auch aktive Links.
-\usepackage[stable,perpage, ragged,  multiple]{footmisc} % Fussnoten
+\usepackage[stable, ragged,  multiple]{footmisc} % Fussnoten 'perpage' entfernt
 \usepackage[english]{varioref} % Intelligente Querverweise /change to ngerman if needed
 \usepackage{enumitem} % Listen
+
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter} % Fussnoten unabhängig vom chapter hochzaehlen
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % Pakete zum Zitieren
