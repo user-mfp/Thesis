@@ -226,12 +226,20 @@ This was only a short overview of some existing interfaces and forms of input. T
 \section{Goal}
 \label{motivation_goal}
 
-After having gathered experiences with several of the aforementioned interaction techniques, I intended to combine those experiences into a unique interface. Especially the intuitive motivation behind tangibles, touch-based interfaces and the immersive nature of \ac{VR}-environments are interesting fields.
+Without too much anticipation, I briefly want to explain what motivated me to do what I did and how I did it. After having gathered experiences with several of the aforementioned interaction techniques, I intended to combine those experiences into a unique interface. Especially the intuitive motivation behind tangibles, touch sensitive interfaces and the immersive nature of \ac{VR}-environments fascinate me.
 \begin{quote}
 	Unfortunately, current user interfaces often lack adequate support for 3D interactions: 2D desktop systems are limited in cases where natural interaction with 3D content is required, and 3D user interfaces consisting of stereoscopic projections and tracked input devices are rarely adopted by ordinary users. The success, both in research and commercial applications, of recent touch-based interfaces raise an interesting possibility. Can the immediacy, control, and expressiveness of recent touch-based natural interfaces be applied to 3D problems?~\cite{ForewordCnG}
 \end{quote}
-I wanted to answer this question. But before that, several issues had to be dealt with. First, a suitable cooperation partner would have to be found. As described earlier, a museum in Weimar was ideal. I merely needed access to an unbiased audience and topical expertise. Second, we would have to agree on a feasible concept and clarify responsibilities. Subsequently, the system would have to be developed and implemented before the final installation could be evaluated in its real-world environment. Finally, some small adjustments could be made and larger improvements or augmentations should be discussed. 
+I wanted to answer this question. But before that, several issues had to be dealt with. First, a suitable cooperation partner would have to be found. A museum in Weimar was ideal, but any other public or corporate institution could have worked as well. I merely needed access to a unbiased audience and topical expertise. Second, we would have to agree on a feasible concept and clarify responsibilities. Subsequently, the system would have to be developed and implemented before the final installation could be evaluated in its real-world environment. Finally, some small adjustments could be made and larger improvements or augmentations should be discussed. 
 
-A museum was found, concepts were made and a touch-based or \ac{TUI} for \ac{3D} interaction was needed. The \textit{SMSlingshot} combines all this. It is a tangible device, which enables a user to splat short massages onto a facade~\cite{SMSlingshot}. The devices affordance is clear, since most people are aware of the functionality of both a phone-sized keypad and a slingshot. Nevertheless, the device can only be used by one user at a time. This is where \textit{Shared Encounters} come into play. There are different types of interrelated spaces, which offer different grades of interaction between a user and either the interface or others~\cite{UrbanHCI}. In course of my work, those two key concepts will reappear more detailed.
+
+
+\begin{itemize}
+	\item \textbf{What?}
+	\\
+	\textit{Tangible + Pointing \& Aiming: ''SMSlingshot DIY''}~\cite{SMSlingshot}
+	\\
+	\textit{Kinds of Spaces \& Users' Interaction / Intraaction: ''Shared Encounters''}~\cite{UrbanHCI}
+\end{itemize}
 
 In the end, my 'answer' was using the most intuitive device there is -- the user's body itself.

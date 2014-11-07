@@ -124,23 +124,16 @@ A \ac{TUI} are a very natural approach. Here, a tangible object represents a dig
 
 \ac{VR} provides a less tangible approach. Contemporary \ac{VR}-systems offer a way to display and manipulate \ac{3D} data in real-time. Users can be immersed into vast, \ac{3D} environments, which are projected on huge stereoscopic displays or shown by a \ac{HMD}\footnote{Recent, distinct examples are \textit{Occulus Rift} and \textit{Google Glasses}. While Occulus Rift provides a completely closed solution for \ac{3D} \ac{VR}-environments, the Google Glasses are an \ac{AR}-approach. Here, additional information is displayed on top of perceived reality.}. Those systems require a special kind of interaction to either navigate through or select objects in the virtual environment. Therefore, special interaction metaphors were developed. Proper navigation can be realized via any input-device capable of six \ac{DOF}\footnote{One \ac{DOF} is either translation along or rotation around one spacial axis. Hence, there are six possible movements in \ac{3D} space.} and is rather familiar. But, since navigating to each object in order to select and manipulate it is inconvenient, a separate metaphor for interacting with objects had to be developed as well. Thus, a pointing device was introduced. In order to calculate its correct position and direction it has reflective markers in a unique pattern, which are then tracked by a system of infrared cameras (\textit{see Figure 1c})~\cite{PointingDevicesVR}. A virtual ray  into the scene is calculated accordingly. Basically, objects can be selected by pointing at them and triggering selection in some way. \textit{A survey of \ac{3D} object selection techniques for virtual environments} showed that 29 of 31 reviewed techniques were based on ray-interaction. The remaining two used a hand avatar like in \textit{Figure 1a}. Both of them track a user's hand and one also applies ray-based leverage to extend reach~\cite{VRObjectSelectionCnG}.
 \\
-In late 2010, Microsoft began selling the \textit{Kinect for Xbox 360}. Independent drivers and software for it were developed almost immediately, which enabled developers and researchers to utilize the system's capabilities on regular computers. The official \ac{SDK} and \textit{Kinect for Windows} followed about half a year later. Other devices like \textit{ASUS' Xtion PRO} followed working with the identical internal hardware. The more detailed hardware specifications will be explained in chapter \ref{conception}. This development introduced a low cost solution for user-tracking, whilst the aforementioned tracking systems for \ac{VR} are very expensive. Several interfaces were developed making use of the hardware's potential. Thus, its performance and suitability for \ac{VR}-tasks was examined. Ren and O'Neill stated that
-\begin{quote}
-	More and more information and other content is visualized and manipulated in 3D, bringing a corresponding increase in the importance of effective and usable 2D user interfaces.~\cite{FreehandSelectionCnG}
-\end{quote}
-Hence, they conducted two kinds of test. First, they looked into \ac{2D} interaction techniques such as touchscreens and \textit{freehand \ac{3D}} interaction and described similarities and differences. Accordingly, both techniques' \ac{WYSIWYG}-approach makes them spontaneous and direct. This natural \textit{walk-up-and-use} interaction style decreases the interaction cost for any possible user. Further, users are able to move freely, because there are no extra devices to pick up and operate~\cite{FreehandSelectionCnG}.
-In the second test, the low cost solution was evaluated for common \ac{3D} interaction techniques for \ac{VR}-environments and came up with a \textit{design guideline for \ac{3D} freehand interaction}~\cite{FreehandSelectionCnG}.
+In late 2010, Microsoft began selling the \textit{Kinect} for its \textit{Xbox 360}. Drivers and software for it were developed almost immediately, which enabled developers and researchers to utilze the system's capabilities for regular computers. The offical \ac{SDK} for Windows followed about half a year later. The system uses a \textit{depth sensor}
+
+\textbf{Kinect}
 \begin{itemize}
-	\item Avoid single actions with either high accuracy or keeping the hand up for long.
-	\item Use goal crossing~\cite{CrossingBasedInterfaces} as a trigger.
-	\item Map complex \ac{3D}-movements on \ac{2D} interaction.
-	\item Use the extra dimension as a trigger.
-	\item Avoid uncomfortable hand or arm positions.
+	\item cheap solution (pros and cons)
+	\item \textit{''Freehand Selection Gesture Pointing''}~\cite{FreehandSelectionCnG}
+	\item examples: mapping on a 2D-plane
+	\item comparison: touchscreen and 3D-interaction (similarities and differences)
+	\item 
 \end{itemize}
-In the end, Ren and O'Neill concluded: 
-\begin{quote}
-	Freehand gestural selection enabled by a single low cost camera is a potentially valuable technique enabling flexible, low configuration interaction in 3D environments, without any requirement for dedicated devices to be worn on or carried by the user. With appropriate designs, freehand 3D interaction can share the appealing fluidity and immediacy of currently popular multi-touch surfaces, [...] enabling walk-up-and-use access to services, holding the promise of wide applications for ordinary users in everyday life.~\cite{FreehandSelectionCnG}
-\end{quote}
 
 %\begin{enumerate}
 	%\item Anzahl - Interfaces
@@ -219,19 +212,24 @@ In the end, Ren and O'Neill concluded:
 	%\end{itemize}
 %\end{itemize}
 
-This was only a short overview of some existing interfaces and forms of input. There are more specialized interactions like tracking eye-movements or \ac{BCI}. The examples given above represent a general insight of how to interact with a system, as well as the breadth and versatility of possibilities.
+This was only a short overview of some existing interfaces and forms of input. There are more specialized interactions for sure, but the aforementioned examples give a general insight of how to interact with a system, as well as the breadth and versatility of possibilities.
 
 %------------------------------------------------------------------------------------------
 
 \section{Goal}
 \label{motivation_goal}
 
-After having gathered experiences with several of the aforementioned interaction techniques, I intended to combine those experiences into a unique interface. Especially the intuitive motivation behind tangibles, touch-based interfaces and the immersive nature of \ac{VR}-environments are interesting fields.
-\begin{quote}
-	Unfortunately, current user interfaces often lack adequate support for 3D interactions: 2D desktop systems are limited in cases where natural interaction with 3D content is required, and 3D user interfaces consisting of stereoscopic projections and tracked input devices are rarely adopted by ordinary users. The success, both in research and commercial applications, of recent touch-based interfaces raise an interesting possibility. Can the immediacy, control, and expressiveness of recent touch-based natural interfaces be applied to 3D problems?~\cite{ForewordCnG}
-\end{quote}
-I wanted to answer this question. But before that, several issues had to be dealt with. First, a suitable cooperation partner would have to be found. As described earlier, a museum in Weimar was ideal. I merely needed access to an unbiased audience and topical expertise. Second, we would have to agree on a feasible concept and clarify responsibilities. Subsequently, the system would have to be developed and implemented before the final installation could be evaluated in its real-world environment. Finally, some small adjustments could be made and larger improvements or augmentations should be discussed. 
+Without too much anticipation, I briefly want to explain what motivated me to do what I did and how I did it. After sketching out certain kinds of interaction and user-environments
 
-A museum was found, concepts were made and a touch-based or \ac{TUI} for \ac{3D} interaction was needed. The \textit{SMSlingshot} combines all this. It is a tangible device, which enables a user to splat short massages onto a facade~\cite{SMSlingshot}. The devices affordance is clear, since most people are aware of the functionality of both a phone-sized keypad and a slingshot. Nevertheless, the device can only be used by one user at a time. This is where \textit{Shared Encounters} come into play. There are different types of interrelated spaces, which offer different grades of interaction between a user and either the interface or others~\cite{UrbanHCI}. In course of my work, those two key concepts will reappear more detailed.
 
-In the end, my 'answer' was using the most intuitive device there is -- the user's body itself.
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item \textbf{Why?}
+	\\
+	\textit{''Unfortunately, current user interfaces often lack adequate support for 3D interactions: 2D desktop systems are limited in cases where natural interaction with 3D content is required, and 3D user interfaces consisting of stereoscopic projections and tracked input devices are rarely adopted by ordinary users. The success, both in research and commercial applications, of recent touch-based interfaces raise an interesting possibility. Can the immediacy, control, and expressiveness of recent touch-based natural interfaces be applied to 3D problems?''}~\cite{ForewordCnG}
+	\item \textbf{What?}
+	\textit{''SMSlingshot DIY''}~\cite{SMSlingshot}
+	\\
+	\textit{''Shared Encounters''}~\cite{UrbanHCI}
+\end{itemize}
