@@ -51,21 +51,11 @@ In summary, the requirements for the final system were narrowing down the possib
 \section{Constraints and capabilities}
 \label{conception_constraints}
 
-\paragraph{Demo} The early idea behind this work was to work with \ac{MS} Gadgeteer to develop a tangible interface for and with a museum. Thus, we first thought about how to include those Gadgeteer-modules. Therefore, I build a demo in Image \ref{?}, which was based on a \textit{FEZ Spider Starter Kit}~\cite{SpiderKitGHI}. In addition, it utilized an \ac{RFID}-reader~\cite{RFIDreaderGHI} and a potentiometer~\cite{PotentiometerGHI}. The RFID-transponders were attached to an old 2,5" \ac{HDD} and a wireless mouse. When the \ac{RFID}-tags were recognized, an image of the object was displayed on the screen. By turning the potentiometer's knob the angle of view changed accordingly. This gave an impression of the possibilities of the hardware. Unfortunately, we only had two \ac{RFID}-tags that had the size of a credit card. After some research though, I found some tags for the correct frequency band and in sizes from a grain of rice over creditcards to keaychains~\cite{RFIDtransponder}. Hence, including \ac{RFID}-tags in tangibles was feasible. Only the shape and size of the tangibles were still up for debate.
-
 \paragraph{Tangibles}
 
-The main point was, whether the hardware would be placed inside or outside the tangibles. This decision dictates the shape and size of the tangibles and therefore the interaction.
-\\
-If it would be placed inside, the tangibles would have to be big. They would have turned out at approximately the size of a box of milk. Such an \textit{active} tangible would be handy and a whole system could be concentrated in one device. On the other hand, they would be prone to damage and maybe even theft. Hence, the tangibles would have to be tough and in some way attached to the showcase. In addition, batteries would have to be either charged or changed. This would take a certain amount of maintenance.
-\\
-With the Hardware outside the tangibles and hidden in a pedestal in front of the showcase, the tangibles could be smaller. Moreover, \textit{passive} tangibles grant more flexibility concerning the shape as well. Several \ac{RFID}-tags could be placed in each tangible. According to their \textit{constrained} position on the \ac{RFID}-reader could trigger different reactions of the system~\cite{TangibleUI}. The tangibles would have to be attached to the pedestal as well, although they would be cheaper to replace.
+Reproductions and Boxed (Gadgeteer)
 
-Both approaches had their advantages and disadvantages and none of them was concrete enough to make a decision. Thus, we continued to specify possible concepts. 
- 
-Hybrid $\to$ passive pieces in active boxes OR semi-active display with tags in pedestal.  
-
-\paragraph{Tangible pointing}
+\paragraph{Tangible Pointers}
 
 Slingshot (Gadgeteer $\to$ Wii $\to$ Kinect)
 
