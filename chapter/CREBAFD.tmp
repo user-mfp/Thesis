@@ -3,14 +3,14 @@
 
 After the \textit{Museum für Ur- und Frühgeschichte Thürigens} was chosen as a partner, all previous ideas had to be analyzed more thoroughly with feasibility in mind. Thus, impractical and too complex or too simple ideas were eliminated in two rounds of review. At first, vague ideas were either improved or discarded. Hence, a screen displaying only information about a fossilized fireplace was eliminated. The idea of a system for digitizing stone carvings was considered too complex to realize and therefor discarded as well. Afterward, some of the museum's staff and I looked at the contents, that could be provided for the remaining candidates. This left us with two remaining possibilities, that were promising enough from an educational and a technical standpoint. The first one was the reproduction of the \textit{Fürstengrab von Haßleben}, which contains replicas and original findings from a 1700 year old grave of a teutonic princess. A close second was a workshop, which should have shown how archeologists and preparateurs work behind the scenes of a museum. Here, the latter consisted of too many single parts and a lot of questions remained unanswered.
 
-%\begin{figure}[H] % [H] -> Here!
-	%\centering
-	%\includegraphics[scale = 0.7]{../pics/Original.eps}
-	%\caption{Fürstengrab von Haßleben-showcase prior to installation.}
-	%\label{fig:conception_grave}
-%\end{figure}
+\begin{figure}[H] % [H] -> Here!
+	\centering
+	\includegraphics[width=0.5\textwidth]{../pics/Original.pdf}
+	\caption{Fürstengrab von Haßleben-showcase prior to installation.}
+	\label{fig:conception_grave}
+\end{figure}
 
-According to the aforementioned review, the Fürstengrab von Haßleben was most promising and therefore chosen in the end. It contains many special relics from ordinary, teutonic pottery to rare, roman coins and jewelry as shown in Figure \ref{fig:conception_grave}a,b and c. This apparent eclecticism is, what makes the grave so special though. It is a sublime showcase for thriving trade and cultural exchange between Teutons and Romans as far east as Thuringia. Further, it proves how Teutons began adapting roman traditions, such as burials. In order to emphasize this insight, an interactive system was to be developed.
+According to the aforementioned review, the Fürstengrab von Haßleben was most promising and therefore chosen in the end. It contains many special relics from ordinary, teutonic pottery to rare, roman coins and jewelry as shown in Figure \ref{conception_grave}. This apparent eclecticism is, what makes the grave so special though. It is a sublime showcase for thriving trade and cultural exchange between Teutons and Romans as far east as Thuringia. Further, it proves how Teutons began adapting roman traditions, such as burials. In order to emphasize this insight, an interactive system was to be developed.
 
 %---------------------------------------------------------------------------- 
 
@@ -58,7 +58,7 @@ In summary, the requirements for the final system were narrowing down the possib
 \section{Constraints and capabilities}
 \label{conception_constraints}
 
-\paragraph{Demo} The early idea behind this work was to work with \ac{MS} Gadgeteer to develop a tangible interface for and with a museum. Thus, we first thought about how to include those Gadgeteer-modules. Therefore, I build the demo device in Figure \ref{?}, which was based on a \textit{FEZ Spider Starter Kit}~\cite{SpiderKitGHI}. In addition, it utilized an \ac{RFID}-reader~\cite{RFIDreaderGHI} and a potentiometer~\cite{PotentiometerGHI}. The RFID-transponders were attached to an old 2,5" \ac{HDD} and a wireless mouse. When the \ac{RFID}-tags were recognized, an image of the object was displayed on the screen. By turning the potentiometer's knob the angle of view changed accordingly. This gave an impression of the possibilities of the hardware. Unfortunately, we only had two \ac{RFID}-tags that had the size of a credit card. After some research though, I found some tags for the correct frequency band and in sizes from a grain of rice over credit cards to key chains~\cite{RFIDtransponder}. Hence, including \ac{RFID}-tags in tangibles was feasible. Only the shape and size of the tangibles were still up for debate.
+\paragraph{Demo} The early idea behind this work was to work with \ac{MS} Gadgeteer to develop a tangible interface for and with a museum. Thus, we first thought about how to include those Gadgeteer-modules. Therefore, I build a demo in Figure \ref{?}, which was based on a \textit{FEZ Spider Starter Kit}~\cite{SpiderKitGHI}. In addition, it utilized an \ac{RFID}-reader~\cite{RFIDreaderGHI} and a potentiometer~\cite{PotentiometerGHI}. The RFID-transponders were attached to an old 2,5" \ac{HDD} and a wireless mouse. When the \ac{RFID}-tags were recognized, an image of the object was displayed on the screen. By turning the potentiometer's knob the angle of view changed accordingly. This gave an impression of the possibilities of the hardware. Unfortunately, we only had two \ac{RFID}-tags that had the size of a credit card. After some research though, I found some tags for the correct frequency band and in sizes from a grain of rice over credit cards to key chains~\cite{RFIDtransponder}. Hence, including \ac{RFID}-tags in tangibles was feasible. Only the shape and size of the tangibles were still up for debate.
 
 \paragraph{Tangibles}
 
@@ -68,19 +68,12 @@ If it would be placed inside, the tangibles would have to be big. They would hav
 \\
 With the Hardware outside the tangibles and hidden in a pedestal in front of the showcase, the tangibles could be smaller. Moreover, \textit{passive} tangibles grant more flexibility concerning the shape as well. Several \ac{RFID}-tags could be placed in each tangible. According to their \textit{constrained} position on the \ac{RFID}-reader could trigger different reactions of the system~\cite{TangibleUI}. The tangibles would have to be attached to the pedestal as well, although they would be cheaper to replace.
 
-Both approaches had their advantages and disadvantages and none of them was concrete enough to make a decision, yet. Thus, we continued to specify the concepts depending on their strengths and weaknesses. We did this, by anticipating probable relations between the exhibits inside and the behavior of visitors outside the showcase. There are several things visitors tend to do, if they are interested in an exhibit. They would like to inspect it up close. First, this means they would like to touch an exhibit and feel it. Second, they want to see it in more detail and from different angles. Next and induced by restrictions, visitors talk about an exhibit or  request further information. This could be anything from its age to where and how it was found.
-\\
-An active tangible could provide nearly all of those qualities in one package. It could - like the demo device - be fitted with a display and an \ac{RFID}-reader. The corresponding \ac{RFID}-tags could then be placed close to the device in order to trigger a particular output. Those outputs could be saved either on the device itself or provided by a server. The question of how to trigger different reactions was to be answered next. The device could either be placed on a pedestal equipped with \ac{RFID}-tags or the tags had to be brought to the reader in any other way. As mentioned earlier, an active tangible would be sizable and it would have to be related to the showcase's topic as well. Hence, it would be reasonable to combine those two criteria and produce enlarged reproductions of exhibits from the showcase. In order to fit the whole hardware, an active tangible would have to have a simple shape. This unfortunately excluded several of the more interesting exhibits, such as coins, a golden ring and other jewelry. Some templates remained though. There was a skull, pottery and the metal remains of two jewelry boxes.
-\\
-The passive tangibles did not appear to cause this much consideration. Any exhibit could have been \ac{3D} scanned\footnote{The scans could have been done in the labs of the chair of Computer Vision and Engineering at Bauhaus-Universität Weimar.}, turned into a digital model, appropriately altered to fit an \ac{RFID}-tag and then printed or milled out. The printed or milled reproduction could be used as a positive to produce casting molds, afterwards. Thus, replacing damaged or otherwise lost tangibles would be more cost-efficient. In addition, it could be done by the museum-staff themselves. One or more \ac{RFID}-readers could be placed in a pedestal in front of the showcase. Depending on the \ac{RFID}-reader and a tangible's tag, the system would display the corresponding output.
-\\
-During those considerations, a third possibility arose. A hybrid approach that combined both principles was possible as well. A reproduction of a jewelry box could be turned into an active tangible and passive tangibles could be put inside to trigger an output. The \ac{RFID}-reader would be placed underneath the box's floor and the display in the lid. \textbf{future and past box for different types of content AND how to place passives inside boxes, when the are chained to the pedestal}
-\\
-The main problem remained with all approaches. Some kind of pedestal would have to be build and placed outside the showcase to hold the tangibles. Although passive tangibles would have been more cost-efficient to replace than active ones, maintenance was rated too high. Furthermore, if the pedestal was not to obscure the showcase, it would have been too low\footnote{The height of the showcase floor is between 45 and 65cm. For more details see chapter \ref{installation}.} to grant satisfactory access for any visitor.
+Both approaches had their advantages and disadvantages and none of them was concrete enough to make a decision. Thus, we continued to specify possible concepts. 
+ 
+Hybrid $\to$ passive pieces in active boxes OR semi-active display with tags in pedestal.  
 
 \paragraph{Tangible pointing}
 
-Resulting from the earlier drawbacks, we tried to minimize the objects outside of the showcase. Hence, the display could be put inside. Inspired by \textit{object selection in \ac{VR}-environments}~\cite{VRObjectSelectionCnG} and the \textit{SMSlingshot}~\cite{SMSlingshot}, a pointing device seemed to fit this requirement.
 Slingshot (Gadgeteer $\to$ Wii $\to$ Kinect)
 
 \paragraph{Pointing}
