@@ -128,7 +128,9 @@ The final system would consist of a \textit{depth sensor}, \textit{PC} and \text
 \\
 The system would have to work as follows. When one or more visitors enter the area in front of the showcase the system would recognize them and react in an inviting fashion. An interaction zone would be declared from where one user would be able to interact with the interface by pointing at an exhibit. The exhibition could be defined by museum-staff themselves. Therefore, an exhibition plane would have to be defined and validated as well as the exhibits' positions on it. This would be executable by the staff and pointing at the required positions as well. Furthermore, the staff would provide the corresponding contents such as images and explanatory texts. 
 
-The final concept all parties agreed on was written down by me in a Functional Specification Document (\ac{FSD}) and responsibilities were covered by a contract. The document states, which features of the final system must, should and must not be implemented and working.
+The final concept all parties agreed on was written down by me in a Functional Specification Document (\ac{FSD}) and responsibilities were covered by a contract. 
+
+The \ac{FSD} states, which features of the final system must, should and must not be implemented and working.
 
 \paragraph{Necessary features - ''Musts''}
 \begin{itemize}
@@ -195,7 +197,7 @@ The contract was drawn up by the university's layer's office and later signed by
 \section{Testing}
 \label{conception_testing}
 
-Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. Thus, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
+Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C\# and Gadgeteer uses Microsoft's .NET framework and C\#, the final system should be implemented in C\#. Thus, an \ac{SDK} written in C\# was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C#-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
 
 \paragraph{Annotations}
 
@@ -207,7 +209,7 @@ Before anything could be installed or evaluated, a reliable system had to be dev
 			\item Only Pointing
 			\item \textit{Images and sketches}
 			\item \textit{Data and Statistics}
-			\item results and conclusion
+			\item results and conlusion
 			\item See appendix
 		\end{itemize}
 		\item One centered Point II
