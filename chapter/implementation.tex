@@ -1,7 +1,7 @@
 \chapter{Implementation}
 \label{implementation}
 
-The IMI-system consists of two main parts. First, the hardware part involves the physical tracking and computing of its data in the background. Second, the software part, which includes the IMI-libraries and IMI-softwares utilizing them, provides the \ac{UI}s.
+The \ac{IMI}-system consists of two main parts. First, the hardware part involves the physical tracking and computing of its data in the background. Second, the software part, which includes the \ac{IMI}-libraries and -softwares utilizing them.
 
 %\paragraph{Annotations}
 %
@@ -14,6 +14,56 @@ The IMI-system consists of two main parts. First, the hardware part involves the
 	%\end{itemize}
 	%\item Sketches
 %\end{itemize}
+
+%-----------------------------------------------------------------------------
+
+\section{Testing}
+\label{conception_testing}
+
+Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. Thus, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item Test of pointing accuracy
+	\begin{enumerate}
+		\item One centered Point I
+		\begin{itemize}
+			\item Only Pointing
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conclusion
+			\item See appendix
+		\end{itemize}
+		\item One centered Point II
+		\begin{itemize}
+			\item Pointing, Aiming and Combined
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conlusion
+			\item See appendix
+		\end{itemize}
+		\item Four Points on each corner of the plane
+		\begin{itemize}
+			\item Classification of combined values
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conlusion
+			\item See appendix
+		\end{itemize}
+	\end{enumerate}
+	\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
+	\begin{itemize}
+		\item Description of Eye-Hand Mismatch [ref]
+		\item \textit{Sketches of classification}
+	\end{itemize}
+	\item Test of algorithm's accuracy
+	\begin{itemize}
+		\item Target = '90 percent of all values within a 10cm radius of mean value'
+		\item Differentiation between real and virtual point
+		\item Necessity of 1:1-mapping of real and virtual point
+	\end{itemize}
+\end{itemize}
 
 %------------------------------------------------------------------------------
 
