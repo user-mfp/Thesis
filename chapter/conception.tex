@@ -123,40 +123,21 @@ The final system would consist of a \textit{depth sensor}, a \textit{PC} and a \
 
 Two softwares would be needed. The first software would be of an administrative nature. Museum-staff would define and maintain the whole exhibition with it. The second software is presenting the exhibition to the visitors. Previously defined exhibits would be selectable.
 \\
-The exhibition could be defined by museum-staff themselves. Therefore, an exhibition plane would have to be defined and validated as well as the exhibits' positions on it. Those positions can be defined in the same way users would later interact with the system, by pointing. To exclude a certain inaccuracy, to define a position it would have to be defined from different angles and validated afterwards. The whole process will be described in Chapter \ref{implementation_administration}. Furthermore, the staff would provide the corresponding contents such as explanatory texts and detailed images. Contents and positions could be changed, removed from or reloaded into the exhibition.
+The exhibition could be defined by museum-staff themselves. Therefore, an exhibition plane would have to be defined and validated as well as the exhibits' positions on it. Those positions can be defined in the same way users would later interact with the system, by pointing. To exclude a certain inaccuracy, to define a position it would have to be defined from different angles and validated afterwards. The whole process will be described in Chapter \ref{installation} and the technical execution in Chapter \ref{installation_tech}. Furthermore, the staff would provide the corresponding contents such as explanatory texts and detailed images. Contents and positions could be changed, removed from or reloaded into the exhibition.
 \\
 When one or more visitors enter the area in front of the showcase the system would recognize them and react in an inviting fashion. An interaction zone would be declared from where one user would be able to interact with the system by pointing at an exhibit. No devices outside the showcase would be needed. 
 
-The final concept all parties agreed on was written down by me in a Functional Specification Document (\ac{FSD}) and responsibilities were covered by a contract. The document states, which features of the final system must, should and must not be implemented and working.
+\paragraph{Functional Specification Document (\ac{FSD})} The final concept all parties agreed on was written down by me in an \ac{FSD} and responsibilities were covered by a contract. The document states, which features of the final system must, should and must not be implemented and working.
+\\
+The necessary features or \textit{must-criteria} where that the the system would have to have separate modes for administration and presentation of an exhibition. The visual feedback of the interaction would be provided by the display. Visitors would be automatically recognized by the system, but only one user at a time would be able interact with it. The whole system would be maintainable by the museum's staff and will start and shut down automatically.
+\\
+Preferable features \textit{should} be realized, but would not be mandatory. Thus, the should be a system's manual. Further, it should be possible to switch the system into a 'blind' mode for guided tours. Extensive exhibits should have a slide show. The system should be operable with either the left or right hand. In addition, statistics about the system's use should be logged for later analysis.
+\\
+There were also criteria that were not requested, and therefore \textit{should not} be implemented. Any free-hand gestures other than pointing should not be recognized by the system. Furter, the lighting inside the showcase should not be controlled or influenced by the installation. Feedback should only be visual and not auditive or haptic. Hence, no speakers or tagibles should come to use. 
+\\
+Furthermore, the \ac{FSD} describes system requirements concerning hard- and firmwares, data formats and other organizational parameters. 
 
-\paragraph{Necessary features - ''Musts''}
-\begin{itemize}
-	\item The system has separate modes for administration and presentation of an exhibition.
-	\item Visual feedback of the interaction will be provided on the display.
-	\item The system recognizes visitors and only one user can interact with it at a time.
-	\item The system will be maintainable by the museum's staff and will start and shut down automatically.
-\end{itemize}
-
-\paragraph{Preferable features - ''Shoulds''}
-\begin{itemize}
-	\item There should be a system's manual.
-	\item It should be possible to switch the system into a 'blind' mode for guided tours.
-	\item Extensive exhibits should have a slide show.
-	\item The system is operable with either the left or right hand.
-	\item Statistics about the system's use should be logged.
-\end{itemize}
-
-\paragraph{Necessary features - ''Must nots''}
-\begin{itemize}
-	\item There will be no recognition of other free-hand gestures beside pointing.
-	\item The system will not controll the lighting inside the showcase.
-	\item There will be no auditive feedback.
-	\item There will not be any tangibles.
-\end{itemize}
-
-Furthermore, the \ac{FSD} describes system requirements, data formats and other organizational parameters. 
-
-The contract was drawn up by the university's layer's office and later signed by the museum's director, my professor and me. Both documents can be found in the appendix.
+In addition to the \ac{FSD}, a contract was drawn up by the university's layer's office. It sorted responsibilities and was later signed by the museum's director, my professor and me. Both documents can be found in the appendix.
 
 %\paragraph{Annotations}
 %

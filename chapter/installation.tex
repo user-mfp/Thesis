@@ -1,7 +1,95 @@
-\chapter{Setups and Hardware}
+\chapter{Processes and Setups}
 \label{installation}
 
-Three installations were build. One lab-setup for development, one makeshift setup was placed in the faculties lobby, and the final one was installed inside the showcase in Museum für Ur- und Frühgeschichte Thüringens. The various setups differed more or less in dimensions and were run with different hardwares. Early tests were conducted with the lab-setup. The lobby-setup was used for a stress-test during an open door-event at the faculty, whereas the final evaluation took place in the museum. Then, only the presentation-software was tested.
+In this chapter I will describe the system in detail. This involves the \textit{interaction paradigm}, the \textit{interface designs} and the \textit{technical principles} behind the system. 
+
+%\textbf{How visitors become users. Spaces [Hornecker et al.], unmittelbare Reaktion, Idiogram mit Anweisung, Fußspuren + Radius, Feedback der Zeigeposition auf Skizze des Grabes mit Exponaten}
+\paragraph{Interaction} 
+In a typical \textit{presentation software}'s scenario, one or more visitors can be involved. At the moment they enter the room of the showcase, the system recognizes them and changes its appearance. The display will show a short and explanatory text about how the system is to be used. In addition, an ideogram visualizes the description by showing a figure pointing at a plane in front of it. This view can be seen in Figure \ref{fig:intro}. If there are no visitors present, the screen will disguise itself by displaying an image of the showcases background. Because the system can only be used by one person at a time, there are footsteps (see Figure \ref{fig:footsteps}) on the floor to distinguish the user from other visitors. Potential users are asked to step into this predefined \textit{interaction space}~\cite{UrbanHCI} by the aforementioned text.
+\\
+Once a user enters the interaction space, the system reacts again. This time, the screen will show the outlines of the exhibits inside the showcase. The position of each selectable exhibit is semi-transparently displayed over the outlines. Now, the user can point at exhibits of interest. No device has to be used, because the only input needed is the user's behavior. The system will track the user's movements, and will calculate the position he or she is pointing at. This position is also overlayed on the outlines as shown in Figure \ref{fig:sketch}. Users can utilize this visual feedback to correct their gesture in order to 'hit' their intended target.
+\\
+An exhibit gets selected, after the user constantly pointed at it for over half a second. This \textit{dwelltime} prevents unintended selections. Otherwise, any exhibit would be immediately selected, whenever a user's pointing position strokes over an exhibit. After selecting an exhibit, a corresponding description will be displayed alongside detailed images of the exhibit (see Figure \ref{fig:show}). While the text will stay, the images will be displayed as a slide show. Afterwards, the system will go back to the overview of the exhibition again. The user does not have to end this slide show and can wait until it is over or select a new exhibit - without feedback though.
+\\
+If a user is done or others want to try the interface out for themselves, users can change any time. They only have to switch places on the footsteps. The same applies for ending the session. -- Visitors can leave at any point during the interaction. As soon as the system does not recognize any visitors around the showcase anymore, it will go back into its disguised appearance again. Again, no inputs have to be made except natural behavior.
+
+The \textit{administration software} is more traditional and requires a keyboard and a mouse. Nevertheless, it also makes use of pointing gestures. This software can be used by one experienced user alone. But the ones that are less advanced might need a second person. The administration software can be used to create and edit \ac{IMI}-exhibitions. Therefore, all necessary data can be defined with it. This data is saved in \textit{configuration files} in XML-format. Those files are used by the presentation software and can be reloaded for editing by the administration software. Experienced users can directly edit those files as well. 
+\\
+An exhibition consists of two main components. They are the \textit{exhibition plane} and the \textit{exhibits}. Both are defined by pointing. Upon the application's start, an existing exhibition can be loaded or a new one can be created by naming it. In case of a new exhibition, the first thing to be defined is the exhibition plane. Therefore, the administrative user again has the choice to either load an existing one or define a new one. Should the user decide to define an exhibition plane, the procedure will be explained in a short instruction, before the calibration begins. It tells the user, to point at three of the planes corners from three different positions. Further, the user is told to follow the instructions during the process. In addition, deograms depicting the positions to go to and the corners to point at are shown during the process. After having pointed at the corners once, a second run is needed to validate the corners' positions. If the validation is successful, the exhibition and its plane are saved. The second main component are the exhibits. They can only be defined or loaded a raw exhibition with a valid exhibition plane is available. The definition of an exhibit is similar to that of an exhibition plane. The user points at the respective exhibit on the earlier defined exhibition plane from three different positions. Afterwards, the position is validated.
+\\
+One more necessary setting is the prospective \textit{user position}. It is one of the exhibition's settings and can be set by simply choosing it from the drop-down menu and confirming with a button press. Subsequently, the administrative user gets the instruction to stand where future users are supposed to stand. After confirming with another button press and a short wait, the software will safe the position. Only visitors standing close to this spot will be able to use the system. When defining the user position, there should be only one person in the scope of the camera.  
+\\
+The remaining parameters of both exhibition and exhibits have default values, which can be edited later. There are buttons labeled with ''Einstellungen'', which lead to the corresponding drop-down menus. Only the exhibition plane can not be changed this way.
+
+%\textbf{Appearance. Administration and Presentation GUIs [Shneiderman], K.I.S.S.}
+\paragraph{Interfaces} 
+
+Presentation -> only three views: (hidden), clear instructions and ideogram, overview, slide show, No traditional, abstract features like a device or buttons, slides, or other confusing items.
+
+Administration -> Shneiderman + K.I.S.S.: a little experience is needed, One thing at a time, no Drop down menues, clear instructions and ideograms, implicit saving, calibrations abort-able
+
+\section{Technical Principles}
+\label{installation_tech}
+
+\paragraph{Analytic Geometry} \textbf{Principle backwards:
+\\
+Visitors walk up to showcase an point at exhibits. Exhibits on Plane (Point on a 2D Surface) $\to$ Exhibition Plane needs 3 corners in 3D space $\to$ Define a Point in 3D space-problem!
+\\
+- 2D Intersection is easy: get two Vectors, set both as equal, calculate intersection
+\\
+- 3D Intersection is most probably not existent $\to$ ''skew'': calculate Pedal Points (point with shortest distance to each of the skew lines) as quasi-intersections}
+
+%-----------------------------------------------------------------------------
+
+\section{Iterative Development}
+\label{installation_testing}
+
+Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. Thus, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item Test of pointing accuracy
+	\begin{enumerate}
+		\item One centered Point I
+		\begin{itemize}
+			\item Only Pointing
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conclusion
+			\item See appendix
+		\end{itemize}
+		\item One centered Point II
+		\begin{itemize}
+			\item Pointing, Aiming and Combined
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conlusion
+			\item See appendix
+		\end{itemize}
+		\item Four Points on each corner of the plane
+		\begin{itemize}
+			\item Classification of combined values
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conlusion
+			\item See appendix
+		\end{itemize}
+	\end{enumerate}
+	\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
+	\begin{itemize}
+		\item Description of Eye-Hand Mismatch [ref]
+		\item \textit{Sketches of classification}
+	\end{itemize}
+	\item Test of algorithm's accuracy
+	\begin{itemize}
+		\item Target = '90 percent of all values within a 10cm radius of mean value'
+		\item Differentiation between real and virtual point
+		\item Necessity of 1:1-mapping of real and virtual point
+	\end{itemize}
+\end{itemize}
+
+%-----------------------------------------------------------------------------
 
 %\paragraph{Annotations}
 %
@@ -15,23 +103,22 @@ Three installations were build. One lab-setup for development, one makeshift set
 
 %-----------------------------------------------------------------------------
 
-\section{Lab-setup}
-\label{installation_lab}
+\section{Development Setups}
+\label{setup_development}
 
-A special lab had to be found and equipped with all necessary Hardware. The Hardware was lend to me by multiple sources of the faculty, while the museum's carpenter made a pedestal consisting of a surface and feet. The surface is made out of four 9mm-press boards. The feet seemed to unstable and thus were replaced with one desk rack for each board.
+Three installations were build. One lab-setup for development, one makeshift setup was placed in the faculties lobby, and the final one was installed inside the showcase in Museum für Ur- und Frühgeschichte Thüringens. The various setups differed more or less in dimensions and were run with different hardwares. Early tests were conducted with the lab-setup. The lobby-setup was used for a stress-test during an open door-event at the faculty, whereas the final evaluation took place in the museum. Then, only the presentation-software was tested.
+
+\paragraph{Lab Setup} A special lab had to be found and equipped with all necessary Hardware. The Hardware was lend to me by multiple sources of the faculty, while the museum's carpenter made a pedestal consisting of a surface and feet. The surface is made out of four 9mm-press boards. The feet seemed to unstable and thus were replaced with one desk rack for each board.
 
 %-----------------------------------------------------------------------------
 
-\section{Lobby-setup}
-\label{installation_lobby}
-
-After some technical difficulties with the museum-setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, I build a makeshift setup in the facultie's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the computer and a tripod with the sensor on top were positioned. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (\textit{see Figure}).
+\paragraph{Lobby Setup} After some technical difficulties with the museum-setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, I build a makeshift setup in the facultie's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the computer and a tripod with the sensor on top were positioned. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (\textit{see Figure}).
 \\
 
 %-----------------------------------------------------------------------------
 
-\section{Final museum-setup}
-\label{installation_museum}
+\section{Museum Setup}
+\label{setup_museum}
 
 \begin{itemize}
 	\item Automatic boot at 8:30am [Bios]

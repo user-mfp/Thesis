@@ -1,0 +1,113 @@
+\chapter{Processes and Setups}
+\label{installation}
+
+\section{Technical Principles}
+\label{installation_tech}
+
+\textbf{Principle backwards:
+\\
+Visitors walk up to showcase an point at exhibits. Exhibits on Plane (Point on a 2D Surface) $\to$ Exhibition Plane needs 3 corners in 3D space $\to$ Define a Point in 3D space-problem!
+\\
+- 2D Intersection is easy: get two Vectors, set both as equal, calculate intersection
+\\
+- 3D Intersection is most probably not existent $\to$ ''skew'': calculate Pedal Points (point with shortest distance to each of the skew lines) as quasi-intersections}
+
+%-----------------------------------------------------------------------------
+
+\section{Iterative Development of Processes}
+\label{installation_testing}
+
+Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. Thus, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item Test of pointing accuracy
+	\begin{enumerate}
+		\item One centered Point I
+		\begin{itemize}
+			\item Only Pointing
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conclusion
+			\item See appendix
+		\end{itemize}
+		\item One centered Point II
+		\begin{itemize}
+			\item Pointing, Aiming and Combined
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conlusion
+			\item See appendix
+		\end{itemize}
+		\item Four Points on each corner of the plane
+		\begin{itemize}
+			\item Classification of combined values
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conlusion
+			\item See appendix
+		\end{itemize}
+	\end{enumerate}
+	\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
+	\begin{itemize}
+		\item Description of Eye-Hand Mismatch [ref]
+		\item \textit{Sketches of classification}
+	\end{itemize}
+	\item Test of algorithm's accuracy
+	\begin{itemize}
+		\item Target = '90 percent of all values within a 10cm radius of mean value'
+		\item Differentiation between real and virtual point
+		\item Necessity of 1:1-mapping of real and virtual point
+	\end{itemize}
+\end{itemize}\section{Testing}
+\label{conception_testing}
+
+%-----------------------------------------------------------------------------
+
+Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. Thus, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
+
+%-----------------------------------------------------------------------------
+
+Three installations were build. One lab-setup for development, one makeshift setup was placed in the faculties lobby, and the final one was installed inside the showcase in Museum für Ur- und Frühgeschichte Thüringens. The various setups differed more or less in dimensions and were run with different hardwares. Early tests were conducted with the lab-setup. The lobby-setup was used for a stress-test during an open door-event at the faculty, whereas the final evaluation took place in the museum. Then, only the presentation-software was tested.
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item Current State
+	%\begin{itemize}
+		%\item Comparing Lab- and Summaery-setup
+		%\item Documentation of system's installation
+	%\end{itemize}
+%\end{itemize}
+
+\section{Lab-setup}
+\label{installation_lab}
+
+A special lab had to be found and equipped with all necessary Hardware. The Hardware was lend to me by multiple sources of the faculty, while the museum's carpenter made a pedestal consisting of a surface and feet. The surface is made out of four 9mm-press boards. The feet seemed to unstable and thus were replaced with one desk rack for each board.
+
+%-----------------------------------------------------------------------------
+
+\section{Lobby-setup}
+\label{installation_lobby}
+
+After some technical difficulties with the museum-setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, I build a makeshift setup in the facultie's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the computer and a tripod with the sensor on top were positioned. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (\textit{see Figure}).
+\\
+
+%-----------------------------------------------------------------------------
+
+\section{Final museum-setup}
+\label{installation_museum}
+
+\begin{itemize}
+	\item Automatic boot at 8:30am [Bios]
+	\item Runnging
+	\item Logfiles for each \textit{Session-Event}
+	\begin{itemize}
+		\item Start Session: User in interaction zone (Exhibition.UserPosition +/- Threshold from SessionHandler := 250mm)
+		\item New Target: User pointing at a target
+		\item Target Selected: Dwelltime (Exhibition.SelectionTime := 700ms) starts slide show for selected target
+		\item End Session: User leaves interaction zone
+	\end{itemize}
+	\item Automatic shutdown at 4:45pm [Software]
+\end{itemize}
