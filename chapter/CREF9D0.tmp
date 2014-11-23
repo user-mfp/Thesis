@@ -3,8 +3,6 @@
 
 In this chapter I will describe the system in detail. This involves the \textit{interaction paradigm}, the \textit{interface designs} and the \textit{technical principles} behind the system. 
 
-%-----------------------------------------------------------------------------
-
 %\textbf{How visitors become users. Spaces [Hornecker et al.], unmittelbare Reaktion, Idiogram mit Anweisung, Fußspuren + Radius, Feedback der Zeigeposition auf Skizze des Grabes mit Exponaten}
 \paragraph{Interaction} 
 In a typical \textit{presentation software}'s scenario, one or more visitors can be involved. At the moment they enter the room of the showcase, the system recognizes them and changes its appearance. The screen will display a short and explanatory text about how the system should be used. In addition, an ideogram visualizes the description by showing a figure pointing at a plane in front of it. This view can be seen in Figure \ref{fig:intro}. If there are no visitors present, the screen will disguise itself by displaying an image of the showcases background. Because the system can only be used by one person at a time, there are footsteps on the floor (see Figure \ref{fig:footsteps}) to distinguish the user from other visitors. 
@@ -25,8 +23,6 @@ One more necessary setting is the prospective \textit{user position}. It is one 
 \\
 The remaining parameters of both exhibition and exhibits have default values, which can be edited later. There are specially labeled buttons, which lead to the corresponding drop-down menus. Only the exhibition plane can not be changed this way.
 
-%-----------------------------------------------------------------------------
-
 %\textbf{Appearance. Administration and Presentation GUIs [Shneiderman], K.I.S.S.}
 \paragraph{Interfaces} The presentation software has a minimal \ac{UI}. There are no control elements like buttons or menus. It only has the four different states shown in Figure \ref{fig:ui_pres}.
 \\
@@ -39,24 +35,19 @@ The system gets into its third state as soon as a user inside the dedicated inte
 The fourth state is the actual \textit{presentation state}. It is similar to the introduction, but here the text and images depend on which exhibit had been selected. The corresponding texts are limited to approximately 300 characters, so visitors do not have to read extensively long descriptions. Meanwhile, detailed images of the chosen exhibits are displayed on the right half of the screen (see Figure \ref{fig:ui_pres}d). They change every four seconds. This time an image shown for can be adjusted either by the administration software of by hand. After all images have been shown, the system will go back to any of the previous states. Where it goes depends on the visitors behavior. If a user is present in the interaction space, the system will go to the overview. If there are visitors present, but no one qualifies as a user, the introduction will be displayed. If everybody left during the presentation, the system will stand by and hide again.
 %Presentation -> only three views: (hidden), clear instructions and ideogram, overview, slide show, No traditional, abstract features like a device or buttons, slides, or other confusing items.
 
-The administration software is used to manage all data of an \ac{IMI}-exhibition. Hence, the interface has to be more complex than that of the presentation software. It is more conventional, too. The amount of different views is low though. 
+The administration software is used to manage all necessary data of an \ac{IMI}-exhibition. Hence, the interface is more complex than that of the presentation software. It is more conventional, too. The amount of different views is low though. 
 \\
-Because it has to be usable by lay persons, similar tasks share a \textit{view pattern}. For instance, Settings of an exhibition and an exhibit have identical controls in an identical layout. Only the views' header and the contents of the drop-down menus vary as can be seen in Figure \ref{ui_admin_settings}. The same principle applies for any definition of positions (see Figure \ref{ui_admin_positions}). No matter if the corners of an exhibition plane, the position of an exhibit or even the user position are defined, the view is always the same.
+Because it has to be usable by lay persons, similar tasks share a view pattern. For instance, Settings of an exhibition and an exhibit have identical controls in an identical layout. Only the views' header and the contents of the drop-down menus vary as can be seen in Figure \ref{ui_admin}a. The same principle applies for any definition of positions (see Figure \ref{ui_admin}b). No matter if the corners of an exhibition plane, the position of an exhibit or even the user position are defined, the view is always the same.
 \\
-The interface is designed for task-driven use. This means, that an administrative user probably will have a particular reason to use this software. Such a task includes changing a particular property. Hence, the \ac{GUI} offers the user to navigate to this property step by step. Therefore, a hierarchical structure is used, which results in less control elements in one view and thus more clarity. There is less choice but a little more actions. Given the example, an exhibit should get an additional image. As shown in Figures \ref{fig:ui_admin_scenario}a through d, a user loads the exhibition, chooses the exhibit from the drop-down menu, chooses ''New Image'' from the drop-down menu and copies with a button press. After that, a dialog opens and the user can choose the image to be added. Finally, the image appears in the images' drop-down menu. From this view, all other properties of the exhibit can be set. By pressing ''Back'', the \ac{GUI} goes back to the exhibition's view and the next task can be attended.
-\\
-Every time anything is changed, it is immediately saved. There are no undo- or redo-buttons. They are not necessary, because the \ac{GUI} always shows the current state of all parameters and they can be changed with no more effort than using such a button. Moreover, more control elements could cause confusion. This is why only controls that are required at a particular stage are visible. Nevertheless, there is always the option to go back to the higher level menu.
-%Administration -> Shneiderman + K.I.S.S.: a little experience is needed, One thing at a time, no Drop-down menus, clear instructions and ideograms, implicit saving, calibrations abort-able
 
-%-----------------------------------------------------------------------------
+%Administration -> Shneiderman + K.I.S.S.: a little experience is needed, One thing at a time, no Drop-down menus, clear instructions and ideograms, implicit saving, calibrations abort-able
 
 \section{Technical Principles}
 \label{installation_tech}
 
-There are certain technical principles, which the systems performance relies on. They range from operations necessary for fundamental calculations to background knowledge involving a proper interface design.
-
-\paragraph{Analytic Geometry}
-Visitors can walk up to the showcase and point at exhibits. These exhibits are lying on an exhibition plane. A plane, although usually flat and only 2-dimensional, can be defined by three Points in \ac{3D} space. Thus, to define three corners of the exhibition plane, a way to define a point in \ac{3D} space was needed. Therefore, I chose the same type of input visitors would later have to use as well. An exhibition plane's corners are defined by pointing at them from various positions.  
+\paragraph{Analytic Geometry} \textbf{Principle backwards:}
+\\
+Visitors walk up to showcase an point at exhibits. Exhibits on Plane (Point on a 2D Surface) $\to$ Exhibition Plane needs 3 corners in 3D space $\to$ Define a Point in 3D space-problem!
 \\
 - 2D Intersection is easy: get two Vectors, set both as equal, calculate intersection
 \\
@@ -67,8 +58,6 @@ Visitors can walk up to the showcase and point at exhibits. These exhibits are l
 Sketch + exemplary calculation with tan: +- 1 Grad entspricht Abweichung um etwa 11 bis 12cm. in der exhibition plane => ''If a person can not point with pin point accuracy, the system doe not have to be calibrated to this accuracy. We would need a sufficient accuracy. Hence, my target was to have the majority of sample positions within a radius of 10cm. This is about the size of a football, with the intended point in its center.''
 
 \textbf{Virtual positions for exhibition plane and exhibits} Consequently, a further decision: I do not need the accurate position in relation to the camera. I need the accurate position to where everybody points at! => All positions are virtual representations of the real positions. Relations do not have to be true, as long as the majority of users hits their desired target.
-
-%-----------------------------------------------------------------------------
 
 \paragraph{Readability} \textbf{Font Size, Reading Speed -> Slide Times}
 \\
