@@ -55,14 +55,25 @@ Every time anything is changed, it is immediately saved. There are no undo- or r
 
 There are certain technical principles, which the systems performance relies on. They range from operations necessary for fundamental calculations to background knowledge involving a proper interface design.
 
-\paragraph{Analytic Geometry}
-Visitors can walk up to the showcase and point at exhibits. These exhibits are lying on an exhibition plane. A plane, although usually flat and only 2-dimensional, can be defined by three Points in \ac{3D} space. Thus, to define three corners of the exhibition plane, a way to define a point in \ac{3D} space was needed. Therefore, I chose the same type of input visitors would later have to use as well. An exhibition plane's corners are defined by pointing at them from various positions.  
-\\
-- 2D Intersection is easy: get two Vectors, set both as equal, calculate intersection
-\\
-- 3D Intersection is most probably not existent $\to$ ''skew'': calculate Pedal Points (point with shortest distance to each of the skew lines) as quasi-intersections
+%-----------------------------------------------------------------------------
 
-\textbf{Angle Error}
+\paragraph{Pointing Challenges}
+
+Visitors can walk up to the showcase and point at exhibits. These exhibits are lying on an exhibition plane. A plane, although usually flat and only 2-dimensional, can be defined by three Points in \ac{3D} space. Thus, to define three corners of the exhibition plane, a way to define a point in \ac{3D} space was needed. Therefore, I chose the same type of input visitors would later have to use as well. Each exhibition plane's corner is defined by pointing at it from various positions. To calculate where a person is pointing at, the system needs a vector. A vector can be determined by two points in \ac{3D} space. One defines the start and the other the direction.
+
+After observing how people point, the elbow was chosen to be the start of the pointing vector. The pointing direction would be determined by the hand\footnote{NiTE's skeleton tracking provides both of these joints, but does not support the tracking of fingers. More details about the implementation can be found in Chapter \ref{implementation}} as Figure \ref{fig:principle_pointing} depicts.
+\\
+In order to define a point in \ac{3D} space, one vector was not sufficient. But, if two or more vectors would target the same point from different angles, their intersection should yield the targeted point. Figure \ref{fig:principle_intersect2d} shows this thought. Hence, a the point of their intersection could be calculated by equating both vectors. However, this is a 3-dimensional problem. The possibility of vectors intersecting in \ac{3D} space is very low. They are mostly skew, and only their projections on a \ac{2D} plane do actually intersect. Nevertheless, there is a solution. Vectors may not intersect, but there is an area where they are closest to each other. Consequently, there is one point that is closest to both vectors. This quasi-intersection is called \textit{pedal point}. It lies in the middle of the shortest line that is perpendicular to both vectors. In case both vectors do meet, pedal point and intersection are equal. Figures \ref{fig:principle_intersect3D}a and b illustrate how the projected intersection and pedal point can vary.
+%- 2D Intersection is easy: get two Vectors, set both as equal, calculate intersection
+%- 3D Intersection is most probably not existent $\to$ ''skew'': calculate Pedal Points (point with shortest distance to each of the skew lines) as quasi-intersections
+
+%-----------------------------------------------------------------------------
+
+Users are pointing at exhibits on a flat, horizontal surface. The distance between users and exhibits can vary and so does the accuracy. The further a target is away the bigger the \textit{angular error} gets. This principle can be seen in Figure \ref{fig:principle_angular_error}. For targets that are further away, \alpha gets more and more acute. Hence, small variations during the pointing process have a much bigger influence with increasing distance to the target.
+\\
+A realistic sample calculation shows how big the angular error gets. Given a distance plane to shoulder of 
+
+																						! ! ! SIEHE NOTIZBUCH ! ! !
 
 Sketch + exemplary calculation with tan: +- 1 Grad entspricht Abweichung um etwa 11 bis 12cm. in der exhibition plane => ''If a person can not point with pin point accuracy, the system doe not have to be calibrated to this accuracy. We would need a sufficient accuracy. Hence, my target was to have the majority of sample positions within a radius of 10cm. This is about the size of a football, with the intended point in its center.''
 
