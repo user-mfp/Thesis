@@ -64,8 +64,6 @@ Visitors can walk up to the showcase and point at exhibits. These exhibits are l
 After observing how people point, the elbow was chosen to be the start of the pointing vector. The pointing direction would be determined by the hand\footnote{NiTE's skeleton tracking provides both of these joints, but does not support the tracking of fingers. More details about the implementation can be found in Chapter \ref{implementation}} as Figure \ref{fig:principle_pointing} depicts.
 \\
 In order to define a point in \ac{3D} space, one vector was not sufficient. But, if two or more vectors would target the same point from different angles, their intersection should yield the targeted point. Figure \ref{fig:principle_intersect2d} shows this thought. Hence, a the point of their intersection could be calculated by equating both vectors. However, this is a 3-dimensional problem. The possibility of vectors intersecting in \ac{3D} space is very low. They are mostly skew, and only their projections on a \ac{2D} plane do actually intersect. Nevertheless, there is a solution. Vectors may not intersect, but there is an area where they are closest to each other. Consequently, there is one point that is closest to both vectors. This quasi-intersection is called \textit{pedal point}. It lies in the middle of the shortest line that is perpendicular to both vectors. In case both vectors do meet, pedal point and intersection are equal. Figures \ref{fig:principle_intersect3D}a and b illustrate how the projected intersection and pedal point can vary.
-\\
-The final point in \ac{3D} space gets set by the average of all pedal points. A minimum of two vectors is needed to compute a pedal point. This is prone to error, because one bad vector is enough to corrupt the calculation. Hence, a multitude of pedal points can compensate for such a bad vector. How many vectors yield satisfactory points had to be tested (see Chapter \ref{installation_testing}).
 %- 2D Intersection is easy: get two Vectors, set both as equal, calculate intersection
 %- 3D Intersection is most probably not existent $\to$ ''skew'': calculate Pedal Points (point with shortest distance to each of the skew lines) as quasi-intersections
 
@@ -129,13 +127,8 @@ Before anything could be installed or evaluated, the aforementioned principles h
 \\
 \ac{FUBI} provides a mechanism to access the coordinates of every tracked persons joints. NiTE tracks and calculates the positions of 25 joints for each person. Further, those joints can be separately updated in real time. Hence, it is possible to only get the positions of necessary joints. This reduces requests and consequently saves performance. Details about the implementation of updating joint positions and further use can be found in Chapters \ref{implementation_administration} and \ref{implementation_presentation}.
 
-\paragraph{First Test} The first test was designed as a proof of concept. The basic feasibility of the aforementioned principle of pointing gestures and the gestures' accuracy were tested. Therefore, a subject had to define a point in \ac{3D} space.
+The first test was designed as a proof of concept. The basic feasibility of the aforementioned principle of pointing gestures and the gestures' accuracy were tested. Therefore, a test person had to define a point in \ac{3D} space.
 \\ 
-The setup that was used for the first round of testing can be seen in Figure \ref{fig:testing_1}\footnote{The exact specifications are described in the next section of this chapter.}. The sensor was positioned at about the same position it would later be inside the Haßleben-showcase. Centered in front of it, a turquoise whiteboard magnet was attached to the white surface of the \textit{lab setup}. It has a diameter of approximately 2cm. 18 subjects, who ranged from 160cm and 188cm in height, took part. All of them are either students or researchers of the faculty of media at Bauhaus-Universität Weimar.
-\\
-The definition of a point in \ac{3D} space was tested with each subject. Only one \ac{IV} was changed throughout a session. It was the amount of positions from where the point had to be defined. Subjects did five rounds for both three and five positions. They were shown the magnet and told to point at it from three and later five positions. Those positions were marked by metal braces along the surface's  edge opposite the sensor. Subjects were not given any visual aid, but an audible countdown in form of beeps was provided instead. At its end a subject either had to point at the target or move to the next position.
-\\
-As expected, the principle worked... 
 
 \begin{itemize}
 	\item Test of pointing accuracy
