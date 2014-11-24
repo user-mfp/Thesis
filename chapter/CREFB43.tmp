@@ -84,7 +84,7 @@ The target's pointing angle $\alpha_{target}$ is approximately 19$^\circ$. Due t
 	b_{long} &= \frac{a}{\tan{\alpha_{long}}} \quad \to \quad b_{long} = \frac{700mm}{\tan{(20.3^\circ)}} \approx 2116mm
 \end{align*}
 $$\Rightarrow \quad \delta_{short} \approx 108mm \quad and \quad \delta_{long} \approx 116mm$$
-This sample calculation shows that a variation of $\pm$1$^\circ$ can cause an error of nearly 120mm in pointing direction. This led me to the conclusion that, if a person can not point with pin point accuracy, the system does not have to be calibrated to this accuracy. We would need to define a \textit{sufficient accuracy} though. The angular error would be bigger for shorter users, such as children. It would additionally increase for targets further away. Nevertheless, a target would have to have the majority of sample positions within a radius of 100mm. This sufficient accuracy is about the size of a football, with the intended point in its center.
+This sample calculation shows that a variation of $\pm$1$^\circ$ can cause an error of nearly 120mm in pointing direction. This led me to the conclusion that, if a person can not point with pin point accuracy, the system does not have to be calibrated to this accuracy. We would need to define a \textit{sufficient accuracy} though. Hence, a target would have to have the majority of sample positions within a radius of 10cm. This is about the size of a football, with the intended point in its center.
 
 Yet another conclusion was to not calibrate each position to its correct position in relation to the sensor and measure if users come close to them. It is counter-intuitive to force a user to re-adjust to hit those positions. Instead, I chose to use the corresponding positions that were defined by users themselves. To hit a target, users do not need its accurate position in relation to the camera, they need the accurate position of where everybody else is pointing at. Hence, all positions are \textit{virtual representations} of the real positions. Relations do not have to be correct, as long as the majority of users hit their designated target.
 
@@ -92,57 +92,46 @@ Yet another conclusion was to not calibrate each position to its correct positio
 
 \paragraph{Readability} Any user should be able to read the instructional and explanatory texts displayed by the installation. Therefore, the font size and the time a text is shown had to be taken in consideration.
 \\
-The minimal visual angle at maximum contrast is one minute of angle or 0.017$^\circ$~\cite{SehwinkelLesbarkeit}. This only describes the ability to differentiate between a white and black dot. Readability involves whole letters and therefore needs a bigger visual angle. For people with normal or vision this angle is at five minutes of angle of 0.083$^\circ$ [ibid.]. This value only applies for people with normal vision, which means they are able to recognize a single letter 20 feet away (see Figure \ref{fig:visual_angle}). People with normal eyesight have 20/20 vision, because, they can archive that. If people have 20/10 vision, they need to be 10 feet away to recognize the particular letter. A vision of 20/15 is more realistic for an average population [ibid.]. This principle can be applied to the Haßleben-installation as well. Given a distance from eye to letter of $b_{20/20}$ = 2.8m and the visual angle $\alpha_{20/20}$ = 0.083$^\circ$, the height of a recognizable letter would be $a_{20/20}$ and calculated as follows:
+The minimal visual angle at maximum contrast is one minute of angle or 0.017$^\circ$~\cite{SehwinkelLesbarkeit}. This only describes the ability to differentiate between a white and black dot. Readability involves whole letters and therefore needs a bigger visual angle. For people with normal or vision this angle is at five minutes of angle of 0.083$^\circ$ [ibid.]. This value is only applies for people with normal vision, which means they are able to recognize a single letter 20 feet away. People with normal eyesight have 20/20 vision, because, they can do the same. If people have 20/10 vision, they need to be 10 feet away to recognize the particular letter. A vision of 20/15 is more realistic for an average population [ibid.]. This principle can be applied to the Haßleben-installation as well. Given a distance from eye to letter of $b_{20/20}$ = 2.8m and the visual angle $\alpha_{20/20}$ = 0.083$^\circ$, the height of a recognizable letter would be $a_{20/20}$ and calculated as follows:
 \begin{align*}
 	\tan{\alpha_{20/20}} = \frac{a_{20/20}}{b} \quad \to \quad a_{20/20} &= b \cdot \tan{\alpha_{20/20}}
 	\\
 	a_{20/20} &= 2800mm \cdot \tan{(0.083^\circ)} \approx 4.1mm
 \end{align*}
-Those 4mm are equivalent to a font size of 25\footnote{The system's display has a resolution of 159dpi. Thus, font size[pt] := $a_{i} \div{(\frac{24.5mm}{159dpi})}$}. A text of this size is unreadable for the majority of the population though. Hence, I considered people could have bad eyesight or no glasses at hand and recalculated the font size for 20/10 and 20/5 vision. Since the tangent is not linear, the corresponding visual angles $\alpha_{20/10}$ and $\alpha_{20/5}$ could not be doubled or quadrupled. They had to be calculated according to the definition mentioned above.
-\\
-$with \ b_{20/10} = 2800mm \div 2 = 1200mm \quad and \quad b_{20/5} = 2800mm \div 4 = 600mm$
-\begin{align*}
-	\tan{\alpha_{20/10}} = \frac{a_{20/20}}{b_{20/10}} \quad \to \quad \tan{\alpha_{20/10}} = \frac{4.1mm}{1200mm} \quad &\to \quad \alpha_{20/10} \approx 0.171^\circ
-\\
-	\tan{\alpha_{20/5}} = \frac{a_{20/20}}{b_{20/5}} \quad \to \quad \tan{\alpha_{20/5}} = \frac{4.1mm}{600mm} \quad &\to \quad \alpha_{20/5} \approx 0.343^\circ
-\end{align*}
-Those visual angles can be used to calculate the correct sizes of letters under 20/10 and 20/5 conditions.
-\begin{align*}
-	a_{20/10} &= 2800mm \cdot \tan{(0.171^\circ)} \approx 8.3mm
-	\\
-	a_{20/5} &= 2800mm \cdot \tan{(0.343^\circ)} \approx 16.8mm
-\end{align*}
-The corresponding font sizes are 51 and 105. Unfortunately, neither of the calculated font sizes satisfied our requirements. Texts with a font size of 51 was not well enough readable, but with a font size of 105 there was insufficient room for a proper instructional or descriptive text. We compromised on a font size of 70, which allows for 300 characters and is still well readable.
+Those 4mm are equivalent to a font size of 11.5. A text of this size is unreadable for the majority of the population though. Hence, I considered people could have bad eyesight or no glasses at hand and recalculated the font size for 20/5 vision. Since the tangent is not linear, the corresponding visual angle $\alpha_{20/5}$ could not be quadrupled. It had to be calculated according to the definition mentioned above.
+$$with \ b_{20/5} = 2800mm \div 4 = 600mm$$
+$$\tan{\alpha_{20/5}} = \frac{a_{20/20}}{b_{20/5}} \quad \to \quad \tan{\alpha_{20/5}} = \frac{4.1mm}{600mm} \quad \to \quad \alpha_{20/5} \approx 0.343^\circ$$
+This visual angle can be used to calculate the correct size of a letter under 20/5 conditions.
+$$a_{20/5} &= 2800mm \cdot \tan{(0.343^\circ)} \approx 16.8mm$$
 
-Another factor influencing the readability of texts is the timespan for which they are displayed. If a text is shown for too long, visitors will get impatient, but if it is displayed too short they will get frustrated, because they could not finish reading. Hence, average reading speed should dictate for how long a text is shown. The average reading speed for German texts is 250 \ac{wpm}~\cite{Lesegeschwindigkeit}. With an average length of 5.7 characters per word in the German language~\cite{Wortlaenge}, this results in 1425 \ac{cpm}. With a maximum of 300 characters per description, an exhibit's presentation should take no longer than 13 seconds. Not every exhibit is described by a text with exactly 300 characters. In case of a shorter text, the presentation should be shortened accordingly. 
+\textbf{Font Size, Reading Speed -> Slide Times}
 \\
-However, there are also images in an exhibit's presentation. To observe an image, we estimated a default timespan of four seconds. Unfortunately, the system does not know, whether a user reads the text or looks at the images. Hence, there is no way of knowing when to change an image during the slide show. Consequently, the time to inspect those images should be added to the time to read the description. In this case, extensive exhibit presentations would take a long time, what could make visitors impatient. Therefore, an exhibit's presentation takes the maximum time of either the reading task or the slide show. A user can select the exhibit again, if there still is interest in the exhibit.
+- Sehwinkel und Lesbarkeit~\cite{SehwinkelLesbarkeit}
+\\
+- Lesegeschwindigkeit~\cite{Lesegeschwindigkeit}
+\\
+- Wortlaenge~\cite{Wortlaenge}
 
 %-----------------------------------------------------------------------------
 
 \section{Iterative Development}
 \label{installation_testing}
 
-Before anything could be installed or evaluated, the aforementioned principles had to be implemented and their reliability tested. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. However, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate \ac{FUBI} to our new system. 
+Before anything could be installed or evaluated, a reliable system had to be developed. Therefore, I researched suitable environments for an extensible system. Because most \ac{SDK}s for PrimeSense's hardware are implemented in C++ or C$\#$ and Gadgeteer uses Microsoft's .NET framework and C$\#$, the final system should be implemented in C$\#$. Thus, an \ac{SDK} written in C$\#$ was to be found. After having tried several open source frameworks, the \ac{FUBI} developed at Universität Augsburg proved to fit our needs best. \ac{FUBI} came with a C$\#$-wrapper, which incorporated all functionality of OpenNI and NiTE that was necessary to achieve our goals. Moreover, its leading developer, \textit{Dipl.-Inf. Felix Kistler}, kindly explained how to incorporate the new approach to \ac{FUBI}.  
 
-\ac{FUBI} provides a mechanism to access the coordinates of every tracked persons joints. NiTE tracks and calculates the positions of 25 joints for each person. Further, those joints can be separately updated in real time. Hence, it is possible to only get the positions of necessary joints. This reduces requests and consequently saves performance. Details about the implementation of updating joint positions and further use can be found in Chapters \ref{implementation_administration} and \ref{implementation_presentation}.
-\\
-The first test was designed as a proof of concept. The basic feasibility of the aforementioned principle of pointing and the gestures' accuracy were tested. Therefore, a test person had to define a point in \ac{3D} space. 
+\paragraph{Annotations}
 
-%\begin{itemize}
-	%\item Test of pointing accuracy
-	%\begin{enumerate}
-		%\item One centered Point I
-		%\begin{itemize}
-			%\item Only Pointing
-			%\item \textit{Images and sketches}
-			%\item \textit{Data and Statistics}
-			%\item results and conclusion
-			%\item See appendix
-		%\end{itemize}
-		
-%-----------------------------------------------------------------------------
-		
+\begin{itemize}
+	\item Test of pointing accuracy
+	\begin{enumerate}
+		\item One centered Point I
+		\begin{itemize}
+			\item Only Pointing
+			\item \textit{Images and sketches}
+			\item \textit{Data and Statistics}
+			\item results and conclusion
+			\item See appendix
+		\end{itemize}
 		\item One centered Point II
 		\begin{itemize}
 			\item Pointing, Aiming and Combined
@@ -151,9 +140,6 @@ The first test was designed as a proof of concept. The basic feasibility of the 
 			\item results and conlusion
 			\item See appendix
 		\end{itemize}
-		
-%-----------------------------------------------------------------------------
-		
 		\item Four Points on each corner of the plane
 		\begin{itemize}
 			\item Classification of combined values
@@ -163,17 +149,11 @@ The first test was designed as a proof of concept. The basic feasibility of the 
 			\item See appendix
 		\end{itemize}
 	\end{enumerate}
-	
-%-----------------------------------------------------------------------------	
-	
 	\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
 	\begin{itemize}
 		\item Description of Eye-Hand Mismatch [ref]
 		\item \textit{Sketches of classification}
 	\end{itemize}
-	
-%-----------------------------------------------------------------------------	
-	
 	\item Test of algorithm's accuracy
 	\begin{itemize}
 		\item Target = '90 percent of all values within a 10cm radius of mean value'
