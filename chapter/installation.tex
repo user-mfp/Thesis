@@ -133,62 +133,145 @@ Before anything could be installed or evaluated, the aforementioned principles h
 \\ 
 The setup that was used for the first round of testing can be seen in Figure \ref{fig:testing_1}\footnote{The exact specifications are described in the next section of this chapter.}. The sensor was positioned at about the same position it would later be inside the Haßleben-showcase. Centered in front of it, a turquoise whiteboard magnet was attached to the white surface of the \textit{lab setup}. It has a diameter of approximately 2cm. 18 subjects, who ranged from 160cm and 188cm in height, took part. All of them are either students or researchers of the faculty of media at Bauhaus-Universität Weimar.
 \\
-The definition of a point in \ac{3D} space was tested with each subject. Only one \ac{IV} was changed throughout a session. It was the amount of positions from where the point had to be defined. Subjects did five rounds for both three and five positions. They were shown the magnet and told to point at it from three and later five positions. Those positions were marked by metal braces along the surface's  edge opposite the sensor. Subjects were not given any visual aid, but an audible countdown in form of beeps was provided instead. At its end a subject either had to point at the target or move to the next position.
+The definition of a point in \ac{3D} space was tested with each subject. Only one \ac{IV} was changed throughout a session. It was the amount of positions from where the point had to be defined. Subjects did five rounds for both three and five positions. They were shown the magnet and told to point at it from three and later five positions. Moreover, subjects had to point with their right arm. The positions were marked by metal braces along the surface's  edge opposite the sensor. Subjects were not given any visual aid, but an audible countdown in form of beeps was provided instead. At its end a subject either had to point at the target or move to the next position.
 \\
-As expected, the principle worked... 
+As expected, subjects defined points in \ac{3D} space by pointing at the given target. However, there were difficulties concerning the accuracy in both conditions. Although histograms of the acquired data (see Figrures \ref{fig:testing_1_histo_3} and \ref{fig:testing_1_histo_5}) suggest a uniform distribution, according to Kolmogorow-Smirnow- and $\chi^2$-tests this is not the case.
+\\
+Nevertheless, the kind of distribution was not relevant for the further analysis of the outcomes. As depicted by Figure \ref{fig:testing_1_dist_3_5}, as well there was a dense cloud of positions for each condition. In the center of each cloud lay the average positions for each condition. Unexpectedly, the values for three pointing positions are more densely distributed, than those for five. This impression can be supported by the similar \ac{AV}, but different \ac{SD} listed in Table \ref{tab:testing_1_avg_val} and \ref{tab:testing_1_std_dev} for three and five positions. 
 
-\begin{itemize}
-	\item Test of pointing accuracy
-	\begin{enumerate}
-		\item One centered Point I
-		\begin{itemize}
-			\item Only Pointing
-			\item \textit{Images and sketches}
-			\item \textit{Data and Statistics}
-			\item results and conclusion
-			\item See appendix
-		\end{itemize}
-		
-%-----------------------------------------------------------------------------
-		
-		\item One centered Point II
-		\begin{itemize}
-			\item Pointing, Aiming and Combined
-			\item \textit{Images and sketches}
-			\item \textit{Data and Statistics}
-			\item results and conlusion
-			\item See appendix
-		\end{itemize}
-		
-%-----------------------------------------------------------------------------
-		
-		\item Four Points on each corner of the plane
-		\begin{itemize}
-			\item Classification of combined values
-			\item \textit{Images and sketches}
-			\item \textit{Data and Statistics}
-			\item results and conlusion
-			\item See appendix
-		\end{itemize}
-	\end{enumerate}
-	
-%-----------------------------------------------------------------------------	
-	
-	\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
-	\begin{itemize}
-		\item Description of Eye-Hand Mismatch [ref]
-		\item \textit{Sketches of classification}
-	\end{itemize}
-	
-%-----------------------------------------------------------------------------	
-	
-	\item Test of algorithm's accuracy
-	\begin{itemize}
-		\item Target = '90 percent of all values within a 10cm radius of mean value'
-		\item Differentiation between real and virtual point
-		\item Necessity of 1:1-mapping of real and virtual point
-	\end{itemize}
-\end{itemize}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ bc !{\vrule width 1pt} nr nr nr}
+		\rowstyle{\bfseries}
+		Positions & AV on X & AV on Y & AV on Z \\
+		\toprule
+		3 & 60.06mm & -674.73mm & 604.28mm \\
+		5 & 81.93mm & -666.20mm & 669.74mm \\		
+	\end{tabular}
+	\caption{Axis' average values for three and five pointing positions.}
+	\label{tab:testing_1_avg_val}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ bc !{\vrule width 1pt} nr nr nr}
+		\rowstyle{\bfseries}
+		Positions & SD on X & SD on Y & SD on Z \\
+		\toprule
+		3 & 98.86mm & 155.86mm & 203.29mm \\
+		5 & 98,77mm & 202.30mm & 284.87mm \\		
+	\end{tabular}
+	\caption{Axis' standard deviations for three and five pointing positions.}
+	\label{tab:testing_1_std_dev}
+\end{table}
+
+Although, \ac{AV}s \ac{SD}s are no appropriate measures to be drawn from non-uniform distributions, they confirm the observations. -- Three pointing positions are less prone to error than five. In retrospect, the five positions were closer together. Consequently, the angle between pointing vectors were more acute. Hence, some pedal points had been calculated to be several meters away from the others. This probably led to the higher dispersion in comparison to that of three pointing positions. Accordingly, it was decided that three positions will be sufficient to properly define a point in \ac{3D} space by pointing. The process still had to be drastically improved though. As Table \ref{tab:testing_1_valid} shows, not even $15\%$ of the positions would have validated each other. This means, 13 of the 90 points defined lie within the aforementioned threshold of 100mm aspired for sufficient accuracy. Even for twice the threshold, less than half of all points validated each other. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ bc !{\vrule width 1pt} nr }
+		\rowstyle{\bfseries}
+		Threshold & Validation \\
+		\toprule
+		100mm & $14.43\%$ \\			
+		120mm & $20.40\%$ \\		
+		140mm &	$27.57\%$ \\		
+		160mm & $33.31\%$ \\			
+		180mm & $39.58\%$ \\		
+		200mm & $44.69\%$ \\		
+	\end{tabular}
+	\caption{Successful validations for increasing thresholds.}
+	\label{tab:testing_1_valid}
+\end{table}
+
+A positive conclusion can be taken from Figure \ref{fig:testing_1_valid_maps}, in which all validation attempt's results are visualized by color coding. Full validation on each axis is green, two successfully validated axis are yellow, one is orange and none is red. Each small square is one defined point. The points are sorted in ascending height of their defining subjects. It can be seen that the subjects' height has no apparent influence on the validation. Hence, size does not matter.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{Color coded validation of each defined point. Thresholds from left to right: 100, 120, 140, 160, 180, 200mm.}%
+%\label{fig:testing_1_valid_maps}%
+%\end{figure}
+
+Two more observations occurred during the tests. First, there were several defective measurements recorded in the raw data. Second, most subjects appeared to point to high and thus overshoot. Both observations had to be addressed to improve the accuracy of the definition process.
+\\
+The first observation could be handled by improving the algorithms that were responsible for sampling the pointing gesture of a subject. In some cases, the subject's joints were not updated properly, which led to zero vectors pointing nowhere. Another aspect was the aforementioned countdown. Several subjects got confused on what to do next. Thus, they did not point during sampling or were not ready. The issue was addressed with improved feedback during the text round of testing.
+\\
+The second observation however, turned out to be more complex and yet helpful than anticipated. What had been observed, was a common issue in \ac{VR}-environments. It is referred to as the \textit{eye-hand visibility mismatch} by Argelaguet et al.~\cite{EyeHandMissmatchVR}. They explain that \ac{VR} pointing techniques can be classified in two groups. Namely, they are \textit{hand-} and \textit{eye-rooted} techniques [ibid.]. In \ac{3D} \ac{VR}-environments not only devices are tracked, but also users' heads\footnote{Users wear special \ac{3D}-glasses. For a correct stereoscopic view, those glasses are tracked as well to calculate a correct perspective view angle into the scene.}. Pointing devices' rays and users' view angle are calculated according to their tracked position and orientation. The eye-hand visibility miss match describes the problem that not everything that is visible for a user, can be reached by a device's ray. Other objects might occlude the ray, what prevents selection [ibid.]. Argelaguet et al. propose a solution as well. They introduce a \textit{selection} and a \textit{display ray}. The selection ray originates at a user's eye position and has the device's orientation. Any intersection with an object in the scene will be the display ray's point of aim. The display ray provides the visual feedback and originates at the device leading to the point of aim. By implication, Argelaguet et al. introduced aiming as an alternative to pointing. 
+\\
+As a consequence, I incorporated this principle to my approach and added a second vector to the system. Aiming vectors have a subject's head-joint as origin. The orientation is determined by the head- and hand-joint. Thus, only one more joint had to be updated.
+
+\paragraph{Second Test} The following test had to show, if the improvements mentioned above have had a positive effect on the systems performance and precision. The setup and task remained the same. Because five positions had been eliminated as a condition, subjects only had to do five rounds from three positions. Both pointing and aiming vectors as well as the computed points in \ac{3D} space were recorded at the same time thus ensuring comparability.  This time, 19 subjects took part. Their heights ranged from 157 to 198cm. Although several subjects had taken part in the first test, no learning effects were expected due to the intuitiveness of the task at hand.  
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ bc !{\vrule width 1pt} nr | nr nr nr }
+		\rowstyle{\bfseries}
+		Threshold & Test No.1 & Pointing & Aiming & Combined \\
+		\toprule
+		100mm & $14.43\%$ & $29.83\%$ & $16.55\%$ & $23.21\%$ \\			
+		120mm & $20.40\%$ & $39.86\%$ & $21.86\%$ & $31.88\%$ \\		
+		140mm &	$27.57\%$ & $50.35\%$ & $26.72\%$ & $39.48\%$ \\		
+		160mm & $33.31\%$ & $63.91\%$ & $31.28\%$ & $45.91\%$ \\			
+		180mm & $39.58\%$ & $65.74\%$ & $35.83\%$ & $51.82\%$ \\		
+		200mm & $44.69\%$ & $70.03\%$ & $39.78\%$ & $56.52\%$ \\		
+	\end{tabular}
+	\caption{Comparison of successful validations for increasing thresholds.}
+	\label{tab:testing_2_valid}
+\end{table}
+
+Text...
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{Color coded validation of each defined point. Thresholds from left to right: 100, 120, 140, 160, 180, 200mm.}%
+%\label{fig:testing_1_valid_maps}%
+%\end{figure}
+
+\paragraph{Third Test} The last test that took place in the lab, was intended to find the most efficient combination of classification and weighing of pointing and aiming points. Moreover, the three most suitable corners for defining an exhibition plane were chosen according to the results of this final test.
+
+ %\begin{itemize}
+	%\item Test of pointing accuracy
+	%\begin{enumerate}
+	%\begin{enumerate}
+		%\item One centered Point I
+		%\begin{itemize}
+			%\item Only Pointing
+			%\item \textit{Images and sketches}
+			%\item \textit{Data and Statistics}
+			%\item results and conclusion
+			%\item See appendix
+		%\end{itemize}
+		%\item One centered Point II
+		%\begin{itemize}
+			%\item Pointing, Aiming and Combined
+			%\item \textit{Images and sketches}
+			%\item \textit{Data and Statistics}
+			%\item results and conlusion
+			%\item See appendix
+		%\end{itemize}
+		%\item Four Points on each corner of the plane
+		%\begin{itemize}
+			%\item Classification of combined values
+			%\item \textit{Images and sketches}
+			%\item \textit{Data and Statistics}
+			%\item results and conlusion
+			%\item See appendix
+		%\end{itemize}
+	%\end{enumerate}
+	%\item Development of algorithms for eye-hand mismatch (elbow/hand + head/hand)
+	%\begin{itemize}
+		%\item Description of Eye-Hand Mismatch [ref]
+		%\item \textit{Sketches of classification}
+	%\end{itemize}
+	%\item Test of algorithm's accuracy
+	%\begin{itemize}
+		%\item Target = '90 percent of all values within a 10cm radius of mean value'
+		%\item Differentiation between real and virtual point
+		%\item Necessity of 1:1-mapping of real and virtual point
+	%\end{itemize}
+%\end{itemize}
 
 %-----------------------------------------------------------------------------
 
