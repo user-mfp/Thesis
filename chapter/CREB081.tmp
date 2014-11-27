@@ -383,44 +383,30 @@ Each of the 24 subjects of this test had to define all four corners of a fiction
 %\label{fig:testing_3_setup} %
 %\end{figure}
 
-After all data had been gathered, they were processed by tool to generate all possible combinations. Therefore, point-tuples defined by pointing an aiming were classified and then weighted. The previous combination was computed for comparison as well.
-\\
-Classifications were either static or biased. \textit{Static classification} implies a balanced weighing. There was a progression in static classification, though. Whereas \textit{direct} classification only computed, whether two points were validating each other for a particular threshold or not, \textit{centered} classification was checking if both points would validate a virtual center between them.
-\\
-\textit{Biased classification} on the other hand compares each of the defining points axis. If there is a difference larger than a particular threshold, there is a probable bias toward either of the points. The dominant point cannot be determined by the distance between the two alone. A decisive criterion was needed and the absolute value was chosen\footnote{A more profound investigation of biased free-hand pointing will be the topic for further research.}. Either the \text{biggest} or the \textit{smallest absolute value} of an axis was considered dominant. Hence, it was given a higher weight than the other point's axis' value. The weight-ratios in favor of the dominant value are 60:40, 70:30, 80:20 and 90:10. Another type of weighing is \textit{automatic weight calculation}. Here, the ratio is calculated with respect to the actual distance between the points. Thus, if the distance is just above the threshold the weight-ratio is 60:40. For values further than twice the threshold apart, the maximum ratio of 90:10 is used. All other distances in between yield a respective weighing.
+After all data had been gathered, they were processed by tool to generate possible combinations. Therefore, point-tuples defined by pointing an aiming were classified by two new criteria and then weighed in five different ways. The previous combinations were computed for comparison as well.
 
 \begin{table}[H]
 	\centering
-	\begin{tabular}{ bl nr !{\vrule width 1pt} nr nr nr nr | nc }
+	\begin{tabular}{ bc bc !{\vrule width 1pt} nr nr nr nr }
 		\rowstyle{\bfseries}
-		Class. 					& Weighing 				& Point $\#$1 & Point $\#$2 & Point $\#$3 & Point $\#$4 & $\sum$ \\
+		Classification & Weighing & Point $\#$1 & Point $\#$2 & Point $\#$3 & Point $\#$4 \\
 		\toprule
-		\textbf{Direct} & $\mathbf{50\%}$ & $3.70\%$  	& $9.25\%$  	& $47.97\%$ 	& $28.95\%$ 	& $22.47\%$ \\			
-		\textbf{Center} & $\mathbf{50\%}$ & $17.23\%$ 	& $39.28\%$ 	& $76.21\%$ 	& $59.55\%$ 	& $48.07\%$ \\	
-			
-		\textbf{Big} 	  & $\mathbf{60\%}$ & $19.93\%$ 	& $38.11\%$ 	& $75.47\%$ 	& $61.03\%$ 	& $48.64\%$ \\		
-		\textbf{Big}    & $\mathbf{70\%}$ & $21.40\%$ 	& $35.58\%$ 	& $74.41\%$ 	& $62.09\%$ 	& $48.37\%$ \\			
-		\textbf{Big}    & $\mathbf{80\%}$ & $21.64\%$ 	& $32.10\%$ 	& $73.79\%$ 	& $61.46\%$ 	& $47.25\%$ \\		
-		\textbf{Big}    & $\mathbf{90\%}$ & $21.75\%$ 	& $29.60\%$ 	& $72.85\%$ 	& $59.74\%$ 	& $46.98\%$ \\	
-		\textbf{Big}    & \textbf{Auto}   & $19.56\%$ 	& $26.49\%$ 	& $73.59\%$ 	& $58.72\%$ 	& $44.59\%$ \\	
-		
-		\textbf{Small}  & $\mathbf{60\%}$ & $15.77\%$ 	& $39.14\%$ 	& $77.35\%$ 	& $59.43\%$ 	& $47.92\%$ \\		
-	  \textbf{Small}  & $\mathbf{70\%}$ & $13.87\%$ 	& $38.03\%$ 	& $77.39\%$ 	& $57.98\%$ 	& $46.82\%$ \\			
-		\textbf{Small}  & $\mathbf{80\%}$ & $12.03\%$ 	& $36.58\%$ 	& $76.88\%$ 	& $56.38\%$ 	& $45.47\%$ \\		
-		\textbf{Small}  & $\mathbf{90\%}$ & $10.31\%$ 	& $34.37\%$ 	& $76.06\%$ 	& $54.03\%$ 	& $43.69\%$ \\
-		\textbf{Small}  & \textbf{Auto}   & $13.13\%$ 	& $37.56\%$ 	& $77.03\%$ 	& $53.09\%$ 	& $45.20\%$ \\						
+		Direct & $50\%$ & $29.83\%$ & $16.55\%$ & $23.21\%$ & $23.21\%$ \\			
+		Center & $50\%$ & $39.86\%$ & $21.86\%$ & $31.88\%$ & $23.21\%$ \\		
+		Big 	 & $60\%$ & $50.35\%$ & $26.72\%$ & $39.48\%$ & $23.21\%$ \\		
+		Big    & $70\%$ & $63.91\%$ & $31.28\%$ & $45.91\%$ & $23.21\%$ \\			
+		Big    & $80\%$ & $65.74\%$ & $35.83\%$ & $51.82\%$ & $23.21\%$ \\		
+		Big    & $90\%$ & $70.03\%$ & $39.78\%$ & $56.52\%$ & $23.21\%$ \\		
+		Big    & Auto   & $70.03\%$ & $39.78\%$ & $56.52\%$ & $23.21\%$ \\	
+		Small  & $60\%$ & $50.35\%$ & $26.72\%$ & $39.48\%$ & $23.21\%$ \\		
+	  Small  & $70\%$ & $63.91\%$ & $31.28\%$ & $45.91\%$ & $23.21\%$ \\			
+		Small  & $80\%$ & $65.74\%$ & $35.83\%$ & $51.82\%$ & $23.21\%$ \\		
+		Small  & $90\%$ & $70.03\%$ & $39.78\%$ & $56.52\%$ & $23.21\%$ \\		
+		Small  & Auto   & $70.03\%$ & $39.78\%$ & $56.52\%$ & $23.21\%$ \\			
 	\end{tabular}
-	\caption{Successful validations for threshold of 100mm. Comparison of classifications and weighing.}
-	\label{tab:testing_3_weighing}
+	\caption{Comparison of classifications and weighing for .}
+	\label{tab:testing_3_weighings}
 \end{table}
-
-As Table \ref{tab:testing_3_weighing} shows, the practical orientation of centered classification alone more than doubled the validations over all. Successful validations were significantly increased especially for points $\#1$ and $\#2$, which lay in the far left and right corner. Thus, drastically reducing problems with angular error.
-\\
-The table further shows that both classification types have similar percentages of overall successful validations. Classification by biggest is a little stronger than by smallest absolute value, though. The advantage comes from a better performance in successfully validating the far left corner.
-\\
-Although ''Big60'' hast the best overall performance, ''Big70'' was chosen for the final version of the administration and presentation software. The successful validations by this combination of classification and weighing show a more homogeneous distribution.
-
-The aspired majority of successful validations within a threshold of 100mm could not be achieved. If users are provided with feedback and can adjust their gestures accordingly, the system is operable. Improvements of the determination of points in \ac{3D} space are discussed in Chapter \ref{future_work}. 
 
  %\begin{itemize}
 	%\item Test of pointing accuracy
