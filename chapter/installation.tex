@@ -171,7 +171,7 @@ Users are pointing at exhibits on a flat, horizontal surface. The distance betwe
 %\label{fig:principle_angular_error}%
 %\end{figure}
 
-A realistic sample calculation shows how big the angular error gets. The scale is an adult user whose shoulder is constantly a = 70cm above the plane. Further, the user stands an arm's length away from the plane and the target is 1.3m away from the edge. This results in a horizontal distance of $b_{target}$ = 2m between user and target\footnote{Here, the shoulder is taken as the rotational joint for illustrative reasons. However, the principle remains the same. Further, this configuration will reappear in Chapter \ref{installation_testing.}}.
+A realistic sample calculation shows how big the angular error gets. The scale is an adult user whose shoulder is constantly a = 70cm above the plane. Further, the user stands an arm's length away from the plane and the target is 1.3m away from the edge. This results in a horizontal distance of $b_{target}$ = 2m between user and target\footnote{Here, the shoulder is taken as the rotational joint for illustrative reasons. However, the principle remains the same. Further, this configuration will reappear in Chapter \ref{installation_testing}.}.
 
 $$\tan{\alpha_{target}} = \frac{b_{target}}{a} \quad \to \quad \tan{\alpha_{target}} = \frac{700mm}{2000mm} \quad \to \quad \alpha_{target} \approx 19.3^\circ$$
 
@@ -485,24 +485,45 @@ Three installations were build. One lab setup for development, one makeshift set
 
 \paragraph{Lab Setup} A room had to be found and equipped with all necessary Hardware. Therefore, the room had to fit a mockup of the Haßleben-showcase and provide enough space for testing. The Hardware was lend to me by multiple sources of the faculty, while the museum's carpenter made a pedestal consisting of a surface and feet. The surface is made out of four 9mm-press boards. The feet seemed to unstable and thus were replaced with one desk rack for each board.
 
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:lab_setup} %
+%\end{figure}
+
 %-----------------------------------------------------------------------------
 
 \paragraph{Lobby Setup} After some technical difficulties with the museum-setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, I build a makeshift setup in the faculty's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the computer and a tripod with the sensor on top were positioned. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (\textit{see Figure}).
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:summaery_setup} %
+%\end{figure}
 
 %-----------------------------------------------------------------------------
 
 \section{Museum Setup}
 \label{setup_museum}
 
-\begin{itemize}
-	\item Automatic boot at 8:30am [Bios]
-	\item Runnging
-	\item Logfiles for each \textit{Session-Event}
-	\begin{itemize}
-		\item Start Session: User in interaction zone (Exhibition.UserPosition +/- Threshold from SessionHandler := 250mm)
-		\item New Target: User pointing at a target
-		\item Target Selected: Dwelltime (Exhibition.SelectionTime := 700ms) starts slide show for selected target
-		\item End Session: User leaves interaction zone
-	\end{itemize}
-	\item Automatic shutdown at 4:45pm [Software]
-\end{itemize}
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:museum_setup} %
+%\end{figure}
+
+%\begin{itemize}
+	%\item Automatic boot at 8:30am [Bios]
+	%\item Runnging
+	%\item Logfiles for each \textit{Session-Event}
+	%\begin{itemize}
+		%\item Start Session: User in interaction zone (Exhibition.UserPosition +/- Threshold from SessionHandler := 250mm)
+		%\item New Target: User pointing at a target
+		%\item Target Selected: Dwelltime (Exhibition.SelectionTime := 700ms) starts slide show for selected target
+		%\item End Session: User leaves interaction zone
+	%\end{itemize}
+	%\item Automatic shutdown at 4:45pm [Software]
+%\end{itemize}
