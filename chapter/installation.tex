@@ -483,7 +483,29 @@ The aspired majority of successful validations within a threshold of 100mm could
 
 Three installations were build. One lab setup for development, one makeshift setup was placed in the faculty building's lobby, and the final one was installed inside the showcase at the Museum für Ur- und Frühgeschichte Thüringens. The various setups differed in dimensions and were run with different hardware configurations. Testing of technical principles and computations were conducted with the lab setup. The lobby setup was used for a stress-test during an open door-event at the faculty, whereas the final evaluation took place in the museum. Only the presentation software was evaluated.
 
-\paragraph{Lab Setup} A room had to be found and equipped with all necessary Hardware. Therefore, the room had to fit a mockup of the Haßleben-showcase and provide enough space for testing. The Hardware was lend to me by multiple sources of the faculty, while the museum's carpenter made a pedestal consisting of a surface and feet. The surface is made out of four 9mm-press boards. The feet seemed to unstable and thus were replaced with one desk rack for each board.
+The Haßleben-showcase was measured. The measurments were then transferred into the groundplan depicted in Figure \ref{fig:hassleben_groundplan}. With a width of 439cm and a depth of 344cm, a mockup of the showcase was quiet large and would need an even larger room to fit in be still operable. The showcase has a floor-to-ceiling height of 293cm and its exhibition plane is 65cm above the floor.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:hassleben_groundplan} %
+%\end{figure}
+
+The laminated glass is 7mm thick. A main concern at the beginning was, whether the sensor would be able to work through glass or not, because the panels have no anti-glare coating. Figure \ref{fig:hassleben_glass} shows that it worked through two sheets of glass at an acute angle (a) as well as straight trough it (b).
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:hassleben_glass} %
+%\end{figure}
+
+\paragraph{Lab Setup} A room with adequate dimensions had to be found. Moreover, the mockup had to be build, and equipped with all necessary Hardware. 
+\\
+There were three unoccupied rooms. One at the museum and two at the faculty. The room at the museum was the attic, not insulated, and had no network connection. Hence it was not suitable. Both rooms at the faculty could fit the mockup and an additional desktop to work at. The smaller room was reserved, though. Thus, the big room became the testing environment. It provided constant lighting and helpful features such as access to the internet and proximity to experts at the faculty.
+\\
+Until the final hardware was acquired by the museum and available for testing, similar hardware was preliminarily lend to me by multiple sources of the faculty. The museum's carpenter fabricated a pedestal consisting of surface plating and feet. The plating is fabricated from four 9mm-press boards. The feet seemed too unstable and thus were replaced with one desk rack for each board as can be seen in Figure \ref{fig:lab_setup}.
 
 \textbf{F I G U R E}
 %\begin{figure}%
@@ -492,9 +514,17 @@ Three installations were build. One lab setup for development, one makeshift set
 %\label{fig:lab_setup} %
 %\end{figure}
 
+The mockup is 315cm wide, 264cm deep and 75cm high. These are not the exact measurements of the showcase. I did not reproduce the whole showcase, but only the exhibition plane within. Therefore, the reproduction is adequately proportioned. The additional height increases the probability of angular error compared to the original. Therefore, the final setup's error is estimated to be lower.
+\\
+The sensor is mounted on a tripod, which is placed at approximately the position it would later be installed inside the showcase. From there, it faces the subjects at an angle of about $100^\circ$. This elevated position is necessary to get reliable readings. Otherwise, a sensor installed at shoulder-height can not properly acquire depth information of occluded joints.
+\\
+The desktop to the right of the mockup was the main workplace from where the tests were supervised. It provided a good overview of subjects and hardware alike. The computer running the test software was placed on this desktop and so was the screen. For later tests, a second screen was placed beneath the tripod's legs.
+
+There were two hardware configurations used during the development of the system. The first test was conducted on a netbook. Following tests were conducted on the desginated desktop-PC\footnote{Full specifications of hardware and the development environment can be found in Chapter \ref{implementation}.}. The display used in all cases had a screen size of 15.6'' and a resolution of 1920x1080.
+
 %-----------------------------------------------------------------------------
 
-\paragraph{Lobby Setup} After some technical difficulties with the museum-setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, I build a makeshift setup in the faculty's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the computer and a tripod with the sensor on top were positioned. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (\textit{see Figure}).
+\paragraph{Lobby Setup} After technical difficulties with the museum setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, a makeshift setup was built in the faculty's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the desktop-PC and a tripod with the sensor on top were positioned. The interaction space was defined by markings on the floor. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (see Figure \ref{fig:summaery_setup}).
 
 \textbf{F I G U R E}
 %\begin{figure}%
@@ -503,10 +533,20 @@ Three installations were build. One lab setup for development, one makeshift set
 %\label{fig:summaery_setup} %
 %\end{figure}
 
+After assembling the hardware and sample exhibits, a sample exhibition was defined with the administration software. It was given a name, the exhibition plane, user position and exhibits' positions along with images and short descriptions were defined. The whole process took only 45 minutes. Subsequently the presentation software was started.
+\\
+The lobby presented the system with a dense environment. Many visitors walked past it or stopped to try it out. The system crashed several times during this ordeal. Two reasons could be identified after having observed the events and reviewing the log-files.
+\\
+First, the system could have had too many people in its sight. As it turned out, OpenNI was designed for 15 users, yet never tested for more than three~\cite{MaxUsersOpenNI}. It is not clear what happens, if more than 15 subjects are recognized and therefore, I tried to reproduce the error. Unfortunately, we could not manage to get more than 12 persons recognized by the system, whereas the error did not occur.
+\\
+The other problem appeared after having seen some log-files, which implied that invalid targets were selected after people left. This was fixed immediately. 
+
 %-----------------------------------------------------------------------------
 
 \section{Museum Setup}
 \label{setup_museum}
+
+Figure \ref{fig:museum_setup} depicts the installation of the final setup at the Haßleben-showcase. The aforementioned desktop-PC was attached behind the maintenance door to the right of the showcase. Because the keyboard and mouse necessary for maintenance are wireless, the only wires were the USB3.0-cable to connect and power the screen and the PC's own power supply. 
 
 \textbf{F I G U R E}
 %\begin{figure}%
@@ -514,6 +554,10 @@ Three installations were build. One lab setup for development, one makeshift set
 %\caption{.}%
 %\label{fig:museum_setup} %
 %\end{figure}
+
+The display's prior position was changed after the museum staff had concerns about it having to much influence on the overall appearance of the exhibits. Hence, it was anchored on the back wall at eye-height (see Figure \ref{fig:museum_setup}c). This compromise should still be recognizable in users' peripheral vision when they look inside the showcase.
+
+The footsteps defining the interaction space are not centered in front of the showcase and screen, but shifted to the left. This way, visitors can get closer to the showcase and still read the instructions and look at the ideogram.
 
 %\begin{itemize}
 	%\item Automatic boot at 8:30am [Bios]
