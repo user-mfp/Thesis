@@ -17,32 +17,139 @@ The \ac{IMI}-system consists of two main parts. First, the hardware, which invol
 
 %-----------------------------------------------------------------------------
 
-The hardware consists of and PC, the sensor, a screen and peripheral input devices for maintenance. The designated PC is an \textit{ASUS VIVO VC60-B013M}. It employs a \textit{Intel Core i5 3210M} with a clock speed of 2x2,5GHz and 4GB DDR3 SDRAM. Since the system does not have complex graphics, there was no need for a sophisticated graphics card. Hence, the PC is compact and does not need much electricity. 
+The hardware consists of and PC, the sensor, a screen and peripheral input devices for maintenance. The designated PC is an \textit{ASUS VIVO VC60-B013M}. It employs a \textit{Intel Core i5 3210M} with a clock speed of 2x2,5GHz and 4GB DDR3 SDRAM~\cite{VivoPCVC60}. Since the system does not have complex graphics, there was no need for a sophisticated graphics card. Hence, the PC is compact and does not need much electricity. 
 \\
-The Display is connected to the PC via USB3.0 and houses its own graphics chip. This configuration eased the installation, because...
+As a display, we chose an \textit{ASUS MB168B+} with a size of 15.6'' and es resolution of 1920x1080 pixels. The display further houses its own graphics chip, which enables it to be connected to a PC via a USB3.0-cable~\cite{MB168B}. This configuration eased the installation, because of the smaller plug the holes drilled into the back wall of the showcase could be smaller than for a usual display-cable. The display is supported by a modified bookend, which is attached to the back wall with two screws. An additional hole has been drilled for the cable. This hole is hidden by the display. Although it was planned to camouflage the display with a foil, it did not seem necessary, because lighting at the new position of the display is already dim.
+
+The soft- and firmware used for developing and running the system is based on \textit{\ac{MS} Windows 7 Professional x86}. As mentioned earlier, the software was included into \ac{FUBI}. This framework is available as an \textit{\ac{MS} Visual Studio 2010}-project. The all software is written in \text{$C\#$} and hence makes use of the \textit{\ac{MS} .NET Framework 4.5.1}~\cite{MSNET} and further \textit{\ac{MS} XNA Framework 4.0}~\cite{MSXNA} for certain functions throughout certain regions of the software. Moreover, \ac{FUBI} utilizes the functionalities of \textit{OpenNI 2.2.0.33}~\cite{OpenNI} and \textit{NiTE 2.2.0.11}~\cite{NiTE}. 
 
 %------------------------------------------------------------------------------
 
 \section{Libraries}
 \label{implementation_libraries}
 
-\paragraph{Annotations}
+\ac{IMI} includes a collection of libraries, which can be used to implement interactive applications. At the time the functionality is restricted to free-hand pointing gestures. Other mechanisms can be easily added. An \ac{IMI}-exhibition is modularly build by those libraries. The Exhibition- and Exhibit-class have structural functionality and manage an exhibition's data. Meanwhile, the Handler-classes use this data to generate and operate the interaction between user and system.
 
+\paragraph{Preliminaries} Terms used hereafter:
 \begin{itemize}
-	\item 'What are the libraries?'
-	\begin{itemize}
-		\item Overview
-		\item Structure of Exhibition and Exhibits
-	\end{itemize}
-	\item 'What does each one do?'
-	\begin{itemize}
-		\item Modularity
-		\item Config-files (XML)
-		\item Particular methods (Lotfußpunkte, Ebenenschnittpunkt, DataLogger etc.)
-	\end{itemize}
+	\item A Point or Corner is a point in \ac{3D} space of type \texttt{Point3D}.
+	\item A Plane is defined by three Points or Corners. 
+	\item A Position is a point on a Plane of type \texttt{Point3D}.
+	\item A Target is an exhibit's representation on the exhibition plane.
 \end{itemize}
 
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What are the libraries?'
+	%\begin{itemize}
+		%\item Overview
+		%\item Structure of Exhibition and Exhibits
+	%\end{itemize}
+	%\item 'What does each one do?'
+	%\begin{itemize}
+		%\item Modularity
+		%\item Config-files (XML)
+		%\item Particular methods (Lotfußpunkte, Ebenenschnittpunkt, DataLogger etc.)
+	%\end{itemize}
+%\end{itemize}
 
+\paragraph{Exhibition.cs} Members of the Exhibition-class are needed to define an \ac{IMI}-exhibition. All necessary information is contained and managed in this class.
+
+The \texttt{exhibitionPlane} is the most essential component of the exhibition. All exhibits' Positions are defined on this fundamental property. It is constructed by three Corners. The structure of such a Plane is declared by the GeometryHandler-class. The Exhibition-class further holds a list of \texttt{Exhibit}-objects. In this \texttt{List} all selectable exhibits of an \ac{IMI}-exhibition are stored. In addition, the earlier mentioned user position that defines the interaction space is also saved in this class as a Point. An exhibition's name and file path are members of the Exhibition-class, too. So are the images, which are used to camouflage the display against the background and the overview of the exhibition plane with sketches of the exhibits at their respective positions. Furthermore, data crucial for interaction are also members of this class. So are the default values for the threshold needed for defining exhibits and the dwell time for Target selection. Timespans used by the presentation software are \texttt{lockTime}, which determines a short period of paused interaction after selecting a Target and \texttt{slideTime} which determines for how long a single image is shown during an exhibit's presentation.
+
+The characteristic functionality of the Exhibition-class is its get- and set-methods. They allow for reading and writing all those essential variables.
+
+%------------------------------------------------------------------------------
+
+\paragraph{Exhibit.cs} The virtual representation of an exhibit is structured by the Exhibit-class. This includes data relevant for interaction with the system and an exhibit's presentation upon selection.
+
+Interaction: Position $\to$ Target by kernel (includes the size (weight) and radius)
+
+Presentation: name and path, List of images for slide show and description
+
+CHARACTERISTIC FUNCTIONS AND METHODS:
+\\- Getter and Setter
+
+%------------------------------------------------------------------------------
+
+\paragraph{FileHandler.cs} Saving an loading of exhibitions and their exhibits.
+\\
+XmlWriterSettings
+\\
+exhibitionFolder
+\\
+TMP\_EXHIBITION and TMP\_EXHIBIT 
+
+CHARACTERISTIC FUNCTIONS AND METHODS:
+\\- Saving and Loading Data as in XML- or TXT-format
+\\- Parser and Writer
+\\- see Figure \ref{fig:filehandler_data_structure}
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:filehandler_data_structure} %
+%\end{figure}
+
+%------------------------------------------------------------------------------
+
+\paragraph{GeometryHandler.cs} Calculations are done by the geometry handler.
+\\
+struct for Vector
+\\
+struct for Plane
+\\
+input-members: pointing- and aiming positions
+\\
+calculation-members: classfications and combined Points/Positions
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{CalibrationHandler.cs} Defines and validates Points, Positions and Planes
+\\
+samples per position and threshold
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{SessionHandler.cs} Determines the user from visitors. Further builds lookup-table and checks for intersections. Calculates the feedback of current pointing position and its buffering. Calculation of fbP on canvas.
+\\
+userPosition + radius $\Rightarrow$ ID
+\\
+lookup
+\\
+feedbackPositionBuffer and feedbackPositionBufferSize
+\\
+Intersections with ePlane: XNA-varialbles
+\\
+ScreenCoords: screenSize, canvasSize, planeCanvasRatio
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{StatisticsHandler.cs} Instant statistics such as average, SD usw. 
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{DataLogger.cs} Logs events during a session.
+\\
+path to save to
+\\
+paragraphs
+\\
+startSession (Timestamp)
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
 
 \section{Administration-software}
 \label{implementation_administration}
