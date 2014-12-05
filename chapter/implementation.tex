@@ -106,16 +106,16 @@ An additional function of the FileHandler-class is reading TXT-files. This featu
 A \texttt{Vector}, in contrast to a standard \texttt{Vector3D} or \texttt{Vector3}, is not only a \textit{direction vector}. It also has a \textit{starting} and a \textit{terminal point}. Hence, a \texttt{Vector} $V$ is defined by a starting point $P_{S}$ and either an endpoint $P_{E}$ or a direction vector leading towards it $\overrightarrow{d_{E}}$, where $P_{S}$ is either a user's tracked head- or elbow-joint and $P_{E}$ is its tracked hand-joint. 
 \begin{align*}
 	V &= P_{S} + \lambda \cdot \overrightarrow{d_{E}} \\
-	V_{P} &= P_{S} + \lambda_{P} \cdot \overrightarrow{d_{E}}
+	P_{V} &= P_{S} + \lambda_{P} \cdot \overrightarrow{d_{E}}
 \end{align*}
-As the factor $\lambda$ is varied, any point $P$ along a \texttt{Vector}'s direction of propagation can be expressed. 
+As the factor $\lambda$ is varied, any point $P_{V}$ along a \texttt{Vector}'s direction of propagation can be expressed. 
 \\
 A \texttt{Plane} is defined by one starting corner $C_{1}$ and either two additional corners $C_{2}$ and $C_{3}$ or two additional \texttt{Vector}s $\overrightarrow{d_{C_{2}}}$ and $\overrightarrow{d_{C_{3}}}$ towards those corners. In short, a \texttt{Plane} $E$ is defined by two \texttt{Vector}s $V_{C_{2}}$ and $V_{C_{3}}$ of identical origin.  
 \begin{align*}
 	E = V_{C_{2}} + V_{C_{3}} \quad \to \quad E &= C_{1} + \lambda \cdot \overrightarrow{d_{C_{2}}} + \mu \cdot \overrightarrow{d_{C_{3}}} \\
-	E_{P} &= C_{1} + \lambda_{P} \cdot \overrightarrow{d_{C_{2}}} + \mu_{P} \cdot \overrightarrow{d_{C_{3}}}
+	P_{E} &= C_{1} + \lambda_{P} \cdot \overrightarrow{d_{C_{2}}} + \mu_{P} \cdot \overrightarrow{d_{C_{3}}}
 \end{align*}
-Any position $P$ on a \texttt{Plain} can be expressed by varying $\lambda_{C_{2}}$ and $\mu_{C_{3}}$.
+Any position $P_{E}$ on a \texttt{Plain} can be expressed by varying $\lambda_{C_{2}}$ and $\mu_{C_{3}}$.
 
 The GeometryHandler-class has two types on members. First, \textit{input-members} are pointing- and aiming points or positions. Second, \textit{output-members} are lists of classified and weighted points or positions.
 
@@ -130,13 +130,43 @@ To compute the pedal point, and stay in the metaphor, the two foot points $F_{A}
 	F_{A} &= S_{A} + \lambda_{F_{A}} \cdot \overrightarrow{d_{A}} \quad &and \quad F_{B} &= S_{B} + \lambda_{F_{B}} \cdot \overrightarrow{d_{B}} \\
 	F_{A} &= S_{A} + \frac{(S_{B} - S_{A}) \bullet \overrightarrow{n_{B}}}{\overrightarrow{d_{A}} \bullet \overrightarrow{n_{B}}} \cdot \overrightarrow{d_{A}} \quad &and \quad F_{B} &= S_{B} + \frac{(S_{A} - S_{B}) \bullet \overrightarrow{n_{A}}}{\overrightarrow{d_{B}} \bullet \overrightarrow{n_{A}}} \cdot \overrightarrow{d_{B}} 
 \end{align*}
-The only step left is to calculate the pedal point $P_{AB}$ between the two foot points $F_{A}$ and $F_{B}$. Since the feet already represent the points on each \texttt{Vector} that are closest to the other \texttt{Vector} and $P_{AB}$ is in the middle, $P_{AB}$ is the average of them.
+The only step left is to calculate the pedal point $P_{AB}$ between the two foot points~\cite{PedalPoint} $F_{A}$ and $F_{B}$. Since the feet already represent the points on each \texttt{Vector} that are closest to the other \texttt{Vector} and $P_{AB}$ is in the middle, $P_{AB}$ is the average of them.
 $$P_{AB} = (F_{A} \cdot F_{B}) / 2$$
+An exemplary configuration of the problem is depicted by Figure \ref{fig:pedal_point}.
 
-CHARACTERISTIC FUNCTIONS AND METHODS: 
-\\- FORMULA: pedal point
-\\- FORMULA: plane-intersection
-\\- classification and weighing
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:pedal_point} 
+%\end{figure}
+
+The \ac{IMI}-system's interaction is based in the principle of intersections of a \texttt{Vector} and a \texttt{Plain}. Positions of \ac{IMI}-exhibits are defined this way. Furthermore, a user's pointing and aiming position is calculated exactly the same. Thus, this computation is crucial for interaction. Given a \texttt{Vector} $V$ and a \texttt{Plane} $E$ are not parallel, they intersect in a position $P_{I}$, where $P_{I} \in V \wedge E$.   
+\begin{align*}
+	V = P_{S} + \lambda \cdot \overrightarrow{d} \quad &\to \quad P_{I} = P_{S} + \lambda_{I} \cdot \overrightarrow{d} \\
+	E = C_{1} + \mu \cdot \overrightarrow{d_{C_{2}}} + \nu \cdot \overrightarrow{d_{C_{3}}} \quad &with \quad \overrightarrow{n_{E}} = \overrightarrow{d_{C_{2}}} \times \overrightarrow{d_{C_{3}}}
+\end{align*}
+A \texttt{Vector} $\overrightarrow{u}$ between $P_{I}$ and any other position on $E$ has to be perpendicular to $E$'s normal $\overrightarrow{n_{E}}$. Further, a \texttt{Vector} $\overrightarrow{w}$ from $V$'s origin to any position on $E$ is needed. It describes $V$'s origin with respect to $E$. In both cases, $C_{1}$ can be taken as a known position on the \texttt{Plane}.
+$$\overrightarrow{u} = P_{I} - C_{1} \quad and \quad \overrightarrow{w} = P_{S} - C_{1}$$
+As Figure \ref{fig:vector_plane_intersect} shows, going from $C_{1}$ to $P_{I}$ by $\overrightarrow{u}$ is the same as by $\overrightarrow{w}$ and then along $\overrightarrow{d}$. Since $P_{I} \in E$, $\overrightarrow{n}$ also stands perpendicular on $\overrightarrow{u}$. Hence, it is also perpendicular to its equal path from $C_{1}$ to $P_{I}$.
+\begin{align*}
+	\overrightarrow{u} = \overrightarrow{w} + \lambda_{I} \cdot \overrightarrow{d} \quad and \quad 0 &= \overrightarrow{n_{E}} \bullet \overrightarrow{u} \\
+	\quad \Rightarrow \quad 0 &= \overrightarrow{n_{E}} \bullet (\overrightarrow{w} + \lambda_{I} \cdot \overrightarrow{d})
+\end{align*}
+This equation can be solved for $\lambda_{I}$, which is then put back into the pointing \texttt{Vector}'s equation.
+\begin{align*}
+	\lambda_{I} = \frac{\overrightarrow{n_{E}} \bullet \overrightarrow{w}}{\overrightarrow{n_{E}} \bullet \overrightarrow{d}} \quad in \quad P_{I} &= P_{S} + \lambda_{I} \cdot \overrightarrow{d} \\	
+	\quad \to \quad P_{I} &= P_{S} + \frac{\overrightarrow{n_{E}} \bullet \overrightarrow{w}}{\overrightarrow{n_{E}} \bullet \overrightarrow{d}} \cdot \overrightarrow{d}
+\end{align*}
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:vector_plane_intersect} 
+%\end{figure}
+
+The third feature of the GeometryHandler-class is classifying and weighing points and positions.
 
 %------------------------------------------------------------------------------
 
