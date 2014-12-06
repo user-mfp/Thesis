@@ -166,15 +166,27 @@ This equation can be solved for $\lambda_{I}$, which is then put back into the p
 %\label{fig:vector_plane_intersect} 
 %\end{figure}
 
-The third feature of the GeometryHandler-class is classifying and weighing points and positions.
+The GeometryHandler-class utilizes the \ac{MS} XNA framework. It features specialized analysis functionality such as computation dot and cross products and the normal of a plane. These functions replaced manual calculations and increased the efficiency of the class.
+
+The third feature of the GeometryHandler-class is classifying and weighing points and positions. As mentioned in Chapter \ref{installation_testing}, the focus of this work is not the investigation of \textit{biased free-hand pointing}, but the development of an interactive system using free-hand pointing.
+\\
+Pointing and aiming points and positions are classified by comparing each axis' values separately. In the current state, the biggest absolute value is considered the dominant value. The combined point or position is then computed by weighing the two inputs 70:30 in favour of the dominant value.
 
 %------------------------------------------------------------------------------
 
-\paragraph{CalibrationHandler.cs} Defines and validates Points, Positions and Planes
-\\
-samples per position and threshold
+\paragraph{CalibrationHandler.cs} Points, planes and positions of an \ac{IMI}-exhibition are defined and validated by the CalibrationHandler-class. Therefore, two members are used. The first stores the samples per position from which an administrative user is pointing. It is needed to organize the inputs of aiming and pointing \texttt{Vector}s. The other member saves the threshold for which points, planes and positions are defined and validated.
 
-CHARACTERISTIC FUNCTIONS AND METHODS: 
+To define a \texttt{Plane}, three corners are needed. Those corners are points in \ac{3D} space. A Point is defined by pointing at it from different pointing positions. This way \texttt{Vector}s from various angles define what can be described as a \textit{cloud of intersections}. They are pedal points between every \texttt{Vector} with every other \texttt{Vector} and computed by an instance of the GeometryHandler-class . Since there are three pointing positions, there are also three \texttt{Vector}s for each corner. Hence, each corner's cloud consists of three pedal points. These pedal points are averaged to form a center point.
+\\
+This process is repeated to validate the once defined corners. Therefore, an administrative user defines the same corners again and the previously defined corners are compared to the newly defined validation corners by checking, whether they lie within the saved threshold. If every pair of corners validates each other, the \texttt{Plane} can be saved as the corresponding member of the \ac{IMI}-exhibition.
+
+Defining the position of an \ac{IMI}-exhibit is similar to the definition of a corner. An admin points at the exhibit on the earlier defined exhibition plane. This is done from three different pointing positions. Only this time the GeometryHandler-instance does not calculate a pedal point, but the \texttt{Vector}s' intersections with the \texttt{Plane}. After that, a center of the three points is computed.
+\\
+A position on an \ac{IMI}-exhibit has to be validated as well. Hence, the defining processes is repeated and the two centers are compared according to the threshold of the respective \ac{IMI}-exhibition. If they validate each other, the position is saved for the particular \ac{IMI}-exhibit. 
+
+Should corners or a position not successfully validate, the whole definition process has to be repeated all over again. Another validation round is not sufficient, because the first defined corners or position may be flawed.
+\\
+The definition and validation for both corners and positions are done for pointing and aiming. Thus, there are always two values for each corner or position. These two get classified, weighted and combined into one corner or position after validation. Hence, the reliability of a corner or position is higher, because only validation of both pointing modes yield validation of the combined corner or position value.
 
 %------------------------------------------------------------------------------
 
