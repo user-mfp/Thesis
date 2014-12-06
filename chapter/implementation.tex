@@ -21,7 +21,9 @@ The hardware consists of and PC, the sensor, a screen and peripheral input devic
 \\
 As a display, we chose an \textit{ASUS MB168B+} with a size of 15.6'' and es resolution of 1920x1080 pixels. The display further houses its own graphics chip, which enables it to be connected to a PC via a USB3.0-cable~\cite{MB168B}. This configuration eased the installation, because of the smaller plug the holes drilled into the back wall of the showcase could be smaller than for a usual display-cable. The display is supported by a modified bookend, which is attached to the back wall with two screws. An additional hole has been drilled for the cable. This hole is hidden by the display. Although it was planned to camouflage the display with a foil, it did not seem necessary, because lighting at the new position of the display is already dim.
 
-The soft- and firmware used for developing and running the system is based on \textit{\ac{MS} Windows 7 Professional x86}. As mentioned earlier, the software was included into \ac{FUBI}. This framework is available as an \textit{\ac{MS} Visual Studio 2010}-project. The all software is written in \text{$C\#$} and hence makes use of the \textit{\ac{MS} .NET Framework 4.5.1}~\cite{MSNET} and further \textit{\ac{MS} XNA Framework 4.0}~\cite{MSXNA} for certain functions throughout certain regions of the software. Moreover, \ac{FUBI} utilizes the functionalities of \textit{OpenNI 2.2.0.33}~\cite{OpenNI} and \textit{NiTE 2.2.0.11}~\cite{NiTE}. 
+The soft- and firmware used for developing and running the system is based on \textit{\ac{MS} Windows 7 Professional x86}. As mentioned earlier, the software was included into \ac{FUBI}. This framework is available as an \textit{\ac{MS} Visual Studio 2010}-project. The all software is written in \text{$C\#$} and hence makes use of the \textit{\ac{MS} .NET Framework 4.5.1}~\cite{MSNET} and further \textit{\ac{MS} XNA Framework 4.0}~\cite{MSXNA} for certain functions throughout certain regions of the software. Moreover, \ac{FUBI} utilizes the functionalities of \textit{OpenNI 2.2.0.33}~\cite{OpenNI} and \textit{NiTE 2.2.0.11}~\cite{NiTE}.
+
+Maintenance is reduced by automatic booting and shutdown. The system's BIOS boots the PC at 8:30 in the morning. A tool shuts the system down at 4:45 in the afternoon. Hence, no member of the staff has to access the PC to start or shut the system down.
 
 %------------------------------------------------------------------------------
 
@@ -35,6 +37,8 @@ The soft- and firmware used for developing and running the system is based on \t
 	\item A point or corner is a point in \ac{3D} space of type \texttt{Point3D}.
 	\item A plane is defined by three points or corners. 
 	\item A position is a point on a plane of type \texttt{Point3D}.
+	\item A pointing position is the position a user is pointing at.
+	\item A pointing location it the location a pointing user is standing at.
 	\item A kernel is an exhibit's membership function. It has a size and radius.
 	\item A target is an exhibit's representation on the exhibition plane. It is determined by its position and kernel.
 \end{itemize}
@@ -176,11 +180,11 @@ Pointing and aiming points and positions are classified by comparing each axis' 
 
 \paragraph{CalibrationHandler.cs} Points, planes and positions of an \ac{IMI}-exhibition are defined and validated by the CalibrationHandler-class. Therefore, two members are used. The first stores the samples per position from which an administrative user is pointing. It is needed to organize the inputs of aiming and pointing \texttt{Vector}s. The other member saves the threshold for which points, planes and positions are defined and validated.
 
-To define a \texttt{Plane}, three corners are needed. Those corners are points in \ac{3D} space. A Point is defined by pointing at it from different pointing positions. This way \texttt{Vector}s from various angles define what can be described as a \textit{cloud of intersections}. They are pedal points between every \texttt{Vector} with every other \texttt{Vector} and computed by an instance of the GeometryHandler-class . Since there are three pointing positions, there are also three \texttt{Vector}s for each corner. Hence, each corner's cloud consists of three pedal points. These pedal points are averaged to form a center point.
+To define a \texttt{Plane}, three corners are needed. Those corners are points in \ac{3D} space. A Point is defined by pointing at it from different pointing locations. This way \texttt{Vector}s from various angles define what can be described as a \textit{cloud of intersections}. They are pedal points between every \texttt{Vector} with every other \texttt{Vector} and computed by an instance of the GeometryHandler-class . Since there are three pointing locations, there are also three \texttt{Vector}s for each corner. Hence, each corner's cloud consists of three pedal points. These pedal points are averaged to form a center point.
 \\
 This process is repeated to validate the once defined corners. Therefore, an administrative user defines the same corners again and the previously defined corners are compared to the newly defined validation corners by checking, whether they lie within the saved threshold. If every pair of corners validates each other, the \texttt{Plane} can be saved as the corresponding member of the \ac{IMI}-exhibition.
 
-Defining the position of an \ac{IMI}-exhibit is similar to the definition of a corner. An admin points at the exhibit on the earlier defined exhibition plane. This is done from three different pointing positions. Only this time the GeometryHandler-instance does not calculate a pedal point, but the \texttt{Vector}s' intersections with the \texttt{Plane}. After that, a center of the three points is computed.
+Defining the position of an \ac{IMI}-exhibit is similar to the definition of a corner. An admin points at the exhibit on the earlier defined exhibition plane. This is done from three different pointing locations. Only this time the GeometryHandler-instance does not calculate a pedal point, but the \texttt{Vector}s' intersections with the \texttt{Plane}. After that, a center of the three points is computed.
 \\
 A position on an \ac{IMI}-exhibit has to be validated as well. Hence, the defining processes is repeated and the two centers are compared according to the threshold of the respective \ac{IMI}-exhibition. If they validate each other, the position is saved for the particular \ac{IMI}-exhibit. 
 
@@ -190,25 +194,39 @@ The definition and validation for both corners and positions are done for pointi
 
 %------------------------------------------------------------------------------
 
-\paragraph{SessionHandler.cs} Determines the user from visitors. Further builds lookup-table and checks for intersections. Calculates the feedback of current pointing position and its buffering. Calculation of fbP on canvas.
-\\
-userPosition + radius $\Rightarrow$ ID
-\\
-lookup
-\\
-feedbackPositionBuffer and feedbackPositionBufferSize
-\\
-Intersections with ePlane: XNA-varialbles
-\\
-ScreenCoords: screenSize, canvasSize, planeCanvasRatio
+\paragraph{SessionHandler.cs} All data necessary for interaction is computed by the SessionHandler-class. It determines a user from surrounding visitors and calculates whether a target is pointed at or not. Furthermore, this handler also calculates a user's \textit{feedback position} on the exhibition plane. Thus, a user is able to adjust his or her way of pointing.
 
-CHARACTERISTIC FUNCTIONS AND METHODS: 
+For all these calculations the SessionHandler-class needs various members. To determine who is a user amongst visitors, the class stores the predefined user position of an \ac{IMI}-exhibition as a member upon initialization. Along this particular point it further saves the radius of the interaction space around the user position.
+\\
+Additional members that are necessary for interacting with the \ac{IMI}-exhibition are the exhibition plane, the screen and canvas\footnote{A canvas is an XAML-element on which the overview, exhibits' positions and later the feedback position are drawn. More about the process in Chapter \ref{implementation_presentation}.} size. The size of the feedback buffer is a constant member for smoothing a user's feedback position on the display. 
+
+A short but important function is the determination of a user. Without the identification of a user, all further interaction is not possible. All trackable visitors recognized by the system have an \ac{ID}. A \texttt{Dictionary} with this \ac{ID} as \texttt{Key} and the respective person's hip-joint position as \texttt{Value} is given to a function. This function checks if any of the visitors' hips is within the interaction space defined by the \texttt{userPosition} and \texttt{radius}. It then returns the \ac{ID} of the user closest to the \ac{IMI}-exhibition's user position. Hence, the software knows the \ac{ID} of the user to further track and hence interact with.
+\\
+Intersections of \texttt{Vector} and \texttt{Plane} are calculated by the GeometryHandler, but the intersection is not enough. It has to be checked, if some target was hit or not. This task is done by the SessionHandler. It is very hard to hit just the position of an \ac{IMI}-exhibit. This is where the aforementioned kernel of an \texttt{Exhibit} comes into play. As depicted by Figure \ref{fig:exhibit_kernel}a the kernel defines an \textit{\ac{AOA}}. The closer an intersection is to the center of the \ac{AOA}, the higher the affinity for its corresponding \texttt{Exhibit}. Thus, the actual size of an \ac{IMI}-exhibit does not influence its selectability. Only its \ac{AOA}'s properties determine how well an \ac{IMI}-exhibit is selectable. Especially for densely arranged exhibits, this is a useful feature. A small but important object can be given a big kernel size and radius and hence attract more selections than a less important object in its direct proximity (see Figure \ref{fig:exhibit_kernel}b).
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:exhibit_kernel} %a) basic principle and b) comparison of big an small AOA 
+%\end{figure}
+
+To select a target, it has to be determined which \ac{AOA} has the strongest affinity for the position in question. Therefore, the affinity of each \texttt{Exhibit} at this position has to be calculated and it has to be distinguished which one's is the highest. To do that for th ewhole exhibition plane and all exhibits on it in real turned out to require a lot of computing power. Hence, the efficiency was improved by using a \textit{pre-processed lookup-table of all \ac{AOA}s}. Therefore, the \texttt{Plane} is rasterized by 1000 steps in each direction. In this case each step between the matrix dots is about 3mm. Then, the all affinities for each of the matrix dots are calculated. Subsequently, the index\footnote{All \texttt{Exhibit}s of an \texttt{Exhibition} are stored in a \texttt{List}.} of the \texttt{Exhibit} with the highest affinity is stored in a \textit{lookup table}. This lookup table is a \texttt{Dictionary} with a position as \texttt{Key} and the corresponding \texttt{Exhibit}'s index as \texttt{Value}. After all positions are processed, all positions referring to no \ac{IMI}-exhibit are removed from the lookup table. Thus, in this case, the number of \textit{pre-determined affinities} is reduced from 1.000.000 to about 50.000. Thereafter, affinities do not have to be computed each frame, but positions are compared\footnote{Pointing positions might not appear in the lookup table. Therefore, the closest position is interpolated.} with those in the lookup table. If there is a match, the corresponding index is returned.
+\\
+Every position a user is pointing at is buffered and a smoothened \textit{feedback position} is returned. This feedback position is already converted in \texttt{Canvas}-coordinates to match the dimensions of the overview. As Figure \ref{fig:plane_screen_canvas_coords} shows, \texttt{Plane}-coordinates have to be converted into \texttt{Canvas}-coordinates with the ratios of \texttt{Plane} to \texttt{Screen} to \texttt{Canvas} in mind. Depending on the ratio of the \texttt{Plane}, the ratio between \texttt{Screen} and \texttt{Canvas} changes.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:plane_screen_canvas_coords} %skizze zur umrechnung 
+%\end{figure}
+
+The \texttt{planeCanvasRatio} is used to calculate the correct position for the representation of the feedback position in an \ac{IMI}-exhibition's overview. Moreover, it is also used to correctly scale and display the \ac{AOA} of each \texttt{Exhibit} it in the defined position on the overview.
 
 %------------------------------------------------------------------------------
 
-\paragraph{StatisticsHandler.cs} Instant statistics such as average, SD usw. 
-
-CHARACTERISTIC FUNCTIONS AND METHODS: 
+\paragraph{StatisticsHandler.cs} Statistical calculations are done by the StatisticsHandler-class. It computes the \textit{mean}, \textit{variance}, \textit{(empiric) standard deviation} and standard error for a sample of \texttt{Point3D} or \texttt{double}-values. This feature was used for informal analysis of raw data during the iterative development-process. Nevertheless, it might be used for more representative long-term evaluation. 
 
 %------------------------------------------------------------------------------
 
@@ -255,7 +273,7 @@ CHARACTERISTIC FUNCTIONS AND METHODS:
 	\end{itemize}
 \end{itemize}
 
-
+%------------------------------------------------------------------------------
 
 \section{Presentation-software}
 \label{implementation_presentation}
@@ -279,7 +297,7 @@ CHARACTERISTIC FUNCTIONS AND METHODS:
 	\end{itemize}
 \end{itemize}
 
-
+%------------------------------------------------------------------------------
 
 \section{Presentation-remote}
 \label{implementation_remote}
@@ -300,7 +318,7 @@ CHARACTERISTIC FUNCTIONS AND METHODS:
 	\end{itemize}
 \end{itemize}
 
-
+%------------------------------------------------------------------------------
 
 \section{Statistics-tool}
 \label{implementation_tool}
