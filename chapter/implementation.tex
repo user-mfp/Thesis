@@ -230,15 +230,11 @@ The \texttt{planeCanvasRatio} is used to calculate the correct position for the 
 
 %------------------------------------------------------------------------------
 
-\paragraph{DataLogger.cs} Logs events during a session.
+\paragraph{DataLogger.cs} The DataLogger-class can be used for saving all kinds of data of the \ac{IMI}-system. It was developed to write log-files in TXT-format. Therefore, it is possible to initiate an instance with only a file path. After that, new paragraphs can be set up with either a headline or no headline. These paragraphs can then be addressed with an index. Thus, new lines are addable at any point during the runtime of an \ac{IMI}-application. A logs can be saved as TXT-files anytime, too.
 \\
-path to save to
+The DataLogger-class was used during the iterative development-process to log pointing and aiming \texttt{Vector}s as well as defined points and positions in one file for each subject along with related statistics of these values.
 \\
-paragraphs
-\\
-startSession (Timestamp)
-
-CHARACTERISTIC FUNCTIONS AND METHODS: 
+The presentation-software, uses the DataLogger-class to save all events during a session. Thus, the museum is able to keep track of its visitors' behavior and interests. These session-logs can be further analyzed by the \ac{IMI}-statistics tool described in Chapter \ref{implementation_tool}.
 
 %------------------------------------------------------------------------------
 
