@@ -1,0 +1,226 @@
+\chapter{Implementation -- Interactive Museum Installation}
+\label{implementation}
+
+The \ac{IMI}-system consists of two main parts. First, the hardware, which involves the physical tracking and computing of that data in the background. Second, the software, which includes the \ac{IMI}-libraries and pieces of software utilizing them.
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item Explanation of functionalities
+	%\item Diagrams
+	%\begin{itemize}
+		%\item Classes
+		%\item Sequences
+	%\end{itemize}
+	%\item Sketches
+%\end{itemize}
+
+%-----------------------------------------------------------------------------
+
+The hardware consists of and PC, the sensor, a screen and peripheral input devices for maintenance. The designated PC is an \textit{ASUS VIVO VC60-B013M}. It employs a \textit{Intel Core i5 3210M} with a clock speed of 2x2,5GHz and 4GB DDR3 SDRAM~\cite{VivoPCVC60}. Since the system does not have complex graphics, there was no need for a sophisticated graphics card. Hence, the PC is compact and does not need much electricity. 
+\\
+As a display, we chose an \textit{ASUS MB168B+} with a size of 15.6'' and es resolution of 1920x1080 pixels. The display further houses its own graphics chip, which enables it to be connected to a PC via a USB3.0-cable~\cite{MB168B}. This configuration eased the installation, because of the smaller plug the holes drilled into the back wall of the showcase could be smaller than for a usual display-cable. The display is supported by a modified bookend, which is attached to the back wall with two screws. An additional hole has been drilled for the cable. This hole is hidden by the display. Although it was planned to camouflage the display with a foil, it did not seem necessary, because lighting at the new position of the display is already dim.
+
+The soft- and firmware used for developing and running the system is based on \textit{\ac{MS} Windows 7 Professional x86}. As mentioned earlier, the software was included into \ac{FUBI}. This framework is available as an \textit{\ac{MS} Visual Studio 2010}-project. The all software is written in \text{$C\#$} and hence makes use of the \textit{\ac{MS} .NET Framework 4.5.1}~\cite{MSNET} and further \textit{\ac{MS} XNA Framework 4.0}~\cite{MSXNA} for certain functions throughout certain regions of the software. Moreover, \ac{FUBI} utilizes the functionalities of \textit{OpenNI 2.2.0.33}~\cite{OpenNI} and \textit{NiTE 2.2.0.11}~\cite{NiTE}. 
+
+%------------------------------------------------------------------------------
+
+\section{Libraries}
+\label{implementation_libraries}
+
+\ac{IMI} includes a collection of libraries, which can be used to implement interactive applications. At the time the functionality is restricted to free-hand pointing gestures. Other mechanisms can be easily added. An \ac{IMI}-exhibition is modularly build by those libraries.
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What are the libraries?'
+	%\begin{itemize}
+		%\item Overview
+		%\item Structure of Exhibition and Exhibits
+	%\end{itemize}
+	%\item 'What does each one do?'
+	%\begin{itemize}
+		%\item Modularity
+		%\item Config-files (XML)
+		%\item Particular methods (Lotfußpunkte, Ebenenschnittpunkt, DataLogger etc.)
+	%\end{itemize}
+%\end{itemize}
+
+\paragraph{\texttt{Exhibition.cs}} Members of the exhibition-class are needed to define an \ac{IMI}-exhibition. All necessary information are contained and managed by this class. This includes the exhibition plane, a list of all included exhibits and other vital variables.
+\\
+exhibition plane
+\\
+exhibits
+\\
+user position
+\\
+name and path
+\\
+background image and overview
+\\
+threshold for defining exhibits
+\\
+dwell time for target selection, lockTime and slideTime
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{Exhibit.cs}} The exhibit-class does amazing stuff.
+\\
+position
+\\
+list of images (slide show)
+\\
+name and path
+\\
+description
+\\
+kernel includes the size (weight) and radius
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{FileHandler.cs}} Saving an loading of exhibitions and their exhibits.
+\\
+XmlWriterSettings
+\\
+exhibitionFolder
+\\
+TMP\_EXHIBITION and TMP\_EXHIBIT 
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{GeometryHandler.cs}} Calculations are done by the geometry handler.
+\\
+struct for Vector
+\\
+struct for Plane
+\\
+input-members: pointing- and aiming positions
+\\
+calculation-members: classfications and combined Points/Positions
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{CalibrationHandler.cs}} Defines and validates Points, Positions and Planes
+\\
+samples per position and threshold
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{SessionHandler.cs}} Determines the user from visitors. Further builds lookup-table and checks for intersections. Calculates the feedback of current pointing position and its buffering. Calculation of fbP on canvas.
+\\
+userPosition + radius $\Rightarrow$ ID
+\\
+lookup
+\\
+feedbackPositionBuffer and feedbackPositionBufferSize
+\\
+Intersections with ePlane: XNA-varialbles
+\\
+ScreenCoords: screenSize, canvasSize, planeCanvasRatio
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{StatisticsHandler.cs}} Instant statistics such as average, SD usw. 
+
+%------------------------------------------------------------------------------
+
+\paragraph{\texttt{DataLogger.cs}} Logs events during a session.
+\\
+path to save to
+\\
+paragraphs
+\\
+startSession (Timestamp)
+
+%------------------------------------------------------------------------------
+
+\section{Administration-software}
+\label{implementation_administration}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the administration-software?'
+	\begin{itemize}
+		\item Define and edit exhibitions
+		\begin{itemize}
+			\item ExhibitionPlane
+			\item Define, load and remove Exhibits
+			\item Define and change UserPosition
+			\item Edit dwelltimes
+			\item Load Background(s)
+		\end{itemize}
+		\item Define and edit exhibits
+		\begin{itemize}
+			\item Define and change Position
+			\item Load and remove Images
+			\item Write and load Description (up to 310 charcters)
+		\end{itemize}
+	\end{itemize}
+	\item 'What does it do?'
+	\begin{itemize}
+		\item \textit{Sequences}
+		\item Paper-mockup
+		\item Create (re-)loadable Config-files
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Presentation-software}
+\label{implementation_presentation}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the presentation-software?'
+	\begin{itemize}
+		\item Display information of previously defined interactive exhibits
+		\item Overview-map of ExhibitionPlane
+		\item Feedback of exhibits' positions and pointing position
+		\item Description (Readability, Sehwinkel) and Images as slide show
+	\end{itemize}
+	\item 'What does it do?'
+	\begin{itemize}
+		\item Check for Exhibition
+		\item Pre-calculate Lookup for exhibit-selection (saves processing power)
+		\item Recognize visitors
+		\item Identify user by predefined UserPosition 
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Presentation-remote}
+\label{implementation_remote}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the presentation-remote?'
+	\begin{itemize}
+		\item Microsoft Gadgeteer-Device
+		\item Bluetooth / WiFi-connection to PC
+		\item For lecturers in order to explain exhibits themselves
+	\end{itemize}
+	\item 'What does it do?'
+	\begin{itemize}
+		\item Automatically connect to Presentation-software
+		\item Toggle Presentation-software's blindness
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Statistics-tool}
+\label{implementation_tool}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the statistics-tool and what does it do?'
+	\begin{itemize}
+		\item Small tool to evaluate logged user-data
+		\item Statistics, such as average length of stay/session, exhibits chosen and how many transitions 
+	\end{itemize}
+\end{itemize}

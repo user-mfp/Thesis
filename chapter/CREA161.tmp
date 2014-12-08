@@ -1,0 +1,284 @@
+\chapter{Implementation -- Interactive Museum Installation}
+\label{implementation}
+
+The \ac{IMI}-system consists of two main parts. First, the hardware, which involves the physical tracking and computing of that data in the background. Second, the software, which includes the \ac{IMI}-libraries and pieces of software utilizing them.
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item Explanation of functionalities
+	%\item Diagrams
+	%\begin{itemize}
+		%\item Classes
+		%\item Sequences
+	%\end{itemize}
+	%\item Sketches
+%\end{itemize}
+
+%-----------------------------------------------------------------------------
+
+The hardware consists of and PC, the sensor, a screen and peripheral input devices for maintenance. The designated PC is an \textit{ASUS VIVO VC60-B013M}. It employs a \textit{Intel Core i5 3210M} with a clock speed of 2x2,5GHz and 4GB DDR3 SDRAM~\cite{VivoPCVC60}. Since the system does not have complex graphics, there was no need for a sophisticated graphics card. Hence, the PC is compact and does not need much electricity. 
+\\
+As a display, we chose an \textit{ASUS MB168B+} with a size of 15.6'' and es resolution of 1920x1080 pixels. The display further houses its own graphics chip, which enables it to be connected to a PC via a USB3.0-cable~\cite{MB168B}. This configuration eased the installation, because of the smaller plug the holes drilled into the back wall of the showcase could be smaller than for a usual display-cable. The display is supported by a modified bookend, which is attached to the back wall with two screws. An additional hole has been drilled for the cable. This hole is hidden by the display. Although it was planned to camouflage the display with a foil, it did not seem necessary, because lighting at the new position of the display is already dim.
+
+The soft- and firmware used for developing and running the system is based on \textit{\ac{MS} Windows 7 Professional x86}. As mentioned earlier, the software was included into \ac{FUBI}. This framework is available as an \textit{\ac{MS} Visual Studio 2010}-project. The all software is written in \text{$C\#$} and hence makes use of the \textit{\ac{MS} .NET Framework 4.5.1}~\cite{MSNET} and further \textit{\ac{MS} XNA Framework 4.0}~\cite{MSXNA} for certain functions throughout certain regions of the software. Moreover, \ac{FUBI} utilizes the functionalities of \textit{OpenNI 2.2.0.33}~\cite{OpenNI} and \textit{NiTE 2.2.0.11}~\cite{NiTE}. 
+
+%------------------------------------------------------------------------------
+
+\section{Libraries}
+\label{implementation_libraries}
+
+\ac{IMI} includes a collection of libraries, which can be used to implement interactive applications. At the time the functionality is restricted to free-hand pointing gestures. Other mechanisms can be easily added. An \ac{IMI}-exhibition is modularly build by those libraries. The Exhibition- and Exhibit-class have structural functionality and manage an exhibition's data. Meanwhile, the Handler-classes use this data to generate and operate the interaction between user and system.
+
+\paragraph{Preliminaries} Terms used hereafter are depicted by Figure \ref{implementation_terms} and defined as follows:
+\begin{itemize}
+	\item A point or corner is a point in \ac{3D} space of type \texttt{Point3D}.
+	\item A plane is defined by three points or corners. 
+	\item A position is a point on a plane of type \texttt{Point3D}.
+	\item A kernel is an exhibit's membership function. It has a size and radius.
+	\item A target is an exhibit's representation on the exhibition plane. It is determined by its position and kernel.
+\end{itemize}
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:implementation_terms} %
+%\end{figure}
+
+%-----------------------------------------------------------------------------
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What are the libraries?'
+	%\begin{itemize}
+		%\item Overview
+		%\item Structure of Exhibition and Exhibits
+	%\end{itemize}
+	%\item 'What does each one do?'
+	%\begin{itemize}
+		%\item Modularity
+		%\item Config-files (XML)
+		%\item Particular methods (Lotfußpunkte, Ebenenschnittpunkt, DataLogger etc.)
+	%\end{itemize}
+%\end{itemize}
+
+\paragraph{Exhibition.cs} Members of the Exhibition-class are needed to define an \ac{IMI}-exhibition. All necessary information is contained and managed in this class.
+
+The \texttt{exhibitionPlane} is the most essential component of an \ac{IMI}-exhibition. All exhibits' positions are defined on this fundamental property. It is constructed by three corners. The structure of such a Plane is declared by the GeometryHandler-class. The Exhibition-class further holds a list of \texttt{Exhibit}-objects. In this \texttt{List} all selectable \ac{IMI}-exhibits of an \ac{IMI}-exhibition are stored. In addition, the earlier mentioned user position that defines the interaction space is also saved in this class as a point. An \ac{IMI}-exhibition's name and file path are members of the Exhibition-class, too. So are the images, which are used to camouflage the display against the background and the overview of the exhibition plane with sketches of exhibits in their respective positions. Furthermore, data crucial for interaction are also members of this class. So are the default values for the threshold needed for defining exhibits and the dwell time for target selection. Timespans used by the presentation software are \texttt{lockTime}, which determines a short period of paused interaction after selecting a target and \texttt{slideTime} which determines for how long a single image is shown during an \ac{IMI}-exhibit's presentation.
+
+The characteristic functionality of the Exhibition-class is its get- and set-methods. They allow for reading and writing all those essential variables.
+
+%------------------------------------------------------------------------------
+
+\paragraph{Exhibit.cs} The virtual representation of an \ac{IMI}-exhibit is structured by the Exhibit-class. This includes data relevant for interaction with the system and an \ac{IMI}-exhibit's presentation upon selection. Like an Exhibition-object, an Exhibit-object stores its own file path as well. This is necessary for organizational reasons. 
+
+The most important member of an \ac{IMI}-exhibit is its position. In combination with the two kernel-defining members \texttt{kernelSize} and \texttt{kernelRadius} the SessionHandler-class is able to compute which target a user is pointing at.  
+
+Members relevant for the presentation of an \ac{IMI}-exhibit are its name, descriptive text and collection of images. The images are stored in a \texttt{Dictionary} as a pair of an image's file path and the image itself. 
+
+The Exhibit-class, just like the Exhibition-class, is of structural nature and therefore only has the same administrative methods that get and set members.
+
+%------------------------------------------------------------------------------
+
+\paragraph{FileHandler.cs} The objective of the FileHandler-class is \textit{saving} and \textit{loading} data of an \ac{IMI}-exhibition, its exhibits, and all their properties. Therefore, a temporary Exhibition- and Exhibit-object are needed. Exhibitions along with all related information are saved in \textit{XML-format}. The hierarchical structure of XML-files allows adding, changing and removing elements without much effort. 
+
+To save an \ac{IMI}-exhibition and all its properties several XML-files have to be written. The main file contains the aforementioned defining properties of the exhibition. This means that each \ac{IMI}-exhibit is stored separately. It is saved as an XML-file as well. Each \ac{IMI}-file contains all properties as attributes or \textit{forwarding file paths}. Equally, corresponding images are saved as file paths leading to the actual image. The exhibition plane is also separately saved as an XML-file. 
+\\
+Loading works in reverse to this procedure. As en \ac{IMI}-exhibition is being loaded, its properties are either saved into a \textit{temporary Exhibition-instance} or forwarding file paths are followed. A \textit{Temporary Exhibit-instance} is used to load all of an \ac{IMI}-exhibits.
+\\
+The modular composition allows the \ac{IMI}-system to be flexible. \ac{IMI}-exhibits exist as independent entities and can be easily removed from or added to an existing \ac{IMI}-exhibition. The same applies for the exhibition plane. Figure \ref{fig:filehandler_data_structure} depicts the whole data-structure behind an \ac{IMI}-exhibition.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:filehandler_data_structure} %Entity-Relationship
+%\end{figure}
+
+An additional function of the FileHandler-class is reading TXT-files. This feature is used to load pre-written descriptions of \ac{IMI}-exhibits.
+
+%------------------------------------------------------------------------------
+
+\paragraph{GeometryHandler.cs} The GeometryHandler-class is solving essential computations of analytic geometry-problems. Therefore, the two structs \texttt{Vector} and \texttt{Plane} are declared, because standard types of C$\#$ do not deliver the complexity needed for those computations.
+\\
+A \texttt{Vector}, in contrast to a standard \texttt{Vector3D} or \texttt{Vector3}, is not only a \textit{direction vector}. It also has a \textit{starting} and a \textit{terminal point}. Hence, a \texttt{Vector} $V$ is defined by a starting point $P_{S}$ and either an endpoint $P_{E}$ or a direction vector leading towards it $\overrightarrow{d_{E}}$, where $P_{S}$ is either a user's tracked head- or elbow-joint and $P_{E}$ is its tracked hand-joint. 
+\begin{align*}
+	V &= P_{S} + \lambda \cdot \overrightarrow{d_{E}} \\
+	P_{V} &= P_{S} + \lambda_{P} \cdot \overrightarrow{d_{E}}
+\end{align*}
+As the factor $\lambda$ is varied, any point $P_{V}$ along a \texttt{Vector}'s direction of propagation can be expressed. 
+\\
+A \texttt{Plane} is defined by one starting corner $C_{1}$ and either two additional corners $C_{2}$ and $C_{3}$ or two additional \texttt{Vector}s $\overrightarrow{d_{C_{2}}}$ and $\overrightarrow{d_{C_{3}}}$ towards those corners. In short, a \texttt{Plane} $E$ is defined by two \texttt{Vector}s $V_{C_{2}}$ and $V_{C_{3}}$ of identical origin.  
+\begin{align*}
+	E = V_{C_{2}} + V_{C_{3}} \quad \to \quad E &= C_{1} + \lambda \cdot \overrightarrow{d_{C_{2}}} + \mu \cdot \overrightarrow{d_{C_{3}}} \\
+	P_{E} &= C_{1} + \lambda_{P} \cdot \overrightarrow{d_{C_{2}}} + \mu_{P} \cdot \overrightarrow{d_{C_{3}}}
+\end{align*}
+Any position $P_{E}$ on a \texttt{Plain} can be expressed by varying $\lambda_{C_{2}}$ and $\mu_{C_{3}}$.
+
+The GeometryHandler-class has two types on members. First, \textit{input-members} are pointing- and aiming points or positions. Second, \textit{output-members} are lists of classified and weighted points or positions.
+
+However, the main task of this class is to calculate \textit{pedal points} between \texttt{Vector}s and \textit{intersections} of a \texttt{Vector} with a \texttt{Plane}. 
+\\
+A pedal points is calculated to define a point. Therefore, a subject has to point at this point in \ac{3D} space from two different locations. Vectors  from both locations should meet in the point to define. Intersections in \ac{3D} space are very unlikely, though. Hence, a substitute point has to be found. The closest two skew vectors come to each other is in the pedal point. Thus, this point is computed instead of an intersection. Given two \texttt{Vector}s $V_{A}$ and $V_{B}$ with starting points $S_{A}$ and $S_{B}$ and their respective directions $\overrightarrow{d_{A}}$ and $\overrightarrow{d_{B}}$.
+$$V_{A} = S_{A} + \lambda_{A} \cdot \overrightarrow{d_{A}} \quad and \quad V_{B} = S_{B} + \lambda_{B} \cdot \overrightarrow{d_{B}}$$
+A normal is a vector, which is perpendicular to its original vector. To get the shortest distance between two \texttt{Vector}s, their normals $\overrightarrow{n_{A}}$ and $\overrightarrow{n_{B}}$ have to be perpendicular to both \texttt{Vector}s. 
+$$\overrightarrow{n_{A}} = \overrightarrow{d_{A}} \times (\overrightarrow{d_{A}} \times \overrightarrow{d_{B}}) \quad and \quad \overrightarrow{n_{B}} = \overrightarrow{d_{B}} \times (\overrightarrow{d_{A}} \times \overrightarrow{d_{B}})$$
+To compute the pedal point, and stay in the metaphor, the two foot points $F_{A}$ and $F_{B}$ are needed. These points lie on either \texttt{Vector} and in between them lies the pedal point. Hence, the factors $\lambda_{F_{A}}$ and $\lambda_{F_{B}}$ have to be altered.
+\begin{align*}
+	F_{A} &= S_{A} + \lambda_{F_{A}} \cdot \overrightarrow{d_{A}} \quad &and \quad F_{B} &= S_{B} + \lambda_{F_{B}} \cdot \overrightarrow{d_{B}} \\
+	F_{A} &= S_{A} + \frac{(S_{B} - S_{A}) \bullet \overrightarrow{n_{B}}}{\overrightarrow{d_{A}} \bullet \overrightarrow{n_{B}}} \cdot \overrightarrow{d_{A}} \quad &and \quad F_{B} &= S_{B} + \frac{(S_{A} - S_{B}) \bullet \overrightarrow{n_{A}}}{\overrightarrow{d_{B}} \bullet \overrightarrow{n_{A}}} \cdot \overrightarrow{d_{B}} 
+\end{align*}
+The only step left is to calculate the pedal point $P_{AB}$ between the two foot points~\cite{PedalPoint} $F_{A}$ and $F_{B}$. Since the feet already represent the points on each \texttt{Vector} that are closest to the other \texttt{Vector} and $P_{AB}$ is in the middle, $P_{AB}$ is the average of them.
+$$P_{AB} = (F_{A} \cdot F_{B}) / 2$$
+An exemplary configuration of the problem is depicted by Figure \ref{fig:pedal_point}.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:pedal_point} 
+%\end{figure}
+
+The \ac{IMI}-system's interaction is based in the principle of intersections of a \texttt{Vector} and a \texttt{Plain}. Positions of \ac{IMI}-exhibits are defined this way. Furthermore, a user's pointing and aiming position is calculated exactly the same. Thus, this computation is crucial for interaction. Given a \texttt{Vector} $V$ and a \texttt{Plane} $E$ are not parallel, they intersect in a position $P_{I}$, where $P_{I} \in V \wedge E$. Hence, a \texttt{Vector} $\overrightarrow{u}$ between $P_{I}$ and any other position on $E$ has to be perpendicular to the normal of the \texttt{Plane} $\overrightarrow{n_{E}}$.  
+
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+\\- FORMULA: plane-intersection~\cite{VectorPlaneIntersect}
+\\- classification and weighing
+
+%------------------------------------------------------------------------------
+
+\paragraph{CalibrationHandler.cs} Defines and validates Points, Positions and Planes
+\\
+samples per position and threshold
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{SessionHandler.cs} Determines the user from visitors. Further builds lookup-table and checks for intersections. Calculates the feedback of current pointing position and its buffering. Calculation of fbP on canvas.
+\\
+userPosition + radius $\Rightarrow$ ID
+\\
+lookup
+\\
+feedbackPositionBuffer and feedbackPositionBufferSize
+\\
+Intersections with ePlane: XNA-varialbles
+\\
+ScreenCoords: screenSize, canvasSize, planeCanvasRatio
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{StatisticsHandler.cs} Instant statistics such as average, SD usw. 
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\paragraph{DataLogger.cs} Logs events during a session.
+\\
+path to save to
+\\
+paragraphs
+\\
+startSession (Timestamp)
+
+CHARACTERISTIC FUNCTIONS AND METHODS: 
+
+%------------------------------------------------------------------------------
+
+\section{Administration-software}
+\label{implementation_administration}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the administration-software?'
+	\begin{itemize}
+		\item Define and edit exhibitions
+		\begin{itemize}
+			\item ExhibitionPlane
+			\item Define, load and remove Exhibits
+			\item Define and change UserPosition
+			\item Edit dwelltimes
+			\item Load Background(s)
+		\end{itemize}
+		\item Define and edit exhibits
+		\begin{itemize}
+			\item Define and change Position
+			\item Load and remove Images
+			\item Write and load Description (up to 310 charcters)
+		\end{itemize}
+	\end{itemize}
+	\item 'What does it do?'
+	\begin{itemize}
+		\item \textit{Sequences}
+		\item Paper-mockup
+		\item Create (re-)loadable Config-files
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Presentation-software}
+\label{implementation_presentation}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the presentation-software?'
+	\begin{itemize}
+		\item Display information of previously defined interactive exhibits
+		\item Overview-map of ExhibitionPlane
+		\item Feedback of exhibits' positions and pointing position
+		\item Description (Readability, Sehwinkel) and Images as slide show
+	\end{itemize}
+	\item 'What does it do?'
+	\begin{itemize}
+		\item Check for Exhibition
+		\item Pre-calculate Lookup for exhibit-selection (saves processing power)
+		\item Recognize visitors
+		\item Identify user by predefined UserPosition 
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Presentation-remote}
+\label{implementation_remote}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the presentation-remote?'
+	\begin{itemize}
+		\item Microsoft Gadgeteer-Device
+		\item Bluetooth / WiFi-connection to PC
+		\item For lecturers in order to explain exhibits themselves
+	\end{itemize}
+	\item 'What does it do?'
+	\begin{itemize}
+		\item Automatically connect to Presentation-software
+		\item Toggle Presentation-software's blindness
+	\end{itemize}
+\end{itemize}
+
+
+
+\section{Statistics-tool}
+\label{implementation_tool}
+
+\paragraph{Annotations}
+
+\begin{itemize}
+	\item 'What is the statistics-tool and what does it do?'
+	\begin{itemize}
+		\item Small tool to evaluate logged user-data
+		\item Statistics, such as average length of stay/session, exhibits chosen and how many transitions 
+	\end{itemize}
+\end{itemize}
