@@ -442,7 +442,7 @@ The table further shows that both classification types have similar percentages 
 \\
 Although ''Big60'' hast the best overall performance, ''Big70'' was chosen for the final version of the administration and presentation software. The successful validations by this combination of classification and weighing show a more homogeneous distribution. 
 \\
-The aspired majority of successful validations within a threshold of 100mm could not be achieved. If users are provided with feedback and can adjust their gestures accordingly, the system is operable\footnote{Two actual exhibits in the Haßleben-showcase were defined about 7cm from each other and are distinguishable by users of the presentation software. Further improvements of the determination of points in \ac{3D} space are discussed in Chapter \ref{future_work}.}, though. 
+The aspired majority of successful validations within a threshold of 100mm could not be achieved for all corners of an exemplary plane. Pointing accuracy close to a subject is well, though. Nevertheless, subjects were not provided with any feedback about the position they were pointing at and only relied on proprioception alone. Hence, when users are provided with feedback and can adjust their gestures accordingly, the system is operable with sufficient accuracy\footnote{Two actual exhibits in the Haßleben-showcase were defined about 7cm from each other and are distinguishable by users of the presentation software. Further improvements of the determination of points in \ac{3D} space are discussed in Chapter \ref{future_work}.}. 
 
  %\begin{itemize}
 	%\item Test of pointing accuracy
@@ -505,7 +505,7 @@ The aspired majority of successful validations within a threshold of 100mm could
 
 Three installations were build. One lab setup for development, one makeshift setup was placed in the faculty building's lobby, and the final one was installed inside the showcase at the Museum für Ur- und Frühgeschichte Thüringens. The various setups differed in dimensions and were run with different hardware configurations. Testing of technical principles and computations were conducted with the lab setup. The lobby setup was used for a stress-test during an open door-event at the faculty, whereas the final evaluation took place in the museum. Only the presentation software was evaluated.
 
-The Haßleben-showcase was measured. The measurments were then transferred into the groundplan depicted in Figure \ref{fig:hassleben_groundplan}. With a width of 439cm and a depth of 344cm, a mockup of the showcase was quiet large and would need an even larger room to fit in be still operable. The showcase has a floor-to-ceiling height of 293cm and its exhibition plane is 65cm above the floor.
+The Haßleben-showcase was measured. The measurments were then transferred into the groundplan depicted in Figure \ref{fig:hassleben_groundplan}. With a width of 439cm and a depth of 344cm, a mockup of the showcase was quiet large and would need an even larger room to fit in and to be still operable. The showcase has a floor-to-ceiling height of 293cm and its exhibition plane is 65cm above the floor.
 
 \textbf{F I G U R E}
 %\begin{figure}%
@@ -536,17 +536,17 @@ Until the final hardware was acquired by the museum and available for testing, s
 %\label{fig:lab_setup} %
 %\end{figure}
 
-The mockup is 315cm wide, 264cm deep and 75cm high. These are not the exact measurements of the showcase. I did not reproduce the whole showcase, but only the exhibition plane within. Therefore, the reproduction is adequately proportioned. The additional height increases the probability of angular error compared to the original. Therefore, the final setup's error is estimated to be lower.
+The mockup is 315cm wide, 264cm deep and 75cm high. These are not the exact measurements of the showcase. I did not reproduce the whole showcase, but only the exhibition plane within. Therefore, the reproduction is adequately proportioned. The additional height increases the probability of angular error compared to the original. Therefore, the final setup's error is estimated to be lower, because pointing vectors' angles of impact are less skew.  
 \\
 The sensor is mounted on a tripod, which is placed at approximately the position it would later be installed inside the showcase. From there, it faces the subjects at an angle of about $100^\circ$. This elevated position is necessary to get reliable readings. Otherwise, a sensor installed at shoulder-height can not properly acquire depth information of occluded joints.
 \\
 The desktop to the right of the mockup was the main workplace from where the tests were supervised. It provided a good overview of subjects and hardware alike. The computer running the test software was placed on this desktop and so was the screen. For later tests, a second screen was placed beneath the tripod's legs.
 
-There were two hardware configurations used during the development of the system. The first test was conducted on an \textit{ASUS Eee PC 1215B}-netbook~\cite{Eee1215B}. Following tests were conducted on the designated desktop-PC\footnote{Full specifications of hardware and the development environment can be found in Chapter \ref{implementation}.}. The display used in all cases had a screen size of 15.6'' and a resolution of 1920x1080.
+There were two hardware configurations used during the development of the system. The first test was conducted on an \textit{ASUS Eee PC 1215B}-netbook~\cite{Eee1215B}. Following tests were conducted on the designated desktop-PC\footnote{Full specifications of hardware and the development environment can be found in Chapter \ref{implementation}.}.
 
 %-----------------------------------------------------------------------------
 
-\paragraph{Lobby Setup} After technical difficulties with the museum setup, the first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, a makeshift setup was built in the faculty's lobby. It consisted of three tables forming the exhibition plane and a bar table, on which the desktop-PC and a tripod with the sensor on top were positioned. The interaction space was defined by markings on the floor. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (see Figure \ref{fig:summaery_setup}).
+\paragraph{Lobby Setup} The first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, a makeshift setup was built in the faculty's lobby. It consisted of three tables forming the exhibition plane and a cocktail table, on which the desktop-PC and a tripod with the sensor on top were positioned. The interaction space was defined by markings on the floor. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (see Figure \ref{fig:summaery_setup}).
 
 \textbf{F I G U R E}
 %\begin{figure}%
@@ -557,11 +557,11 @@ There were two hardware configurations used during the development of the system
 
 After assembling the hardware and sample exhibits, a sample exhibition was defined with the administration software. It was given a name, the exhibition plane, user position and exhibits' positions along with images and short descriptions were defined. The whole process took only 45 minutes. Subsequently the presentation software was started.
 \\
-The lobby presented the system with a dense environment. Many visitors walked past it or stopped to try it out. The system crashed several times during this ordeal. Two reasons could be identified after having observed the events and reviewing the log-files.
+The lobby presented the system with a densely populated environment. Many visitors walked past it or stopped to try it out. The system crashed several times during this ordeal. Two reasons could be identified after having observed the events and reviewing the log-files.
 \\
-First, the system could have had too many people in its sight. As it turned out, OpenNI was designed for 15 users, yet never tested for more than three~\cite{MaxUsersOpenNI}. It is not clear what happens, if more than 15 subjects are recognized and therefore, I tried to reproduce the error. Unfortunately, we could not manage to get more than 12 persons recognized by the system, whereas the error did not occur.
+First, the system could have had too many people in its sight. As it turned out, OpenNI was designed for 15 users, yet never tested for more than three~\cite{MaxUsersOpenNI}. It is not clear what happens, if more than 15 subjects are recognized and therefore, I tried to reproduce the error. Unfortunately, we could not manage to get more than 12 persons recognized by the system, whereas the error did not re-occur.
 \\
-The other problem appeared after having seen some log-files, which implied that invalid targets were selected after people left. This was fixed immediately. 
+The other problem appeared after having seen some log-files, which implied that non-existent targets were selected by the system after people left. This smaller bug was fixed immediately by checking if a selected target was referring to a valid \ac{IMI}-exhibit. 
 
 %-----------------------------------------------------------------------------
 
@@ -577,9 +577,9 @@ Figure \ref{fig:museum_setup} depicts the installation of the final setup at the
 %\label{fig:museum_setup} %
 %\end{figure}
 
-The display's prior position was changed after the museum staff had concerns about it having too much influence on the overall appearance of the exhibits. Hence, it was anchored on the back wall at eye-height (see Figure \ref{fig:museum_setup}c). This compromise was deemed sufficient for the display to still be recognizable in users' peripheral vision when they look inside the showcase.
+The display's prior position was changed after the museum staff had concerns about it having too much influence on the overall appearance of the showcase. There was a fear of it being too distracting or disturbing the overall picture. Hence, it was anchored on the back wall at eye-height (see Figure \ref{fig:museum_setup}c). This compromise was deemed sufficient for the display to still be recognizable in users' peripheral vision when they look inside the showcase.
 
-The footsteps defining the interaction space are not centered in front of the showcase and screen, but shifted to the left. This way, visitors can get closer to the showcase and still read the instructions and look at the ideogram.
+The footsteps defining the interaction space are not centered in front of the showcase and screen, but shifted to the left. This way, visitors can get closer to the showcase and still read the instructions and look at the ideogram. Moreover, the readability of the display was compromised by reflections in the glass panel of the showcase if users stood right in front of it.
 
 %\begin{itemize}
 	%\item Automatic boot at 8:30am [Bios]
