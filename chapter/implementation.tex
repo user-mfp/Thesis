@@ -238,7 +238,7 @@ The presentation-software, uses the DataLogger-class to save all events during a
 
 %------------------------------------------------------------------------------
 
-\section{Administration-software}
+\section{Administration Software}
 \label{implementation_administration}
 
 \paragraph{Annotations}
@@ -271,7 +271,7 @@ The presentation-software, uses the DataLogger-class to save all events during a
 
 %------------------------------------------------------------------------------
 
-\section{Presentation-software}
+\section{Presentation Software}
 \label{implementation_presentation}
 
 \paragraph{Annotations}
@@ -295,36 +295,50 @@ The presentation-software, uses the DataLogger-class to save all events during a
 
 %------------------------------------------------------------------------------
 
-\section{Presentation-remote}
+\section{Presentation Remote}
 \label{implementation_remote}
 
-\paragraph{Annotations}
+A remote to stop an resume the presentation software during guided tours war requested by the museum's staff. Therefore, it should be possible to switch the sensor off and stop tracking visitors. Hence, the presentation software would stay in its hibernation mode and the display would remain camouflaged.
 
-\begin{itemize}
-	\item 'What is the presentation-remote?'
-	\begin{itemize}
-		\item Microsoft Gadgeteer-Device
-		\item Bluetooth / WiFi-connection to PC
-		\item For lecturers in order to explain exhibits themselves
-	\end{itemize}
-	\item 'What does it do?'
-	\begin{itemize}
-		\item Automatically connect to Presentation-software
-		\item Toggle Presentation-software's blindness
-	\end{itemize}
-\end{itemize}
+Unfortunately, not finished by now...
+
+But, hardware present and template project available...
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What is the presentation-remote?'
+	%\begin{itemize}
+		%\item Microsoft Gadgeteer-Device
+		%\item Bluetooth / WiFi-connection to PC
+		%\item For lecturers in order to explain exhibits themselves
+	%\end{itemize}
+	%\item 'What does it do?'
+	%\begin{itemize}
+		%\item Automatically connect to Presentation-software
+		%\item Toggle Presentation-software's blindness
+	%\end{itemize}
+%\end{itemize}
 
 %------------------------------------------------------------------------------
 
-\section{Statistics-tool}
+\section{Statistics Tool}
 \label{implementation_tool}
+ 
+The presentation software saves a log-file of each session for and review purposes. These files can be analyzed with the statistics tool. Therefore, the tool only has two buttons. By pressing ''Load'', one or more log-files can be loaded into the tool and the amount of loaded files is displayed in a small label. All loaded files get analyzed by pressing ''Analyze''. Consecutively, the tool reads all files and parses them for relevant information. This process takes a few minutes. After parsing all files general statistics of the combined files are computed. The results are displayed within a label of the tool and written to a TXT-file.
 
-\paragraph{Annotations}
+The results include the \textit{involvement relation}. It is the relation between empty and evaluable sessions. In an empty session no interaction with the \ac{IMI}-system occurred. Inferences about the system's recognizability can be drawn from the involvement relation. A low quotient implies a low rate of interaction with the system and appropriate measures should be taken to increase recognizability.
+\\
+Afterwards, \textit{relevant times} are analyzed with respect to the longest, shortest and average length. The relevant times are the \textit{initiation time}\footnote{Here, initiation time is the time between activation of the system and the first interaction of a user.} and the \textit{total length} of a session measured from activation to departure. The first time indicates the visitors' inhibition to use the system, while the latter gives an overview of visitors' involvement with the system.
+\\
+Finally, \textit{exhibit selection} is reviewed. Therefore, two separate values are inspected. The amount of \textit{absolute selections} shows how often each \ac{IMI}-exhibit was selected over all. The ranking of selections implies visitors' general interest. \textit{Target transitions} are computed as well. A transition occurs when a target does not get selected, but instead another target gets marked. In this case, an \textit{external transition} between the two targets occurs. It might also happen that the pointing position of a user leaves a kernel and re-enters it immediately. Thus, the target also does not get selected, and there is an \textit{internal transition}. Transitions indicate difficulties in selecting certain targets. These targets are either hard to hit on their own or too close to another one. In both cases however, kernels of the \ac{IMI}-exhibits in question can be altered and/or the positions of those exhibits can be re-defined.
 
-\begin{itemize}
-	\item 'What is the statistics-tool and what does it do?'
-	\begin{itemize}
-		\item Small tool to evaluate logged user-data
-		\item Statistics, such as average length of stay/session, exhibits chosen and how many transitions 
-	\end{itemize}
-\end{itemize}
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What is the statistics-tool and what does it do?'
+	%\begin{itemize}
+		%\item Small tool to evaluate logged user-data
+		%\item Statistics, such as average length of stay/session, exhibits chosen and how many transitions 
+	%\end{itemize}
+%\end{itemize}
