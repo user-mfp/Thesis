@@ -262,37 +262,39 @@ Images are used as the background for the stand by mode and the outlines of the 
 \\
 Instead of writing a description for an \ac{IMI}-exhibit, a previously constructed text can alternatively be loaded into the \texttt{textBox}. All files should be TXT-files and coded in UTF-8 to guarantee flawlessly displayed characters.
 \\
-It is possible to load existent \ac{IMI}-exhibits as well. Even if they where defined in another \ac{IMI}-exhibition's context, they can be loaded. After loading, they will be part of the administered \ac{IMI}-exhibition. Nevertheless, certain changes might have to be done to properly include them into the new context. Their position might have to be re-defined, if the exhibition plane or location of the depth sensor are different that before.
+It is possible to load already existing \ac{IMI}-exhibits as well. Even if they where defined in the context of another \ac{IMI}-exhibition, they can be loaded. Afterwards, they will be a valid part of the administered \ac{IMI}-exhibition. Nevertheless, certain changes might have to be done to properly include them into the new context. Their position might have to be re-defined in order to be selectable, if the exhibition plane or location of the depth sensor are different that before.
 
-All properties of an \ac{IMI}-exhibit can be edited with the administration software. 
+All properties of an \ac{IMI}-exhibit can be edited with the administration software. This includes the aforementioned properties that can be loaded, but also various other ones. Therefore, a special ''Properties'' section offers each editable property in a drop down menu. The properties vary in type. One the one hand, there are the radius and size of the kernel. Although these are continuous values, the input is restricted to three discreet states to avoid confusion. They are presented as textual entities ''low'', ''normal'' and ''high'' and hence more imaginable representations of a certain percentage of the default value. The low value is 50$\%$, the normal value is 100$\%$ and the high value 150$\%$ of the respective default value. On the other hand, there is the position of the exhibit itself. This value can be set by defining and validating it again like it is described above.
+\\
+The view displaying the properties' drop down-menu of an \ac{IMI}-exhibition can be reached with the same ''Properties''-button in the lower left corner of the \ac{GUI}'s view of the exhibition. An \ac{IMI}-exhibition has more properties than an \ac{IMI}-exhibit, because it has to regulate the interaction. Here, three types of values are editable. First, there are the two images that can be loaded from this view. Next, continuous values are adjustable as ''low'', ''normal'' and ''high''. They are the threshold to validate new positions, the dwell time for target selection, the time the tracking is paused after selectig a target and the time a slide is shown for. The final property is the user position. This value can be set by a person standing in the user position. Like the definition of any other point or position, the process can only be started, if the person is trackable. 
 
-\paragraph{Annotations}
-
-\begin{itemize}
-	\item 'What is the administration-software?'
-	\begin{itemize}
-		\item Define and edit exhibitions
-		\begin{itemize}
-			\item ExhibitionPlane
-			\item Define, load and remove Exhibits
-			\item Define and change UserPosition
-			\item Edit dwelltimes
-			\item Load Background(s)
-		\end{itemize}
-		\item Define and edit exhibits
-		\begin{itemize}
-			\item Define and change Position
-			\item Load and remove Images
-			\item Write and load Description (up to 310 charcters)
-		\end{itemize}
-	\end{itemize}
-	\item 'What does it do?'
-	\begin{itemize}
-		\item \textit{Sequences}
-		\item Paper-mockup
-		\item Create (re-)loadable Config-files
-	\end{itemize}
-\end{itemize}
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What is the administration-software?'
+	%\begin{itemize}
+		%\item Define and edit exhibitions
+		%\begin{itemize}
+			%\item ExhibitionPlane
+			%\item Define, load and remove Exhibits
+			%\item Define and change UserPosition
+			%\item Edit dwelltimes
+			%\item Load Background(s)
+		%\end{itemize}
+		%\item Define and edit exhibits
+		%\begin{itemize}
+			%\item Define and change Position
+			%\item Load and remove Images
+			%\item Write and load Description (up to 310 charcters)
+		%\end{itemize}
+	%\end{itemize}
+	%\item 'What does it do?'
+	%\begin{itemize}
+		%\item \textit{Sequences}
+		%\item Paper-mockup
+		%\item Create (re-)loadable Config-files
+	%\end{itemize}
+%\end{itemize}
 
 %------------------------------------------------------------------------------
 
