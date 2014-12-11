@@ -301,24 +301,47 @@ The view displaying the properties' drop down-menu of an \ac{IMI}-exhibition can
 \section{Presentation Software}
 \label{implementation_presentation}
 
-\paragraph{Annotations}
+The presentation software is is the main interface of the \ac{IMI}-system.
 
-\begin{itemize}
-	\item 'What is the presentation-software?'
-	\begin{itemize}
-		\item Display information of previously defined interactive exhibits
-		\item Overview-map of ExhibitionPlane
-		\item Feedback of exhibits' positions and pointing position
-		\item Description (Readability, Sehwinkel) and Images as slide show
-	\end{itemize}
-	\item 'What does it do?'
-	\begin{itemize}
-		\item Check for Exhibition
-		\item Pre-calculate Lookup for exhibit-selection (saves processing power)
-		\item Recognize visitors
-		\item Identify user by predefined UserPosition 
-	\end{itemize}
-\end{itemize}
+- start: load exhibition (read all files, load all external images, make lookup table) go to stand by.
+
+- recognize visitors: List of trackable users is constantly updated
+
+- update: is the a visitor in the interaction space -> there is a user (track its joints!) -> EVENT start session -> load navigational view
+
+- updateJoints(), updateFeedbackPosition()
+
+- constantly calculate pointing positions and check lookup table for marked targets
+
+- (new) target marked? -> (re-)start selectionThread (countdown) -> EVENT new target
+\\
+- no target marked? -> stop selectionThread
+
+- selectionThread finished -> select current target -> presentation of corresponding exhibit (load text to label and images into pictureBox) -> start ''slideShowThread'' -> EVENT selected target
+
+- presentation over -> navigational view
+
+- no more user -> EVENT end session
+- no more visitors -> EVENT duration (session over) -> write log-file
+
+%\paragraph{Annotations}
+%
+%\begin{itemize}
+	%\item 'What is the presentation-software?'
+	%\begin{itemize}
+		%\item Display information of previously defined interactive exhibits
+		%\item Overview-map of ExhibitionPlane
+		%\item Feedback of exhibits' positions and pointing position
+		%\item Description (Readability, Sehwinkel) and Images as slide show
+	%\end{itemize}
+	%\item 'What does it do?'
+	%\begin{itemize}
+		%\item Check for Exhibition
+		%\item Pre-calculate Lookup for exhibit-selection (saves processing power)
+		%\item Recognize visitors
+		%\item Identify user by predefined UserPosition 
+	%\end{itemize}
+%\end{itemize}
 
 %------------------------------------------------------------------------------
 
