@@ -318,18 +318,20 @@ For each cycle of the main tracking thread, the pointing and aiming \texttt{Vect
 First, the pointing position is put into the \texttt{feedbackPositionBuffer} and a buffered feedback position is displayed on the overview of the exhibition plane on the display. A buffer is necessary, because otherwise raw pointing positions tend to jitter a lot. This irritates users and causes frustration. 
 The other process happening with the pointing position is to check, whether it hits a target. Therefore, the lookup table is checked by the \texttt{SessionHandler} as described in Chapter \ref{implementation_libraries}. If there is an entry and a corresponding index of an \ac{IMI}-exhibit, the index is returned as \textit{temporary target}. Else, the temporary target gets invalidated.
 
-With updating the feedback position on the display, it is also checked, whether there is a new and valid target. Therefore, the temporary target is checked against the actually \textit{marked target}.
+With updating the feedback position on the display, it is also checked, whether the target has changed. Therefore, the temporary target is checked against the actual state of the \textit{marked target}. This actual state can either be invalid for no marked target or the \ac{ID} of a marked target. Figure \ref{fig:new_target} depicts the evaluation process for marking a new target. If the temporary and marked target differ, the temporary target becomes the new marked target. Consequently, the \texttt{selectionThread} is started for valid targets. In this case, a ''New Target''-event is saved including the exact time, name of the target, ID of the user and amount of trackable visitors. However, if the \texttt{selectionThread} is already running for a previous target, it is aborted and restarted for the new marked target. And the corresponding ''New Target''-event is logged\footnote{This is succession of at least two ''New Target''-events will later be analyzable as a transition. More about the analysis of \ac{IMI}-events can be found in the \textit{Statistics Tool}-paragraph of this Chapter.}.  
 
-- (new) target marked? -> (re-)start selectionThread (countdown) -> EVENT new target
-\\
-- no target marked? -> stop selectionThread
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:new_target} %flow chart von updateTarget 
+%\end{figure}
 
-- selectionThread finished -> select current target -> presentation of corresponding exhibit (load text to label and images into pictureBox) -> start ''slideShowThread'' -> EVENT selected target
+Before a target gets selected, it has to get marked to start the dwell time defined by the \ac{IMI}-exhibition. The \texttt{selectionThread} selects the \ac{IMI}-exhibit referred to by its target \ac{ID}. This happens after waiting for the specific dwell time. During this wait a new target might get marked and the waiting begins all over. When the waiting period is over, the \ac{IMI}-exhibit is loaded for its presentation. First, the selected \ac{IMI}-exhibit is set as the program's \textit{temporary \ac{IMI}-exhibit}. Then, a ''Select Target''-event is stored with the exact time, name of the target, ID of the user and amount of trackable visitors. Afterwards, the presentational view is loaded with the images and description of temporary \ac{IMI}-exhibit. Finally, the \texttt{presentationThread} is started, the tracking is paused for e few seconds to avoid further selections, and the \texttt{selectionThread} is aborted.
 
-- presentation over -> navigational view
+The \texttt{presentationThread} is loading the name of the \ac{IMI}-exhibit as headline and its description into the presentational \texttt{label}. Further, an image of the \ac{IMI}-exhibit is loaded into the presentational \texttt{pictureBox}. The images are changed after a specific \texttt{slideTime}, which is a definable property of each \ac{IMI}-exhibit, until each picture has been shown. After everything has been displayed and the necessary time to read has elapsed (see Chapter \ref{installation_tech}), the presentation is over and the software switches back to the navigational view. Therefore, the temporary target and \ac{IMI}-exhibit are reset to be invalid.
 
-- no more user -> EVENT end session
-- no more visitors -> EVENT duration (session over) -> write log-file
+Once the list of trackable visitors is empty, the ''End Session''-event is stored along with the corresponding timestamp. After that, the duration of the whole session is combuted by calculating the difference between the first ''Start Session''-event and  the final ''End Session''-event. This duration is also logged and the file is stored by the \texttt{DataLogger} as a TXT-file. To organize the files in an ordered fashion, the file names include the time of storage along the label as a log-file.
 
 %\paragraph{Annotations}
 %
@@ -352,14 +354,15 @@ With updating the feedback position on the display, it is also checked, whether 
 
 %------------------------------------------------------------------------------
 
-\section{Presentation Remote}
-\label{implementation_remote}
+\paragraph{Presentation Remote}
 
-A remote to stop an resume the presentation software during guided tours war requested by the museum's staff. Therefore, it should be possible to switch the sensor off and stop tracking visitors. Hence, the presentation software would stay in its hibernation mode and the display would remain camouflaged.
+A remote control to stop and resume the presentation software during guided tours was requested by the museum's staff. Therefore, it should be possible to switch the sensor off and stop tracking visitors. Hence, the presentation software would stay in its hibernation mode and the display would remain camouflaged. 
 
-Unfortunately, not finished by now...
-
-But, hardware present and template project available...
+A working prototype of this remote was not finished by the completion of this work. Hence, its functionality could not be properly implemented or tested. The hardware however is already acquired.
+\\
+The remote is based on \ac{MS} Gadgeteer and includes a \textit{FEZ Spider Starter Kit}~\cite{SpiderKitGHI} and a \textit{Bluetooth Module}~\cite{BluetoothGHI}. Because the PC on which the current \ac{IMI}-system is based supports bluetooth connectivity, the prototype will use similar communication as the \textit{Gadgeteer device}\cite{RemoteBluetooth} described by Minerva and Dodaro.
+\\
+In case the limited range of any bluetooth transmitter is insufficient or the shielding of the Haßleben-showcase is to strong for the \ac{IMI}-remote to work properly, a second option is also possible. This solution could use a \textit{WiFi Module}~\cite{WiFiGHI} and work more like the \textit{Gadgeteer Robot}~\cite{RemoteWiFi} also described by Minerva and Dodaro, except the additional phone.
 
 %\paragraph{Annotations}
 %
