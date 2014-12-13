@@ -301,17 +301,24 @@ The view displaying the properties' drop down-menu of an \ac{IMI}-exhibition can
 \section{Presentation Software}
 \label{implementation_presentation}
 
-The presentation software is is the main interface of the \ac{IMI}-system.
+The presentation software is is the main interface of the \ac{IMI}-system. On the very first start of the application, an administrative user has to load the \ac{IMI}-exhibition that has to be presented from that moment on. The file path to the definition file of the \ac{IMI}-exhibition is then saved to a local text-file. To change the exhibition, the file path has to be changed to the definition file of another \ac{IMI}-exhibition. The old file path can also be deleted and the presentation software restarted to load the alternative \ac{IMI}-exhibition.
+\\
+After the start of the program, all the \ac{IMI}-exhibition are loaded. This includes all \ac{IMI}-exhibits and their external images as well. For proper interaction, the lookup table is computed and all the \ac{IMI}-exhibits' positions are converted into the corresponding positions on the overview of the exhibition plane to guarantee correct feedback.
+\\
+When all components of the \ac{IMI}-exhibition are initialized, the tracking thread of the depth sensor is started. Finally the application goes into the standby mode and waits for visitors. 
 
-- start: load exhibition (read all files, load all external images, make lookup table) go to stand by.
+When at least one visitor enters the sensor's field of view and is recognized the system reacts. The instructions and ideogram are displayed to invite visitors to actively interact with the system and the \texttt{DataLogger} of the presentation software starts the recording of a new session. Furthermore, the software permanently updates a list of all trackable visitors. This list contains their \ac{ID}s. If a visitor is no longer trackable the corresponding \ac{ID} is removed from the list. 
 
-- recognize visitors: List of trackable users is constantly updated
+The software is a state of active waiting. This means, every time the trackable users are updated so are the coordinated of their hip-joints. If a visitor follows the instruction and gets into the declared interaction space, he or she becomes the active user of the presentation software. The interaction space is marked by foot steps and defined by the \texttt{userPosition}-member of the \ac{IMI}-exhibition.
+\\
+Once there is a user, several things happen. First, the user's head-, elbow-, and hand-joints are updated by the software to compute pointing and aiming \texttt{Vector}s. In addition, the \texttt{DataLogger} records a ''Start Session''-event along with the exact time, ID of the user and amount of trackable visitors. Next, the navigational view is displayed to provide visual feedback of all the positions of \ac{IMI}-exhibits on the exhibition plane and the pointing position of the user, if it lies on the plane as well. Finally, the head,- elbow-, and hand-joints are updated to compute pointing and aiming \texttt{Vector}s.
 
-- update: is the a visitor in the interaction space -> there is a user (track its joints!) -> EVENT start session -> load navigational view
+For each cycle of the main tracking thread, the pointing and aiming \texttt{Vector}s' intersections with the exhibition plane are calculated and combined into a biased pointing position. This position is then twofoldly analyzed.
+\\
+First, the pointing position is put into the \texttt{feedbackPositionBuffer} and a buffered feedback position is displayed on the overview of the exhibition plane on the display. A buffer is necessary, because otherwise raw pointing positions tend to jitter a lot. This irritates users and causes frustration. 
+The other process happening with the pointing position is to check, whether it hits a target. Therefore, the lookup table is checked by the \texttt{SessionHandler} as described in Chapter \ref{implementation_libraries}. If there is an entry and a corresponding index of an \ac{IMI}-exhibit, the index is returned as \textit{temporary target}. Else, the temporary target gets invalidated.
 
-- updateJoints(), updateFeedbackPosition()
-
-- constantly calculate pointing positions and check lookup table for marked targets
+With updating the feedback position on the display, it is also checked, whether there is a new and valid target. Therefore, the temporary target is checked against the actually \textit{marked target}.
 
 - (new) target marked? -> (re-)start selectionThread (countdown) -> EVENT new target
 \\

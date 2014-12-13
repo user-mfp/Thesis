@@ -1,0 +1,61 @@
+\select@language {english}
+\contentsline {subsubsection}{\nonumberline Affidavit}{v}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {chapter}{\numberline {2}Background and Motivation}{4}
+\contentsline {section}{\numberline {2.1}Museums}{4}
+\contentsline {section}{\numberline {2.2}Interfaces and Interaction}{7}
+\contentsline {section}{\numberline {2.3}Goal of this Work}{13}
+\contentsline {chapter}{\numberline {3}Partnering process}{15}
+\contentsline {section}{\numberline {3.1}Requirement analysis}{15}
+\contentsline {section}{\numberline {3.2}Potential partner museums}{16}
+\contentsline {section}{\numberline {3.3}Decision for a partner museum}{17}
+\contentsline {paragraph}{\nonumberline Deutsches Bienenmuseum}{18}
+\contentsline {paragraph}{\nonumberline Palais Schardt}{18}
+\contentsline {paragraph}{\nonumberline Museum f\IeC {\"u}r Ur- und Fr\IeC {\"u}hgeschichte Th\IeC {\"u}ringens}{18}
+\contentsline {chapter}{\numberline {4}Conception}{20}
+\contentsline {section}{\numberline {4.1}System Preconditions}{21}
+\contentsline {section}{\numberline {4.2}Concept Development}{22}
+\contentsline {paragraph}{\nonumberline Tangibles}{22}
+\contentsline {paragraph}{\nonumberline Pointing}{24}
+\contentsline {section}{\numberline {4.3}Final Concept}{27}
+\contentsline {paragraph}{\nonumberline Functional Specification Document (\ac {FSD})}{28}
+\contentsline {chapter}{\numberline {5}Processes and Setups}{30}
+\contentsline {section}{\numberline {5.1}Interaction with the \ac {IMI}-System}{30}
+\contentsline {paragraph}{\nonumberline Presentation Software}{30}
+\contentsline {paragraph}{\nonumberline Administration Software}{31}
+\contentsline {section}{\numberline {5.2}Interfaces of the \ac {IMI}-System}{33}
+\contentsline {paragraph}{\nonumberline Presentation Software}{33}
+\contentsline {section}{\numberline {5.3}Technical Principles}{35}
+\contentsline {paragraph}{\nonumberline Pointing Challenges}{35}
+\contentsline {paragraph}{\nonumberline Readability}{38}
+\contentsline {section}{\numberline {5.4}Iterative Development}{40}
+\contentsline {paragraph}{\nonumberline First Test}{40}
+\contentsline {paragraph}{\nonumberline Second Test}{44}
+\contentsline {paragraph}{\nonumberline Third Test}{45}
+\contentsline {section}{\numberline {5.5}Development Setups}{48}
+\contentsline {paragraph}{\nonumberline Lab Setup}{48}
+\contentsline {paragraph}{\nonumberline Lobby Setup}{50}
+\contentsline {section}{\numberline {5.6}Museum Setup}{50}
+\contentsline {chapter}{\numberline {6}Implementation -- Interactive Museum Installation}{52}
+\contentsline {section}{\numberline {6.1}Libraries}{53}
+\contentsline {paragraph}{\nonumberline Preliminaries}{53}
+\contentsline {paragraph}{\nonumberline Exhibition.cs}{54}
+\contentsline {paragraph}{\nonumberline Exhibit.cs}{54}
+\contentsline {paragraph}{\nonumberline FileHandler.cs}{55}
+\contentsline {paragraph}{\nonumberline GeometryHandler.cs}{55}
+\contentsline {paragraph}{\nonumberline CalibrationHandler.cs}{58}
+\contentsline {paragraph}{\nonumberline SessionHandler.cs}{59}
+\contentsline {paragraph}{\nonumberline StatisticsHandler.cs}{61}
+\contentsline {paragraph}{\nonumberline DataLogger.cs}{62}
+\contentsline {section}{\numberline {6.2}Administration Software}{62}
+\contentsline {section}{\numberline {6.3}Presentation Software}{65}
+\contentsline {section}{\numberline {6.4}Presentation Remote}{67}
+\contentsline {section}{\numberline {6.5}Statistics Tool}{67}
+\contentsline {chapter}{\numberline {7}Evaluation}{69}
+\contentsline {section}{\numberline {7.1}Pre-Study}{69}
+\contentsline {section}{\numberline {7.2}Study}{69}
+\contentsline {paragraph}{\nonumberline Annotations}{69}
+\contentsline {section}{\numberline {7.3}Post-Study}{69}
+\contentsline {chapter}{\numberline {8}Discussuion}{70}
+\contentsline {paragraph}{\nonumberline Annotations}{70}
+\contentsline {chapter}{\numberline {9}Future Work}{71}
