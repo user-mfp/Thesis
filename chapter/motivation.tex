@@ -184,8 +184,34 @@ Apperceptive and playful interfaces might raise visitors' involvement. Groups of
 %\end{figure}
 
 As mentioned earlier, keyboard and mouse are established means of input, though there are more natural ways of input though. Humans have been communicating with gestures for ages. With this in mind, \textit{gestural interaction} arose as a concept in \ac{HCI}. In \cite{GestureInteraction} five basic categories of gesture styles are defined.	All those gestures can be applied to two- and three-dimensional interfaces. \textit{Deictic} gestures are defining a location and include all varieties of pointing gestures [ibid.]. They range from the cursor on a desktop PC to the \ac{VR}-pointing devices mentioned above. \textit{Manipulative} gestures are used for translation, rotation, and scaling [ibid.]. Here, the ''pinch to zoom''-gesture for many touch-based devices is probably the most commonly known. More abstract gestures are \textit{semaphoric} and {language} gestures [ibid.]. They consist of designated signs or movements and can be static or dynamic. The best example for static gestures is sign language. Air traffic controllers use flag waving to guide planes into parking positions by semaphoric gestures. The last category is \textit{gesticulation} [ibid.]. In contrast to semaphoric gestures, gesticulation is purely natural and does not have to be learned. Gestures often appear in combination with speech, why they are also called \textit{coverbial} gestures.
+
+Gestures are naturally motivated. Thus, gesture-based interfaces should be intuitive to interact with. Through the introduction of smart phones and tablet computers touch-based interaction and gesture-based interfaces are getting more and more relevant. In 2003, the \textit{EyeToy for PlayStation2} began to show the possibilities of \textit{free-hand gestures}. A few years later, Microsoft began selling the \textit{Kinect for Xbox 360}. Independent drivers and software for it were developed almost immediately, which enabled developers and researchers to utilize the system's capabilities on regular computers. The official \ac{SDK} and \textit{Kinect for Windows} followed about half a year later. Other devices like \textit{ASUS Xtion PRO} followed working with the identical internal hardware. The more detailed hardware specifications will be explained in Chapter \ref{conception}. This development introduced a low cost solution for user-tracking, whilst the aforementioned tracking systems for \ac{VR} are very expensive. Several interfaces were developed making use of the hardware's potential. 
 \\
-Since gestures are naturally motivated, gesture-based interfaces should be intuitive to interact with. With the introduction of smart phones and tablet computers touch-based interaction and gesture-based Interfaces are getting more and more relevant. In 2003, the \textit{EyeToy for PlayStation2} began to show the possibilities of \textit{free-hand gestures}. A few years later, Microsoft began selling the \textit{Kinect for Xbox 360}. Independent drivers and software for it were developed almost immediately, which enabled developers and researchers to utilize the system's capabilities on regular computers. The official \ac{SDK} and \textit{Kinect for Windows} followed about half a year later. Other devices like \textit{ASUS' Xtion PRO} followed working with the identical internal hardware. The more detailed hardware specifications will be explained in Chapter \ref{conception}. This development introduced a low cost solution for user-tracking, whilst the aforementioned tracking systems for \ac{VR} are very expensive. Several interfaces were developed making use of the hardware's potential. Thus, its performance and suitability for \ac{VR}-tasks was examined. Ren and O'Neill stated that
+The \textit{Data$^3$} is an interface based in a Kinect sensor to interact with a database~\cite{DataCube}. It is an approach to visually handle multidimensional datasets. Therefore, the gestures of a user are interpreted and recognized by a middleware. This middleware then produces events upon which the Data$^3$-interface changes the view on the \ac{3D} dataset or certain properties about it. Although the input data provided by the depth sensor is three-dimensional, the gestures that are interpretable are restricted to one or two axes [ibid.].
+\\
+A similar approach is followed by \textit{Kinoogle}, which is a \textit{natural user interface}~\cite{Kinoogle}. Here, several gestures were defined to navigate in \textit{Google Earth} and \textit{Street View}. The four gestures depicted in Figure \ref{fig:kinoogle} were defined to operate the \ac{GUI} of Google Earth. Therefore, \textit{panning}, \textit{zooming}, \textit{rotate}, and \textit{tilt} gestures are mapped to mouse and keyboard inputs.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{a~\cite{PointingDevicesVR}, b~\cite{VRObjectSelectionCnG}.}%
+%\label{fig:kinnogle~\cite{Kinoogle}} %vire gesten zur steuerung
+%\end{figure}
+
+For each gesture, all axes are monitored to recognize an event. However, an event is triggered by certain changes on one or two axes. For instance, the rotation gesture is based on the relation of both hands of the user to each other. Therefore, their x- and y-values are observed and evaluated~\cite{Kinoogle}. The remaining gestures work in a similar fashion. 
+\\
+In virtual \ac{3D}-environments low cost depth sensors are used as well. Thus, a Kinect can be utilized to track a user inside a \ac{CAVE}\footnote{A \ac{CAVE} is a special \ac{VR}-setup with multiple screens. This produces more immersion than an ordinary single screen-setup. To provide correct perspectives for a user, its head position and orientation have to be reliably tracked. Otherwise, there might be unpleasant artifacts or even errors between the differentC screens.} to calculate correct perspectives for him or her~\cite{KinectCAVE}. Figure \ref{fig:kinectCAVE}a and b show a user inside the \ac{CAVE} once as a standard image and once as depth image.
+
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{a~\cite{PointingDevicesVR}, b~\cite{VRObjectSelectionCnG}.}%
+%\label{fig:kinectCAVE~\cite{KinectCAVE}} %beide Bilder aus der Cave
+%\end{figure}
+
+Jung et al. are tracking the shoulders and head of a user. Those tracked points are then combined to form an orientation matrix upon which a \textit{sufficiently correct perspective} can be displayed~\cite{KinectCAVE}. If the tracking data is flawed, the perspective is also compromised. Hence, such a system has to be robust and reliable. 
+
+As a consequence of these developments, the performance and suitability of low cost tracking solutions for \ac{VR}-tasks was examined. Ren and O'Neill stated that
 \textit{\begin{quote}
 	''More and more information and other content is visualized and manipulated in 3D, bringing a corresponding increase in the importance of effective and usable 2D user interfaces.''\textnormal{~\cite{FreehandSelectionCnG}}
 \end{quote}}

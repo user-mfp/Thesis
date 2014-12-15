@@ -127,15 +127,17 @@ Every time anything is changed, it is immediately saved. There are no undo- or r
 \section{Technical Principles}
 \label{installation_tech}
 
-There are certain technical principles, which the systems performance relies on. They range from operations necessary for fundamental calculations to background knowledge involving a proper interface design.
+There are certain technical principles, which the system's performance relies on. They range from operations necessary for fundamental calculations to background knowledge involving a proper interface design.
+\\
+As explained in Chapter \ref{motivation_interfaces} Ren et al. introduced their \textit{design guideline for 3D freehand interaction}~\cite{FreehandSelectionCnG}.
 
-\textbf{2D ist doof, weil...}
+\textbf{\ac{2D} ist doof, weil...}~\cite{DataCube}~\cite{Kinoogle}~\cite{KinectCAVE}~\cite{FreehandSelectionCnG}
 
 %-----------------------------------------------------------------------------
 
 \paragraph{Pointing Challenges}
 
-Visitors can walk up to the showcase and point at exhibits. These exhibits are lying on an exhibition plane. A plane, although usually flat and only 2-dimensional, can be defined by three Points in \ac{3D} space. Thus, to define three corners of the exhibition plane, a way to define a point in \ac{3D} space was needed. Therefore, I chose the same type of input visitors would later have to use as well. Each exhibition plane's corner is defined by pointing at it from various positions. To calculate where a person is pointing at, the system needs a vector. A vector can be determined by two points in \ac{3D} space. One defines the start and the other the direction.
+Visitors can walk up to the showcase and point at exhibits. These exhibits are lying on an exhibition plane. A plane, although usually flat and only \ac{2D}, can be defined by three Points in \ac{3D} space. Thus, to define three corners of the exhibition plane, a way to define a point in \ac{3D} space was needed. Therefore, I chose the same type of input visitors would later have to use as well. Each exhibition plane's corner is defined by pointing at it from various positions. To calculate where a person is pointing at, the system needs a vector. A vector can be determined by two points in \ac{3D} space. One defines the start and the other the direction.
 
 After observing how people point, the elbow was chosen to be the start of the pointing vector. The pointing direction would be determined by the hand\footnote{NiTE's skeleton tracking provides both of these joints, but does not support the tracking of fingers. More details about the implementation can be found in Chapter \ref{implementation}} as Figure \ref{fig:principle_pointing} depicts.
 

@@ -107,14 +107,14 @@ An additional function of the FileHandler-class is reading TXT-files. This featu
 
 \paragraph{GeometryHandler.cs} The GeometryHandler-class is solving essential computations of analytic geometry-problems. Therefore, the two structs \texttt{Vector} and \texttt{Plane} are declared, because standard types of C$\#$ do not deliver the complexity needed for those computations.
 \\
-A \texttt{Vector}, in contrast to a standard \texttt{Vector3D} or \texttt{Vector3}, is not only a \textit{direction vector}. It also has a \textit{starting} and a \textit{terminal point}. Hence, a \texttt{Vector} $V$ is defined by a starting point $P_{S}$ and either an endpoint $P_{E}$ or a direction vector leading towards it $\overrightarrow{d_{E}}$, where $P_{S}$ is either a user's tracked head- or elbow-joint and $P_{E}$ is its tracked hand-joint. 
+A \texttt{Vector}, in contrast to a standard \texttt{Vector3D} or \texttt{Vector3}, is not only a \textit{direction vector}. It also has a \textit{starting} and a \textit{terminal point}. Hence, a \texttt{Vector} $V$ is defined by a starting point $P_{S}$ and either an endpoint $P_{E}$ or a direction vector leading towards it $\overrightarrow{d_{E}}$, where $P_{S}$ is either a user's tracked head- or elbow-joint and $P_{E}$ is its tracked hand-joint. A vector in its parametric form is written like this:
 \begin{align*}
 	V &= P_{S} + \lambda \cdot \overrightarrow{d_{E}} \\
 	P_{V} &= P_{S} + \lambda_{P} \cdot \overrightarrow{d_{E}}
 \end{align*}
 As the factor $\lambda$ is varied, any point $P_{V}$ along a \texttt{Vector}'s direction of propagation can be expressed. 
 \\
-A \texttt{Plane} is defined by one starting corner $C_{1}$ and either two additional corners $C_{2}$ and $C_{3}$ or two additional \texttt{Vector}s $\overrightarrow{d_{C_{2}}}$ and $\overrightarrow{d_{C_{3}}}$ towards those corners. In short, a \texttt{Plane} $E$ is defined by two \texttt{Vector}s $V_{C_{2}}$ and $V_{C_{3}}$ of identical origin.  
+A \texttt{Plane} is defined by one starting corner $C_{1}$ and either two additional corners $C_{2}$ and $C_{3}$ or two additional \texttt{Vector}s $\overrightarrow{d_{C_{2}}}$ and $\overrightarrow{d_{C_{3}}}$ towards those corners. In short, a \texttt{Plane} $E$ is defined by two \texttt{Vector}s $V_{C_{2}}$ and $V_{C_{3}}$ of identical origin. The parametric form of a plane is defined as follows: 
 \begin{align*}
 	E = V_{C_{2}} + V_{C_{3}} \quad \to \quad E &= C_{1} + \lambda \cdot \overrightarrow{d_{C_{2}}} + \mu \cdot \overrightarrow{d_{C_{3}}} \\
 	P_{E} &= C_{1} + \lambda_{P} \cdot \overrightarrow{d_{C_{2}}} + \mu_{P} \cdot \overrightarrow{d_{C_{3}}}
@@ -152,7 +152,7 @@ The \ac{IMI}-system's interaction is based in the principle of intersections of 
 \end{align*}
 A \texttt{Vector} $\overrightarrow{u}$ between $P_{I}$ and any other position on $E$ has to be perpendicular to $E$'s normal $\overrightarrow{n_{E}}$. Further, a \texttt{Vector} $\overrightarrow{w}$ from $V$'s origin to any position on $E$ is needed. It describes $V$'s origin with respect to $E$. In both cases, $C_{1}$ can be taken as a known position on the \texttt{Plane}.
 $$\overrightarrow{u} = P_{I} - C_{1} \quad and \quad \overrightarrow{w} = P_{S} - C_{1}$$
-As Figure \ref{fig:vector_plane_intersect} shows, going from $C_{1}$ to $P_{I}$ by $\overrightarrow{u}$ is the same as by $\overrightarrow{w}$ and then along $\overrightarrow{d}$. Since $P_{I} \in E$, $\overrightarrow{n}$ also stands perpendicular on $\overrightarrow{u}$. Hence, it is also perpendicular to its equal path from $C_{1}$ to $P_{I}$.
+As Figure \ref{fig:vector_plane_intersect} shows, going from $C_{1}$ to $P_{I}$ by $\overrightarrow{u}$ is the same as by $\overrightarrow{w}$ and then along $\overrightarrow{d}$. Hence, both terms are \textit{linear dependent} on each other. Since $P_{I} \in E$, $\overrightarrow{n}$ also stands perpendicular on $\overrightarrow{u}$. Hence, it is also perpendicular to its equal path from $C_{1}$ to $P_{I}$.
 \begin{align*}
 	\overrightarrow{u} = \overrightarrow{w} + \lambda_{I} \cdot \overrightarrow{d} \quad and \quad 0 &= \overrightarrow{n_{E}} \bullet \overrightarrow{u} \\
 	\quad \Rightarrow \quad 0 &= \overrightarrow{n_{E}} \bullet (\overrightarrow{w} + \lambda_{I} \cdot \overrightarrow{d})
