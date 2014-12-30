@@ -1,33 +1,41 @@
 \chapter{Future Work}
 \label{future_work}
 
-During the development and implementation of free-hand pointing gestures as input for a public interface, a lot of new and interesting perspectives on this style of interaction appeared. The \ac{IMI}-system as such reliably works and has become an established part of the Museum für Ur- und Frühgeschichte Thüringens. My initial theory was proved to some extend. The presence of an interactive installation, however, increases the engagement of visitors with the Haßleben-showcase and thus their awareness of the topic. Whether the interaction is successful or not did not seem to matter that much. But the attention it creates does, because visitors look at the exhibits more carefully when they point at them. 
+During the development and implementation of free-hand pointing gestures as input for a public interface, new and interesting perspectives on this style of interaction appeared. The \ac{IMI}-system as such reliably works and has become an established part of the Museum für Ur- und Frühgeschichte Thüringens. My initial theory has been proved by the pre- and main study thus far. The presence of an interactive installation increases the engagement of visitors with the Haßleben-showcase and their awareness of the topic. Whether the interaction is successful or not did not seem to matter that much. The attention it creates provokes engagement visitors, because they look at the exhibits more carefully once they are pointing at them. 
 \\
-Nevertheless, there is still room for improvements and further research as talking to staff of the museum and the university, fellow students and participants of the studies revealed. 
+Nevertheless, there is room for improvements and further research. Talking to staff of the museum and the university, fellow students and participants of the studies revealed many exciting ways extend or improve the \ac{IMI}-system. 
 
-\textbf{Lessons from Development and Implementation}
-\\- research of angular error -> more efficient combined positions through improvement of eye hand-mismatch
-\\- research of kernel functions -> improvement of kernels (dominant and submissive kernel-functions)  
-\\- 3D selectability by using the XNA framework (bounding sphere)
-\\- gereal improvement of the implementation and prettier \ac{GUI}
+While developing the basic functionality of free-hand pointing interaction, some problems were encountered and overcome with sufficient success for the \ac{IMI}-system to work properly. Yet, these issues present opportunities to improve the interaction.
+\\
+The first technical issue is the \textit{angular error}, which is explained in Chapter \ref{installation_tech}. The pointing position of a user is prone to error, which is directly related to the angle of impact of the pointing vector onto the exhibition plane. To minimize this another aspect of improper pointing was utilized as a counter measure. \textit{Eye-hand missmatch} makes a user point and aim at two different positions on the exhibition plane. The \ac{IMI}-system computes an average position of the two. To calculate the position, it is assumed, that either of the vectors is dominant and the combined position is biased in favor of this vector's pointing position. The dominant vector, however, is determined by each of its axes absolute value in comparison to the other vectors values. Future research might find a more reliable way of this determination. Subjects could be observed more closely while pointing and physiological aspects could be taken into consideration as well. As Figure \ref{fig:dominant_pointing} depicts, pointing with the right arm results in a drift of the pointing position to the left, whereas the aiming vector tends to go to the right.
 
-\textbf{Lessons from Studies}
-\\- multiple users (leads to mobile devices)
-\\- allow mobility of a user
-\\- recognize small children
-\\- improve visual feedback 
-\\---- bigger display in viewing direction
-\\---- feedback directly on exhibition plane (spot requested) 
-\\---- (as Conception stated earlier)
-\\- improve readability
-\\---- more time to read
-\\---- bigger letters
-\\---- re-think parallelism of text and images
-\\- incorporate other gestures
+\textbf{F I G U R E}
+%\begin{figure}%
+%\includegraphics[width=\columnwidth]{filename}%
+%\caption{.}%
+%\label{fig:dominant_pointing} %Draufsicht ideogram aus principle 
+%\end{figure}
 
-\textbf{Lessons from other Discussions}
-\\- mobile devices -> App für iPod Touch (Audioguide)
-\\- tangibles with Gadgeteer
+\textit{Kernel functions} were not entirely investigated. The current \ac{IMI}-system uses a basic triangular function. The linear characteristics of affinity might be a problem in target selection. Dominant and submissive properties are modulated by the maximum value and the radius of the kernel. Non-linear functions could improve on these properties.
+\\
+Towards the end of the implementation functionalities of the \ac{MS} XNA Framework were utilized to calculate intersections. The XNA Framework defines basic geometrical shapes like planes, spheres and boxes~\cite{MSXNA}. Those shapes could be used to define new kernel functions. Furthermore, \ac{IMI}-exhibits could be defined in \ac{3D} space with a bounding sphere as a kernel around it. Hence, the exhibition plane might be obsolete. This would present a lot of new possibilities for public interaction with free-hand pointing gestures.
+
+Discussions with fellow students and staff of the museum and faculty brought up the question of combining the \ac{IMI}-system with \textit{tangibles} and \textit{mobile devices}. A possible inclusion of tangibles is introduced in Chapter \ref{conception_constraints} under 'Tangibles' and in Chapter \ref{implementation_presentation} by the concept of the \textit{presentation remote}.
+\\
+Mobile devices could also be addressed by wireless communication like bluetooth or WiFi. For instance, the audio guide at the Museum für Ur- und Frühgeschichte Thüringens is based on an iPod Touch. These devices could be utilized by another \ac{IMI}-application to display the specific information of an \ac{IMI}-exhibit in addition to the main screen of the \ac{IMI}-system inside a showcase.
+
+The studies confirmed the request for the aforementioned improvements and led to further possible alterations and upgrades of the \ac{IMI}-system. The two most frequently mentioned aspects of the \ac{IMI}-system that need revisiting is the feedback and the readability of the presentation software. Participants of the main study communicated that the visual feedback presented on the display was helpful, but to inconvenient. They further suggested to present the feedback directly on the exhibition plane as it was initially proposed in Chapter \ref{conception_constraints}. Moreover, participants perceived the position and size of the display as hindering, because they had to switch their focus of attention between the intended target and the visual feedback on the display. The size of the display can also be seen a reason for some of the readability issues. Hence, a bigger display that is closer to the actual \ac{IMI}-exhibits could get rid of those problems. The second readability issue is lack of time. Participants could not finish reading the text and looking at the images. Thus, another layout for the presentation of the \ac{IMI}-exhibits should be considered. The parallelism of text and images is too confusing and users either get frustrated or have to start the presentation all over again. This leads to another proposition from several participants of the main study. They requested additional gestures as commands
+\\
+One implicit feature participants wished for was to allow for mobility of a user. The pre-determined interaction space restricts the visibility of the exhibits. It was not clear, that a user only had to stand in the interaction space for the selection process. When the presentation of an \ac{IMI}-exhibit was running, there was no need to stay on the footsteps. Since there is one display, only a single input can be processed by the \ac{IMI}-system. It can not handle a multitude of users pointing at different \ac{IMI}-exhibits. Currently, there has to be a mechanism to identify one user from a group of visitors, who is in charge of the interaction. Nevertheless, the location of the footsteps could be used to mark a certain user, who is then able to move around the \ac{IMI}-exhibition and interact with the \ac{IMI}-system. The mark could then be reassigned once another user steps inside the interaction space.
+\\
+An issue that was already mentioned during the pre-study was the improvable suitability for children. The exhibition plane is to high for small children to see all the exhibits properly. Furthermore, the recognition of a user only works for a certain height due to the definition of the user position of an \ac{IMI}-exhibition. If the location a child's hip is too much below the hip location of the defining admin, the child can not be recognized as a user. A number of parent asked for a step to provide a raised view angle. This solution could also solve the recognition issue.
+
+Certain adjustments to improve the interaction could be made right away. As mentioned in Chapters \ref{installation_testing} and \ref{setup_development}, minor modifications were done right away during the tests of the technical principles and different setups. In addition to that, the trembling of the feedback position in the navigational view of the presentation software was reduced by buffering. In succession to the main study the Haßleben-showcase was equipped with additional spot lights. They especially highlight areas where \ac{IMI}-exhibits are positioned.   
+
+Finally, the \ac{IMI}-system is a novel way of interacting in public spaces. The Haßleben-showcase at the Museum für Ur- und Frühgeschichte Thüringens is an example of how the presence of a natural walk-up-and-use interface influences the perception of an ordinary showcase. The awareness about its topic and contents is raised through natural engagement. 
+\\
+The \ac{IMI}-system requires certain improvement and further testing. Yet it has successfully proved itself as a prototype for a public interface that needs no more input than a pointing user. And to the question, if the immediacy, control, and expressiveness of recent touch-based natural interfaces can be applied to 3D problems~\cite{ForewordCnG}?\\
+--Yes, it can!
 
 %\paragraph*{Annotations}
 %
