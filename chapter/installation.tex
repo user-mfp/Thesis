@@ -227,13 +227,13 @@ The lowest calculated X-value was -182mm and the highest was 1037mm. Hence the v
 \caption{Histogram of values on Y-axis computed during the first test period.}%
 \label{fig:testing_1_histoY}%
 \end{figure}
-Y-values have a similar spread. The range from -1155mm to -115mm. Thus, the range on the Y-axis is 1040mm. The spread os more flat, though. Thus, there are 54 values within an range of 347mm and the Y-values are far from sufficient accuracy.
+Y-values have a similar spread. They range from -1155mm to -115mm. Thus, the range on the Y-axis is 1040mm. The spread os more flat, though. Thus, there are 54 values within an range of 347mm and the Y-values are far from sufficient accuracy.
 \begin{figure}[H]%
 \includegraphics[width=\columnwidth]{../pics/histogramZ.eps}%
 \caption{Histogram of values on Z-axis computed during the first test period.}%
 \label{fig:testing_1_histoZ}%
 \end{figure}
-The biggest spread was produced by the computation of the Z-value. These values ranged from -1185mm to 1685mm. Hence, the angular error was 2871mm. The Z-value, however, has the highest number of values in a bin from 489mm to 728mm. 66 out of 89 values are in this group that is about the size of the aspired sufficient accuracy.
+The biggest spread was produced by the computation of the Z-value. These values ranged from -1185mm to 1685mm. Hence, the overall angular error was 2871mm. The Z-value, however, has the highest number of values in a bin from 489mm to 728mm. 66 out of 89 values are in this group that is about the size of the aspired sufficient accuracy.
 
 As it turned out, the kind of distribution was not relevant for the further analysis of the outcomes. There was a dense cloud of points for each condition. In the center of each cloud lay the average point for each condition. Unexpectedly, the values for three pointing locations are more densely distributed, than those for five. This impression can be supported by the similar means and medians, but different \ac{SD} listed in Table \ref{tab:testing_1_mean}, \ref{tab:testing_1_med} and \ref{tab:testing_1_sd} for three and five positions.
 
@@ -456,17 +456,17 @@ The aspired majority of successful validations within a threshold of 100mm could
 
 Three installations were build. One lab setup for development, one makeshift setup was placed in the faculty building's lobby, and the final one was installed inside the showcase at the Museum für Ur- und Frühgeschichte Thüringens. The various setups differed in dimensions and were run with different hardware configurations. Testing of technical principles and computations were conducted with the lab setup. The lobby setup was used for a stress-test during an open door-event at the faculty, whereas the final evaluation took place in the museum. Only the presentation software was evaluated.
 
-The Haßleben-showcase was measured. The measurments were then transferred into the groundplan depicted in Figure \ref{fig:hassleben_groundplan}. With a width of 439cm and a depth of 344cm, a mockup of the showcase was quiet large and would need an even larger room to fit in and to be still operable. The showcase has a floor-to-ceiling height of 293cm and its exhibition plane is 65cm above the floor.
+The Haßleben-showcase was measured. The measurements were then transferred into the groundplan depicted in Figure \ref{fig:hassleben_groundplan}. With a width of 439cm and a depth of 344cm, a mockup of the showcase was quiet large and would need an even larger room to fit in and to be still operable. The showcase has a floor-to-ceiling height of 293cm and its exhibition plane is 65cm above the floor.
 \begin{figure}[H]%
 \includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Groundplan of the Haßleben-showcase.}%
+\caption{[UNFINISHED]Groundplan of the Haßleben-showcase.}%
 \label{fig:hassleben_groundplan} %
 \end{figure}
 
-The laminated glass is 7mm thick. A main concern at the beginning was, whether the sensor would be able to work through glass or not, because the panels have no anti-glare coating. Figure \ref{fig:hassleben_glass} shows that it worked through two sheets of glass at an acute angle (a) as well as straight trough it (b).
+The laminated glass is 7mm thick. A main concern at the beginning was, whether the sensor would be able to work through glass or not, because the panels have no anti-glare coating. The images in Figure \ref{fig:hassleben_glass} were taken during the fitment of the \ac{IMI}-system inside the Haßleben-showcase. They confirm that the depth sensor works through the glass panels.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Depth image through the glass panels of the Hassleben-showcase.}%
+\includegraphics[width=\columnwidth]{../pics/depthmirror.eps}%
+\caption{Color coded depth image of a pointing person through two panels of glass at an acute angle (left). Adjusting the depth sensor inside the Haßleben-showcase with raw and depth image (middle and right).}%
 \label{fig:hassleben_glass} %
 \end{figure}
 
@@ -476,8 +476,8 @@ There were three unoccupied rooms. One at the museum and two at the faculty. The
 \\
 Until the final hardware was acquired by the museum and available for testing, similar hardware was preliminarily lend to me by multiple sources of the faculty. The museum's carpenter fabricated a pedestal consisting of surface plating and feet. The plating is fabricated from four 9mm-press boards. The feet seemed too unstable and thus were replaced with one desk rack for each board as can be seen in Figure \ref{fig:lab_setup}.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Images of the lab setup during the development process.}%
+\includegraphics[width=\columnwidth]{../pics/labconstruction.eps}%
+\caption{Images of the construction of the lab setup during the development process.}%
 \label{fig:lab_setup} %
 \end{figure}
 
@@ -493,8 +493,8 @@ There were two hardware configurations used during the development of the system
 
 \paragraph{Lobby Setup} The first test under aggravated conditions was conducted during \textit{Summ\ae{}ry}\footnote{Summ\ae{}ry is an open door-event at the faculty of media, where all chairs present their work throughout the faculty-buildings.}. Therefore, a makeshift setup was built in the faculty's lobby. It consisted of three tables forming the exhibition plane and a cocktail table, on which the desktop-PC and a tripod with the sensor on top were positioned. The interaction space was defined by markings on the floor. There were three targets - a candy bar, a stack of coins, and a stack of fliers - lying on the plane (see Figure \ref{fig:summaery_setup}).
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{The setup in the lobby of the faculty of Media during the Summ\ae{}ry.}%
+\includegraphics[width=\columnwidth]{../pics/summaery.eps}%
+\caption{Trying out the \ac{IMI}-system as it was setup in the lobby of the faculty of Media during the Summ\ae{}ry.}%
 \label{fig:summaery_setup} %
 \end{figure}
 
@@ -513,8 +513,8 @@ The other problem appeared after having seen some log-files, which implied that 
 
 Figure \ref{fig:museum_setup} depicts the installation of the final setup at the Haßleben-showcase. The aforementioned desktop-PC was attached behind the maintenance door to the right of the showcase. Because the keyboard and mouse necessary for maintenance are wireless, the only wires were the USB3.0-cable to connect and power the screen and the PC's own power supply. 
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{The final setup inside the Haßleben-showcase at the Museum für Ur- und Frühgeschichte Thüringens.}%
+\includegraphics[width=\columnwidth]{../pics/showcase.eps}%
+\caption{Impressions of the final setup inside the Haßleben-showcase at the Museum für Ur- und Frühgeschichte Thüringens.}%
 \label{fig:museum_setup} %
 \end{figure}
 
