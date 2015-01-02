@@ -32,8 +32,8 @@ Once a user enters the interaction space, the system reacts again. This time, th
 
 An exhibit is selected after the user constantly points at it for over half a second. This \textit{dwell time} prevents unintended selections. Otherwise, any exhibit would be immediately selected, whenever a user's pointing position strokes over it. After selecting an exhibit a corresponding description is displayed alongside detailed images of the exhibit (see Figure \ref{fig:show}). While the text remains stable, the images are displayed as a slide show. Afterwards, the system goes back to the exhibition's overview again. The user does not have to end a slide show and can wait until it is over or select a new exhibit while the slide show is still running - without visual feedback though.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/dosenfibel.eps}%
+\caption{Presentational view of the box brooch (Dosenfibel) of the Haßleben-showcase.}%
 \label{fig:show}%
 \end{figure}
 
@@ -41,10 +41,10 @@ If a user is done or others want to try the interface out for themselves, users 
 
 \paragraph{Administration Software} An \textit{administrative scenario} is more traditional and requires a keyboard and a mouse. Nevertheless, it also makes use of pointing gestures. This software can be used by one experienced staff member alone. But the ones that are less advanced might need a second person's assistance. The administration software can be used to create and edit \ac{IMI}-exhibitions. Therefore, all necessary data can be defined with it. This data is saved in \textit{configuration files} of XML-format. These files are used by the presentation software and can be reloaded for editing by the administration software. Expert administrators can make changes with a text editor as well. 
 \\
-An exhibition consists of two main components. Both the \textit{exhibition plane} and the \textit{exhibits} are defined by pointing. Upon the application's start, an existing exhibition can be loaded or a new one can be created by naming it. In case of a new exhibition, the first thing to be defined is the exhibition plane. Therefore, the administrative user again has the choice to either load an existing plane or define a new one. Should the admin decide to define an exhibition plane, the procedure will be explained in a short instruction, before the calibration begins.It tells an admin, to point at three of the planes corners from three different positions. Further, the administrative user is told to follow the instructions during the process. To start the procedure, the administrative user has to be recognizable by the sensor. In addition, ideograms like Figure \ref{fig:ideo_cali} depicting the positions to go to and the corners to point at are shown during the process. Once the process is started it will guide the admin from position to position and corner to corner in fixed intervals between three and five seconds. After having pointed at the corners once, a second run is needed to validate the corners' positions. This is necessary, because a position could be defined wrong. If the validation is successful, the exhibition and its plane are saved. The second main component are the exhibits. They can only be defined or loaded, if a raw exhibition with a valid exhibition plane is already available. The definition of an exhibit is similar to that of the exhibition plane. The admin points at the respective exhibit on the earlier defined exhibition plane from three different positions. Afterwards, the position is also validated.
+An exhibition consists of two main components. Both the \textit{exhibition plane} and the \textit{exhibits} are defined by pointing. Upon the application's start, an existing exhibition can be loaded or a new one can be created by naming it. In case of a new exhibition, the first thing to be defined is the exhibition plane. Therefore, the administrative user again has the choice to either load an existing plane or define a new one. Should the admin decide to define an exhibition plane, the procedure will be explained in a short instruction, before the calibration begins.It tells an admin, to point at three of the planes corners from three different positions. Further, the administrative user is told to follow the instructions during the process. To start the procedure, the administrative user has to be recognizable by the sensor. In addition, ideograms like the ones in Figure \ref{fig:ideo_cali} depict the positions to go to and the corners to point at and are shown during the process. Once the process is started it will guide the admin from position to position and corner to corner in fixed intervals between three and five seconds. After having pointed at the corners once, a second run is needed to validate the corners' positions. This is necessary, because a position could be defined wrong. If the validation is successful, the exhibition and its plane are saved. The second main component are the exhibits. They can only be defined or loaded, if a raw exhibition with a valid exhibition plane is already available. The definition of an exhibit is similar to that of the exhibition plane. The admin points at the respective exhibit on the earlier defined exhibition plane from three different positions. Afterwards, the position is also validated.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/define-plane.eps}%
+\caption{Three different pointing locations merged into one image (a), and pointing at three corners from the second pointing location (b).}%
 \label{fig:ideo_cali}%
 \end{figure}
 
@@ -57,41 +57,30 @@ The remaining parameters of both exhibition and exhibits have default values, wh
 %\textbf{Appearance. Administration and Presentation GUIs [Shneiderman], K.I.S.S.}
 \section{Interfaces of the \ac{IMI}-System} 
 
-\paragraph{Presentation Software} There are no conventional control elements like buttons or menus in the \ac{UI} of the presentation software. It only has the four different states shown in Figure \ref{fig:ui_pres}.
-\begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
-\label{fig:ui_pres}%
-\end{figure}
+\paragraph{Presentation Software} There are no conventional control elements like buttons or menus in the \ac{GUI} of the presentation software. It only has four different states.
 
 The first one is the \textit{standby state}. It is active, if no person in front of the showcase is recognized. The corresponding view's task is to mask the system. Therefore, the screen will only show an image of the showcase's background in order to disguise itself. 
 \\
-The next state gets activated, if visitors are present and none of them is inside the dedicated interaction space. This \textit{introduction state}'s task is to make visitors aware of the systems presence and invite one of them to interact with the installation. As shown in Figure \ref{fig:ui_pres}b, only a short introduction and an ideogram are needed to explain how the system has to be used. In order to seamlessly integrate into the general style of the museum, the font was chosen to be the museum's corporate font. Further, the background color was chosen to fit with the ambient color of the showcase, and to reduce the contrast between text and background. Moreover, the font size was increased to ensure readability. The associated calculations can be found in the next chapter. 
+The next state gets activated, if visitors are present and none of them is inside the dedicated interaction space. This \textit{introduction state}'s task is to make visitors aware of the systems presence and invite one of them to interact with the installation. As shown in Figure \ref{fig:intro}, only a short introduction and an ideogram are needed to explain how the system has to be used. In order to seamlessly integrate into the general style of the museum, the font was chosen to be the museum's corporate font. Further, the background color was chosen to fit with the ambient color of the showcase, and to reduce the contrast between text and background. Moreover, the font size was increased to ensure readability. The associated calculations can be found in the next chapter. 
 \\
-The system gets into its third state as soon as a user is inside the dedicated interaction space. It can be described as an \textit{overview state}. Figure \ref{fig:ui_pres}c shows the selectable exhibits' positions on top of all exhibits' outlines as blue ellipse and the user's pointing position as a red dot. While the exhibits' positions are always marked, the red \textit{feedback position} only appears, if a user is really pointing at that particular spot of the exhibition plane. Otherwise, the red dot will not be shown.
+The system gets into its third state as soon as a user is inside the dedicated interaction space. It can be described as an \textit{overview state}. Figure \ref{fig:sketch} shows the selectable exhibits' positions on top of all exhibits' outlines as blue ellipse and the user's pointing position as a red dot. While the exhibits' positions are always marked, the red \textit{feedback position} only appears, if a user is really pointing at that particular spot of the exhibition plane. Otherwise, the red dot will not be shown.
 \\
-The fourth state is the actual \textit{presentation state}. It is similar to the introduction, but here the text and images depend on which exhibit had been selected. The corresponding texts are limited to approximately 300 characters for two reasons. Because the screen space of the text is restricted to half the display, readability would suffer for more characters\footnote{Further explanation of this matter can be found in Chapter \ref{installation_tech}.}. The second reason for this character restriction is that visitors do not have to read extensively long descriptions. Meanwhile, detailed images of the chosen exhibits are displayed on the right half of the screen (see Figure \ref{fig:ui_pres}d). They change every four seconds. The time an image is shown can be adjusted either by the administration software of by hand. After all images have been shown, the system will go back to any of the previous states. Where it goes depends on the visitors behavior. If a user is detected in the interaction space, the system will go to the overview. If there are visitors present, but none of them is inside the interaction space, no one qualifies as a user and the introduction will be displayed. As soon as every potential user left, the system will go into standby and hide again - even during a presentation.
+The fourth state is the actual \textit{presentation state}. It is similar to the introduction, but here the text and images depend on which exhibit had been selected. The corresponding texts are limited to approximately 300 characters for two reasons. Because the screen space of the text is restricted to half the display, readability would suffer for more characters\footnote{Further explanation of this matter can be found in Chapter \ref{installation_tech}.}. The second reason for this character restriction is that visitors do not have to read extensively long descriptions. Meanwhile, detailed images of the chosen exhibits are displayed on the right half of the screen (see Figure \ref{fig:show}). They change every four seconds. The time an image is shown can be adjusted either by the administration software of by hand. After all images have been shown, the system will go back to any of the previous states. Where it goes depends on the visitors behavior. If a user is detected in the interaction space, the system will go to the overview. If there are visitors present, but none of them is inside the interaction space, no one qualifies as a user and the introduction will be displayed. As soon as every potential user left, the system will go into standby and hide again - even during a presentation.
 %Presentation -> only three views: (hidden), clear instructions and ideogram, overview, slide show, No traditional, abstract features like a device or buttons, slides, or other confusing items.
 
 The administration software is used to manage all data of an \ac{IMI}-exhibition. Hence, the interface has to be more complex than that of the presentation software. It is more conventional, too. The amount of different views is low, though. 
 \\
-Since it has to be usable by lay persons, similar tasks share a \textit{view pattern}. For instance, settings of an exhibition and an exhibit have identical controls in an identical layout. Only the header of the views and the contents of the drop-down menus vary as can be seen in Figure \ref{ui_admin_settings}. The same principle applies for any definition of positions (see Figure \ref{ui_admin_positions}). No matter if the corners of an exhibition plane, the position of an exhibit or even the user position are defined, the view is always the same.
+Since it has to be usable by lay persons, similar tasks share a \textit{view pattern}. For instance, settings of an exhibition and an exhibit have identical controls in an identical layout. Only the header of the views and the contents of the drop-down menus vary as can be seen in Figure \ref{fig:ui_admin_settings}. The same principle applies for any definition of positions. No matter if the corners of an exhibition plane, the position of an exhibit or even the user position are defined, the view is always the same.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
-\label{fig:ui_admin_positions}%
-\end{figure}
-
-\begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/settings-dropdown.eps}%
+\caption{View of the settings for an \ac{IMI}-exhibition (left) and an \ac{IMI}-exhibit (right).}%
 \label{fig:ui_admin_settings}%
 \end{figure}
 
-The interface is designed for task-driven use. This means, that an administrative user probably will have a particular reason to use this software. Such a task includes changing a particular property. Hence, the \ac{GUI} offers the user to navigate to this property step by step. Therefore, a hierarchical structure is used, which results in less control elements in one view and thus more clarity. There is less choice but a little more actions. For example, an exhibit should get an additional image. As shown in Figures \ref{fig:ui_admin_scenario}a through d, a user loads the exhibition, chooses the exhibit from the drop-down menu, chooses ''New Image'' from the drop-down menu and copies with a button press. After that, a dialog opens and the user can choose the image to be added. Finally, the image appears in the images' drop-down menu. Images can also be deleted from the exhibit by choosing an existing image and pressing ''Delete''. From this view, all other properties of the exhibit can be set. By pressing ''Back'', the \ac{GUI} goes back to the exhibition's view and the next task can be attended.
+The interface is designed for task-driven use. This means, that an administrative user probably will have a particular reason to use this software. Such a task includes changing a particular property. Hence, the \ac{GUI} offers the user to navigate to this property step by step. Therefore, a hierarchical structure is used, which results in less control elements in one view and thus more clarity. There is less choice but a little more actions. For example, an exhibit should get an additional image. A user loads the exhibition, chooses the exhibit from the drop-down menu, chooses ''New Image'' from the drop-down menu and confirms with a button press. After that, a dialog opens and the user can choose the image to be added. Finally, the image appears in the images' drop-down menu. Images can also be deleted from the exhibit by choosing an existing image and pressing ''Delete''. From this view, all other properties of the exhibit can be set. By pressing ''Back'', the \ac{GUI} goes back to the exhibition's view and the next task can be attended.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/scenario.eps}%
+\caption{Selecting an \ac{IMI}-exhibit (a), choosing ''New Image'' (b), choosing an Image (c), and the image is a new part of the \ac{IMI}-exhibit (d).}%
 \label{fig:ui_admin_scenario}%
 \end{figure}
 
@@ -115,21 +104,21 @@ Visitors can walk up to the showcase and point at exhibits. These exhibits are l
 
 After observing how people point, the elbow was chosen to be the start of the pointing vector. The pointing direction would be determined by the hand\footnote{NiTE's skeleton tracking provides both of these joints, but does not support the tracking of fingers. More details about the implementation can be found in Chapter \ref{implementation}} as Figure \ref{fig:principle_pointing} depicts.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/basic-pointing.eps}%
+\caption{Basic principle of free-hand pointing gesture as seen from the side (left) and top (right).}%
 \label{fig:principle_pointing}%
 \end{figure}
 
-In order to define a point in \ac{3D} space, one vector was not sufficient. But, if two or more vectors would target the same point from different angles, their intersection should yield the targeted point. Figure \ref{fig:principle_intersect2d} shows this concept. Hence, a the point of their intersection could be calculated by equating both vectors. However, this is a 3-dimensional problem. The possibility of vectors intersecting in \ac{3D} space is very low. They are mostly skew, and only their projections on a \ac{2D} plane do actually intersect. Nevertheless, there is a solution. Vectors may not intersect, but there is an area where they are closest to each other. Consequently, there is one point that is closest to both vectors. This quasi-intersection is called \textit{pedal point}. It lies in the middle of the shortest line that is perpendicular to both vectors~\cite{PedalPoint}. In case both vectors do meet, pedal point and intersection are equal. Figures \ref{fig:principle_intersect3d}a and b illustrate how the projected intersection and pedal point can vary.
+In order to define a point in \ac{3D} space, one vector was not sufficient. But, if two or more vectors would target the same point from different angles, their intersection should yield the targeted point. Figure \ref{fig:principle_intersect2d} shows this concept. Hence, a the point of their intersection could be calculated by equating both vectors. 
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/intersection2d.eps}%
+\caption{Vectors from two different pointing locations intersecting each other in 2D.}%
 \label{fig:principle_intersect2d}%
 \end{figure}
-
+However, this is a 3-dimensional problem. The possibility of vectors intersecting in \ac{3D} space is very low. They are mostly skew, and only their projections on a \ac{2D} plane do actually intersect. Nevertheless, there is a solution. Vectors may not intersect, but there is an area where they are closest to each other. Consequently, there is one point that is closest to both vectors. This quasi-intersection is called \textit{pedal point}. It lies in the middle of the shortest line that is perpendicular to both vectors~\cite{PedalPoint}. In case both vectors do meet, pedal point and intersection are equal. Figures \ref{fig:principle_intersect3d}a and b illustrate how the projected intersection and pedal point can vary.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/intersection3d.eps}%
+\caption{Top view of the position of a 2D intersection in dark green (left) compared to the side view of the pedal point in red for the same pointing vectors (right).}%
 \label{fig:principle_intersect3d}%
 \end{figure}
 
@@ -141,8 +130,8 @@ The final point in \ac{3D} space gets set by the average of all pedal points. A 
 
 Users are pointing at exhibits on a flat, horizontal surface. The distance between users and exhibits can vary and so does the accuracy. The further a target is away the bigger the \textit{angular error} gets. This principle can be seen in Figure \ref{fig:principle_angular_error}. For targets that are further away, the angle of impact on the surface $\alpha$ gets more and more acute. Hence, small variations during the pointing process have a much bigger influence with increasing distance to the target. It is an exponential problem and can be described by the \textit{law of tangents}. 
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/angular-error.eps}%
+\caption{Illustration of pointing at a target in gray and the according angular errors in red.}%
 \label{fig:principle_angular_error}%
 \end{figure}
 
@@ -159,23 +148,26 @@ The hypothetical target's pointing angle of impact $\alpha_{target}$ is approxim
 $$\Rightarrow \quad \delta_{short} \approx 108mm \quad and \quad \delta_{long} \approx 116mm$$
 This exemplary calculation shows that a variation of $\pm$1$^\circ$ can cause an error of nearly 120mm in pointing direction. This led me to the conclusion that, if a person can not point with pin point accuracy, the system does not have to be calibrated to this accuracy. We would need to define a \textit{sufficient accuracy} though. The angular error would be bigger for shorter users, such as children. It would additionally increase for targets further away. Nevertheless, to define the position of an \ac{IMI}-exhibit as explained earlier, it has to be defined and validated. This means that both positions have to be within a threshold determined by sufficient accuracy. A radius of 100mm\footnote{A radius of 100mm matches the dimensions of a football, with the intended position in its center.} has been chosen as threshold and thus the aspired sufficient accuracy for this system. 
 
-Yet another conclusion was to not calibrate each position to its actual position in relation to the depth sensor's coordinate system  and measure if users come close to them. It is counter-intuitive to force a user to re-adjust to hit those positions. Instead, I chose to use the corresponding positions that were defined by the users themselves. To hit a target, users do not need its real position in relation to the depth sensor, they need the common position defined by other users. Hence, all positions are \textit{virtual representations} of the real positions. Relations do not have to be correct, as long as the majority of users hit their designated target. This principle is illustrated by Figure \ref{fig:virtual_position}.
-\begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
-\label{fig:virtual_position} %not matching to real world coordinates
-\end{figure}
+Yet another conclusion was to not calibrate each position to its actual position in relation to the depth sensor's coordinate system  and measure if users come close to them. It is counter-intuitive to force a user to re-adjust to hit those positions. Instead, I chose to use the corresponding positions that were defined by the users themselves. To hit a target, users do not need its real position in relation to the depth sensor, they need the common position defined by other users. Hence, all positions are \textit{virtual representations} of the real positions. Relations do not have to be correct, as long as the majority of users hit their designated target. 
+%This principle is illustrated by Figure \ref{fig:virtual_position}.
+%\begin{figure}[H]%
+%\includegraphics[width=\columnwidth]{../pics/blank.eps}%
+%\caption{Caption}%
+%\label{fig:virtual_position} %not matching to real world coordinates
+%\end{figure}
 
 %-----------------------------------------------------------------------------
 
 \paragraph{Readability} Any user should be able to read the instructional and explanatory texts displayed by the installation. Therefore, the font size and the time a text is shown had to be taken in consideration. 
-\begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
-\label{fig:visual_angle}%
-\end{figure}
 
-The minimal visual angle at maximum contrast is one minute of angle or 0.017$^\circ$~\cite{SehwinkelLesbarkeit}. This only describes the ability to differentiate between a white and black dot. Readability involves whole letters and therefore needs a bigger visual angle. For people with normal vision this means five minutes or 0.083$^\circ$ of visual angle [ibid.]. This value only applies for people with normal vision, which means they are able to recognize a single letter 20 feet away (see Figure \ref{fig:visual_angle}). People with normal eyesight have 20/20 vision. If people have 20/10 vision, they need to be 10 feet away to recognize the particular letter. A vision of 20/15 is more realistic for an average population [ibid.]. This principle can be applied to the Haßleben-installation as well. Given a distance from eye to letter of $b_{20/20}$ = 2.8m and the visual angle $\alpha_{20/20}$ = 0.083$^\circ$, the height of a recognizable letter would be $a_{20/20}$ and calculated as follows:
+The minimal visual angle at maximum contrast is one minute of angle or 0.017$^\circ$~\cite{SehwinkelLesbarkeit}. This only describes the ability to differentiate between a white and black dot. Readability involves whole letters and therefore needs a bigger visual angle. For people with normal vision this means five minutes or 0.083$^\circ$ of visual angle [ibid.]. This value only applies for people with normal vision, which means they are able to recognize a single letter 20 feet away. People with normal eyesight have 20/20 vision. If people have 20/10 vision, they need to be 10 feet away to recognize the particular letter. A vision of 20/15 is more realistic for an average population [ibid.].
+%\begin{figure}[H]%
+%\includegraphics[width=\columnwidth]{../pics/blank.eps}%
+%\caption{Caption}%
+%\label{fig:visual_angle}%
+%\end{figure}
+\\
+This principle can be applied to the Haßleben-installation as well. Given a distance from eye to letter of $b_{20/20}$ = 2.8m and the visual angle $\alpha_{20/20}$ = 0.083$^\circ$, the height of a recognizable letter would be $a_{20/20}$ and calculated as follows:
 \begin{align*}
 	\tan{\alpha_{20/20}} = \frac{a_{20/20}}{b} \quad \to \quad a_{20/20} &= b \cdot \tan{\alpha_{20/20}}
 	\\
@@ -214,28 +206,36 @@ Before anything could be installed or evaluated, the aforementioned principles h
 
 \paragraph{First Test} The first test was designed as a proof of concept. The basic feasibility of the aforementioned principle of pointing gestures and the gestures' accuracy were tested. Therefore, a subject had to define a point in \ac{3D} space.
 \\ 
-The setup that was used for the first test can be seen in Figure \ref{fig:testing_1}\footnote{The exact specifications are described in the next section of this chapter.}. The sensor was positioned at about the same position it would later be inside the Haßleben-showcase. Centered in front of it, a turquoise token was attached to the white surface of the \textit{lab setup}. It has a diameter of approximately 2cm. 18 subjects, who ranged from 160cm to 188cm in height, took part. All of them are either students or researchers of the faculty of Media at Bauhaus-Universität Weimar.
+The setup that was used for the this test can be seen in Figure \ref{fig:testing_1}\footnote{The exact specifications are described in the next section of this chapter.}. The sensor was positioned at about the same position it would later be inside the Haßleben-showcase. Centered in front of it, a turquoise token was attached to the white surface of the \textit{lab setup}. It has a diameter of approximately 2cm. 18 subjects, who ranged from 160cm to 188cm in height, took part. All of them are either students or researchers of the faculty of Media at Bauhaus-Universität Weimar.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
+\includegraphics[width=\columnwidth]{../pics/lab-setup.eps}%
+\caption{Lab setup that was used throughout the iterative development process.}%
 \label{fig:testing_1}%
 \end{figure}
 
 The definition of a point in \ac{3D} space was tested with each subject. Only one \ac{IV} was changed throughout a session. It was the amount of positions from where the point had to be defined. Five rounds of defining the token in \ac{3D} space for both three and five positions were done by each subject. They were shown the token and told to point at it from three and later five positions. Moreover, subjects had to point with their right arm. The positions were marked by metal braces along the surface's edge opposite the sensor. Subjects were not given any visual aid, but an audible countdown in form of beeps was provided instead. At the end a subject either had to point at the target or move to the next position. Subjects had to point straight at the target for one second. During this second of pointing, ten pointing vectors were recorded\footnote{The sensor has a sampling rate of up to 60Hz.}.  
 
-As expected, subjects defined points in \ac{3D} space by pointing at the given target. However, there were difficulties concerning the accuracy in both conditions. Although histograms of the acquired data (see Figures \ref{fig:testing_1_histo_3_5}a and b) suggest a normal distribution, according to the Kolmogorow-Smirnow test this is not the case. There are too many outliers and hence, the defined points are not normally distributed.
+As expected, subjects defined points in \ac{3D} space by pointing at the given target. However, there were difficulties concerning the accuracy in both conditions. The histograms of the acquired data in Figures \ref{fig:testing_1_histoX}, \ref{fig:testing_1_histoY}, and \ref{fig:testing_1_histoZ} indicate a normal distribution for each axis. There are several outliers, though. Hence, those needed to be reduced or avoided.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
-\label{fig:testing_1_histo_3_5}%
+\includegraphics[width=\columnwidth]{../pics/histogramX.eps}%
+\caption{Histogram of values on X-axis computed during the first test period.}%
+\label{fig:testing_1_histoX}%
 \end{figure}
+The lowest calculated X-value was -182mm and the highest was 1037mm. Hence the values are spread over a range of 1219mm. About 74$\%$ of values lie between 21mm and 224mm. This is already close to the targeted sufficient accuracy.
+\begin{figure}[H]%
+\includegraphics[width=\columnwidth]{../pics/histogramY.eps}%
+\caption{Histogram of values on Y-axis computed during the first test period.}%
+\label{fig:testing_1_histoY}%
+\end{figure}
+Y-values have a similar spread. The range from -1155mm to -115mm. Thus, the range on the Y-axis is 1040mm. The spread os more flat, though. Thus, there are 54 values within an range of 347mm and the Y-values are far from sufficient accuracy.
+\begin{figure}[H]%
+\includegraphics[width=\columnwidth]{../pics/histogramZ.eps}%
+\caption{Histogram of values on Z-axis computed during the first test period.}%
+\label{fig:testing_1_histoZ}%
+\end{figure}
+The biggest spread was produced by the computation of the Z-value. These values ranged from -1185mm to 1685mm. Hence, the angular error was 2871mm. The Z-value, however, has the highest number of values in a bin from 489mm to 728mm. 66 out of 89 values are in this group that is about the size of the aspired sufficient accuracy.
 
-As it turned out, the kind of distribution was not relevant for the further analysis of the outcomes. As depicted by Figure \ref{fig:testing_1_dist_3_5}, there was a dense cloud of points for each condition. In the center of each cloud lay the average point for each condition. Unexpectedly, the values for three pointing locations are more densely distributed, than those for five. This impression can be supported by the similar means and medians, but different \ac{SD} listed in Table \ref{tab:testing_1_mean}, \ref{tab:testing_1_med} and \ref{tab:testing_1_sd} for three and five positions. 
-\begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Caption}%
-\label{fig:testing_dist_3_5}%
-\end{figure}
+As it turned out, the kind of distribution was not relevant for the further analysis of the outcomes. There was a dense cloud of points for each condition. In the center of each cloud lay the average point for each condition. Unexpectedly, the values for three pointing locations are more densely distributed, than those for five. This impression can be supported by the similar means and medians, but different \ac{SD} listed in Table \ref{tab:testing_1_mean}, \ref{tab:testing_1_med} and \ref{tab:testing_1_sd} for three and five positions.
 
 \begin{table}[H]
 	\centering
@@ -295,10 +295,10 @@ Although, means and \ac{SD}s are no appropriate measures to be drawn from non-un
 	\label{tab:testing_1_valid}
 \end{table}
 
-A positive conclusion can be taken from the \textit{validation maps} depicted in Figure \ref{fig:testing_1_valid_maps}, in which all validation attempt's results are visualized by color coding. Full validation on each axis is green, two successfully validated axes are yellow, one is orange and none is red. Each small square is one defined point. The points are sorted in ascending height of their defining subjects. It can be seen that the subjects' height has no apparent influence on the validation. Hence, size does not matter.
+A positive conclusion can be taken from the \textit{validation maps} depicted in Figure \ref{fig:testing_1_valid_maps}, in which all validation attempt's results are visualized by color coding. Full validation on each axis is green, two successfully validated axes are yellow, one is orange and none is red. Each small square is one defined point. The points are sorted in ascending height of their defining subjects. It can be seen that the subjects' height has no apparent influence on the validation, although a certain height appears to be more practical, as the density of green dots in the lower left area indicates. Nevertheless, size does not matter.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Color coded validation map of each defined point. Thresholds from left to right: 100, 120, 140, 160, 180, 200mm.}%
+\includegraphics[width=\columnwidth]{../pics/colorcodes1.eps}%
+\caption{Color coded validation maps of every defined point with every other defined point. Thresholds from left to right: 100, 120, 140, 160, 180, 200mm.}%
 \label{fig:testing_1_valid_maps}%
 \end{figure}
 
@@ -306,10 +306,10 @@ Two more observations occurred during the tests. First, there were several defec
 \\
 The first observation could be handled by improving the algorithms that were responsible for sampling the pointing gesture of a subject. In some cases, the subject's joints were not updated properly, which led to zero vectors pointing nowhere. Those vectors are filtered out since by an improved sampling mechanism. Another aspect was the aforementioned countdown. Several subjects got confused on what to do next. Thus, they did not point during sampling or were not ready. The issue was addressed with improved feedback on what to do during the next test.
 \\
-The second observation however, turned out to be more complex and yet helpful than anticipated. What had been observed, was a common issue in \ac{VR}-environments. It is referred to as the \textit{eye-hand visibility missmatch} by Argelaguet et al.~\cite{EyeHandMissmatchVR}. They explain that \ac{VR} pointing techniques can be classified in two groups. Namely, they are \textit{hand-} and \textit{eye-rooted} techniques [ibid.]. In \ac{3D} \ac{VR}-environments not only devices are tracked, but also users' heads\footnote{Users wear special \ac{3D}-glasses. For a correct stereoscopic view, those glasses are tracked as well to calculate a correct perspective view angle into the scene.}. Pointing devices' rays and users' view angle are calculated according to their tracked position and orientation. The eye-hand visibility missmatch describes the problem that not everything that is visible for a user, can be reached by the ray from a handheld device. Other objects might occlude the ray, which prevents selection [ibid.]. Argelaguet et al. propose a solution as well. They introduce a \textit{selection} and a \textit{display ray}. The selection ray originates at a user's eye position and has the device's orientation. Any intersection with an object in the scene will be the display ray's point of aim. The display ray provides the visual feedback and originates at the device leading to the point of aim (see Figure \ref{fig:mis_match}). By implication, Argelaguet et al. introduced aiming as an alternative to pointing. 
+The second observation however, turned out to be more complex and yet helpful than anticipated. What had been observed, was a common issue in \ac{VR}-environments. It is referred to as the \textit{eye-hand visibility missmatch} by Argelaguet et al.~\cite{EyeHandMissmatchVR}. They explain that \ac{VR} pointing techniques can be classified in two groups. Namely, they are \textit{hand-} and \textit{eye-rooted} techniques [ibid.]. In \ac{3D} \ac{VR}-environments not only devices are tracked, but also users' heads\footnote{Users wear special \ac{3D}-glasses. For a correct stereoscopic view, those glasses are tracked as well to calculate a correct perspective view angle into the scene.}. Pointing devices' rays and users' view angle are calculated according to their tracked position and orientation. The eye-hand visibility missmatch describes the problem that not everything that is visible for a user, can be reached by the ray from a handheld device. Other objects might occlude the ray, which prevents selection [ibid.]. Argelaguet et al. propose a solution as well. They introduce a \textit{selection} and a \textit{display ray}. The selection ray originates at a user's eye position and has the device's orientation. Any intersection with an object in the scene will be the display ray's point of aim. The display ray provides the visual feedback and originates at the device leading to the point of aim (see Figure \ref{fig:miss_match}). By implication, Argelaguet et al. introduced aiming as an alternative to pointing. 
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{eye-hand miss match~\cite{EyeHandMissmatchVR}}%
+\includegraphics[width=\columnwidth]{../pics/missmatch.eps}%
+\caption{Selection of an occluded object instead of visible one (left). Unable to select an object, because the ray is occluded by another object (middle). Object is visible from eye's and hand's location, but no position on its surface is visible by both (right).~\cite{EyeHandMissmatchVR}}%
 \label{fig:miss_match}%
 \end{figure}
 
@@ -319,8 +319,8 @@ As a consequence, I incorporated this principle to my approach and added a secon
 \\
 In addition to the two pointing paradigms being tested, their combination arose as a solution for an earlier consideration. The \textit{angular error} could be corrected by combining points defined by pointing and aiming. The conjunction of pointing and aiming depicted in Figure \ref{fig:testing_2_conjunction} could increase the percentage of successful validations.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{Target areas of pointing, aiming ant thier conjunction.}%
+\includegraphics[width=\columnwidth]{../pics/conjunction.eps}%
+\caption{Pointing vector in green and aiming vector in red miss the target (a). Target areas of pointing, aiming and the target inside their conjunction (b).}%
 \label{fig:testing_2_conjunction} %Wie angular error + aiming und zonen samt AND-Bereich
 \end{figure}
 
@@ -349,8 +349,8 @@ The visual observation of subjects during the test revealed a bias toward one of
 \\
 Each of the 24 subjects of this test had to define all four corners of a fictional exhibition plane. These corners were, as depicted in Figure \ref{fig:testing_3_setup}, marked with colored tokens. Similar to the two earlier tests, they had to point at every corner from each of the three previous positions. During a session, they were given textual advice telling them the position to go to or the corner to point at. The sequence of actions was like in the final definition process of an exhibition plane. Subjects went into position and then consecutively pointed at each of the corners. Intervals between changing positions or pointing at the next target were about 4 seconds. All subjects did five rounds, but this time they defined four points instead of one.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{.}%
+\includegraphics[width=\columnwidth]{../pics/testsetup2.eps}%
+\caption{The first corner was marked with a blue, the second with a green, the third with a yellow, and the fourth corner with a red token.}%
 \label{fig:testing_3_setup} %
 \end{figure}
 
@@ -459,14 +459,14 @@ Three installations were build. One lab setup for development, one makeshift set
 The Haßleben-showcase was measured. The measurments were then transferred into the groundplan depicted in Figure \ref{fig:hassleben_groundplan}. With a width of 439cm and a depth of 344cm, a mockup of the showcase was quiet large and would need an even larger room to fit in and to be still operable. The showcase has a floor-to-ceiling height of 293cm and its exhibition plane is 65cm above the floor.
 \begin{figure}[H]%
 \includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{.}%
+\caption{Groundplan of the Haßleben-showcase.}%
 \label{fig:hassleben_groundplan} %
 \end{figure}
 
 The laminated glass is 7mm thick. A main concern at the beginning was, whether the sensor would be able to work through glass or not, because the panels have no anti-glare coating. Figure \ref{fig:hassleben_glass} shows that it worked through two sheets of glass at an acute angle (a) as well as straight trough it (b).
 \begin{figure}[H]%
 \includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{.}%
+\caption{Depth image through the glass panels of the Hassleben-showcase.}%
 \label{fig:hassleben_glass} %
 \end{figure}
 
@@ -477,7 +477,7 @@ There were three unoccupied rooms. One at the museum and two at the faculty. The
 Until the final hardware was acquired by the museum and available for testing, similar hardware was preliminarily lend to me by multiple sources of the faculty. The museum's carpenter fabricated a pedestal consisting of surface plating and feet. The plating is fabricated from four 9mm-press boards. The feet seemed too unstable and thus were replaced with one desk rack for each board as can be seen in Figure \ref{fig:lab_setup}.
 \begin{figure}[H]%
 \includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{.}%
+\caption{Images of the lab setup during the development process.}%
 \label{fig:lab_setup} %
 \end{figure}
 
