@@ -125,14 +125,16 @@ To compute the pedal point, and stay in the metaphor, the two foot points $F_{A}
 	F_{A} &= S_{A} + \lambda_{F_{A}} \cdot \overrightarrow{d_{A}} \quad &\text{and} \quad F_{B} &= S_{B} + \lambda_{F_{B}} \cdot \overrightarrow{d_{B}} \\
 	F_{A} &= S_{A} + \frac{(S_{B} - S_{A}) \bullet \overrightarrow{n_{B}}}{\overrightarrow{d_{A}} \bullet \overrightarrow{n_{B}}} \cdot \overrightarrow{d_{A}} \quad &\text{and} \quad F_{B} &= S_{B} + \frac{(S_{A} - S_{B}) \bullet \overrightarrow{n_{A}}}{\overrightarrow{d_{B}} \bullet \overrightarrow{n_{A}}} \cdot \overrightarrow{d_{B}} 
 \end{align*}
-The only step left is to calculate the pedal point $P_{AB}$ between the two foot points~\cite{PedalPoint} $F_{A}$ and $F_{B}$. Since the feet already represent the points on each \texttt{Vector} that are closest to the other \texttt{Vector} and $P_{AB}$ is in the middle, $P_{AB}$ is the average of them.
-$$P_{AB} = (F_{A} \cdot F_{B}) / 2$$
 An exemplary configuration of the problem is depicted by Figure \ref{fig:pedal_point}.
+
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{[UNFINISHED] Schematics of the calculation of the pedal point between two skew lines.}%
+\includegraphics[width=\columnwidth]{../pics/pedalpoint.eps}%
+\caption{Schematics of the calculation of the pedal point between two skew lines.}%
 \label{fig:pedal_point} 
 \end{figure}
+
+The only step left is to calculate the pedal point $P_{AB}$ between the two foot points~\cite{PedalPoint} $F_{A}$ and $F_{B}$. Since the feet already represent the points on each \texttt{Vector} that are closest to the other \texttt{Vector} and $P_{AB}$ is in the middle, $P_{AB}$ is the average of them.
+$$P_{AB} = (F_{A} \cdot F_{B}) / 2$$
 
 The \ac{IMI}-system's interaction is based in the principle of intersections of a \texttt{Vector} and a \texttt{Plane}. Positions of \ac{IMI}-exhibits are defined this way. Furthermore, a user's pointing and aiming position is calculated exactly the same. Thus, this computation is crucial for interaction. Given a \texttt{Vector} $V$ and a \texttt{Plane} $E$ are not parallel, they intersect in a position $P_{I}$, where $P_{I} \in V \wedge E$.   
 \begin{align*}
@@ -146,16 +148,18 @@ As Figure \ref{fig:vector_plane_intersect} shows, going from $C_{1}$ to $P_{I}$ 
 	\overrightarrow{u} = \overrightarrow{w} + \lambda_{I} \cdot \overrightarrow{d} \quad and \quad 0 &= \overrightarrow{n_{E}} \bullet \overrightarrow{u} \\
 	\quad \Rightarrow \quad 0 &= \overrightarrow{n_{E}} \bullet (\overrightarrow{w} + \lambda_{I} \cdot \overrightarrow{d})
 \end{align*}
+
+\begin{figure}[H]%
+\includegraphics[width=\columnwidth]{../pics/intersection.eps}%
+\caption{Schematics of the intersection between a plane and a line.}%
+\label{fig:vector_plane_intersect} 
+\end{figure}
+
 This equation can be solved for $\lambda_{I}$, which is then put back into the pointing \texttt{Vector}'s equation.
 \begin{align*}
 	\lambda_{I} = \frac{\overrightarrow{n_{E}} \bullet \overrightarrow{w}}{\overrightarrow{n_{E}} \bullet \overrightarrow{d}} \quad in \quad P_{I} &= P_{S} + \lambda_{I} \cdot \overrightarrow{d} \\	
 	\quad \to \quad P_{I} &= P_{S} + \frac{\overrightarrow{n_{E}} \bullet \overrightarrow{w}}{\overrightarrow{n_{E}} \bullet \overrightarrow{d}} \cdot \overrightarrow{d}
 \end{align*}
-\begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{[UNFINISHED] Schematics of the intersection between a plane and a line.}%
-\label{fig:vector_plane_intersect} 
-\end{figure}
 
 The GeometryHandler-class utilizes the \ac{MS} XNA framework. It features specialized analysis functionality such as computation dot and cross products and the normal of a plane. These functions replaced manual calculations and increased the efficiency of the class.
 
