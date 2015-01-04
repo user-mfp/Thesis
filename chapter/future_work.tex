@@ -9,10 +9,11 @@ While developing the basic functionality of free-hand pointing interaction, some
 \\
 The first technical issue is the \textit{angular error}, which is explained in Chapter \ref{installation_tech}. The pointing position of a user is prone to error, which is directly related to the angle of impact of the pointing vector onto the exhibition plane. To minimize this another aspect of improper pointing was utilized as a counter measure. \textit{Eye-hand missmatch} makes a user point and aim at two different positions on the exhibition plane. The \ac{IMI}-system computes an average position of the two. To calculate the position, it is assumed, that either of the vectors is dominant and the combined position is biased in favor of this vector's pointing position. The dominant vector, however, is determined by each of its axes absolute value in comparison to the other vectors values. Future research might find a more reliable way of this determination. Subjects could be observed more closely while pointing and physiological aspects could be taken into consideration as well. As Figure \ref{fig:dominant_pointing} depicts, pointing with the right arm results in a drift of the pointing position to the left, whereas the aiming vector tends to go to the right.
 \begin{figure}[H]%
-\includegraphics[width=\columnwidth]{../pics/blank.eps}%
-\caption{[UNFINISHED] Dominant pointing.}%
+\includegraphics[width=\columnwidth]{../pics/pivotpoints.eps}%
+\caption{Leaver effects of free-hand pointing gestures.}%
 \label{fig:dominant_pointing} %Draufsicht ideogram aus principle 
 \end{figure}
+As the elbow moves outwards, the pointing position moves to the left. Here, the hand acts as a pivot point. The same applies for the head and hand. Only if the hand moves outward, the aiming position moves with it. This time, the head is the pivot point. Hence, each joint can act as a pivot point. Recognizing and compensating those effects can result in a more reliable computation of a pointing position. 
 
 \textit{Kernel functions} were not entirely investigated. The current \ac{IMI}-system uses a basic triangular function. The linear characteristics of affinity might be a problem in target selection. Dominant and submissive properties are modulated by the maximum value and the radius of the kernel. Non-linear functions could improve on these properties.
 \\
